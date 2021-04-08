@@ -28,13 +28,44 @@
             ?>
             <div class="swiper-slide">
                 <div class="row is-flex v-center">
-                    <div class="col-md-6 pad0 slider-img">
+                    <div class="col-xs-12 col-sm-12 col-md-6 pad0 slider-img">
                         <div style="background-image:url(<?php echo $foto;?>)">
                         </div>
                     </div>
-                    <div class="col-md-6 slider-text">
+                    <div class="col-xs-12 col-sm-12 col-md-6 slider-text">
                         <h3 class="text-white">“
-                        <?php 
+                            <?php 
+                         if(get_field("blocos", $story->ID)){
+                                
+                                $blocos_stories = get_field("blocos", $story->ID);
+                                    foreach($blocos_stories as $blocos_storie){
+                                        $tipo_bloco =  $blocos_storie['tipo_de_bloco'];
+                                            foreach($tipo_bloco as $tipos_blocos){
+                                                $block_quote = $tipos_blocos['blockquote'];    
+                                                    echo $block_quote;
+                                            }
+                                    }
+                                                                                    
+                            }
+                        ?>”</h3>
+                        <div class="name"><?php echo $name; ?></div>
+                        <p><?php echo $descricao_alumni; ?></p>
+                        <div>
+                            <img src="<?php echo $logo_empresa;?>">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="row is-flex v-center">
+                    <div class="col-sm-12 col-md-6 pad0 slider-img">
+                        <div style="background-image:url(<?php echo $foto;?>)">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 slider-text">
+                        <h3 class="text-white">“
+                            <?php 
                          if(get_field("blocos", $story->ID)){
                                 
                                 $blocos_stories = get_field("blocos", $story->ID);
@@ -68,26 +99,26 @@
     <div class="swiper-button-prev"></div>
 </div>
 <script>
-        var swiper = new Swiper('.swiper-alumni', {
-        slidesPerView: 1,
-        speed: 1000,
-        spaceBetween: 30,
-        centeredSlides: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
+var swiper = new Swiper('.swiper-alumni', {
+    slidesPerView: 1,
+    speed: 1000,
+    spaceBetween: 30,
+    centeredSlides: true,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        0: {
+            spaceBetween: 20
         },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+        768: {
+            spaceBetween: 30
         },
-        breakpoints: {
-            0: {
-                spaceBetween: 20
-            },
-            768: {                
-                spaceBetween: 30
-            },
-        }
-        });
-    </script>
+    }
+});
+</script>

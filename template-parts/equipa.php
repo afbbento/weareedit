@@ -1,6 +1,6 @@
 <div class="row persons-grid">
 
-<?php
+    <?php
     $seccao_equipa = get_field('seccao_equipa');
         if( $seccao_equipa ){
             $equipa = $seccao_equipa['elemento'];
@@ -18,35 +18,35 @@
                     
                     ?>
 
-                    <div class="col-md-3 col-sm-6">
-                    <a href="<?php echo $link_elemento; ?>">
-                        <div class="adaptImage reveal-block">
-                            <div class="adaptImage__inner">
-                                <div class="adaptImage__aspect" style="padding-bottom:145%;">
-                                    <img class="adaptImage__image" src="<?php echo $foto['url']; ?>">
-                                </div>
-                                
-                                <div class="person-card">
-                                    <div class="person-card-content">
-                                        <div class="text">
-                                            <div class="name"><?php echo $nome." ".$sobrenome; ?></div>
-                                            <div class="job"><?php echo $cargo; ?></div>
-                                            <div class="company"><?php echo $empresa; ?></div>                                                
-                                        </div>            
-                                    </div>
-                                    <div class="link">Ver entrevista</div>
-                                </div>
-                            </div>    
+    <div class="col-md-3 col-sm-6 col-xs-10 col-xs-offset-1 col-sm-offset-0"">
+        <a href=" <?php echo $link_elemento; ?>">
+        <div class="adaptImage reveal-block">
+            <div class="adaptImage__inner">
+                <div class="adaptImage__aspect" style="padding-bottom:145%;">
+                    <img class="adaptImage__image" src="<?php echo $foto['url']; ?>">
+                </div>
+
+                <div class="person-card">
+                    <div class="person-card-content">
+                        <div class="text">
+                            <div class="name"><?php echo $nome." ".$sobrenome; ?></div>
+                            <div class="job"><?php echo $cargo; ?></div>
+                            <div class="company"><?php echo $empresa; ?></div>
                         </div>
-                    </a>
                     </div>
-                    <?php
+                    <div class="link">Ver entrevista</div>
+                </div>
+            </div>
+        </div>
+        </a>
+    </div>
+    <?php
                     if ($i==5){
-                        echo '<div class="col-md-3 col-sm-6"></div>';
+                        echo '<div class="col-md-3 col-sm-5"></div>';
                     }
                     }
                 }
             }
 ?>
-             
+
 </div>

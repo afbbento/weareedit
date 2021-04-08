@@ -1,0 +1,43 @@
+@media (max-width: 992px){
+.courses-container {
+    padding-left: 110px;
+}
+.persons-grid{
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
+.alumni-slider .slider-img > div {
+    height: 40vw !important;
+}
+
+}
+
+@media (max-width: 768px){
+html.mobile .navigation__primary___3I64N:after {
+    top: 115px;
+}
+html.mobile .navigation__secondary___13rln:after {
+    top: 115px;
+}
+.primaryNav___sqMHp {
+    padding: 125px 30px 30px 33px;
+}
+.content__inner___1liSK {
+    padding: 125px 35px 60px;
+}
+
+
+.swiper-alumni .swiper-slide {
+    width: 100% !important;
+}
+
+.courses-container {
+    padding-left: 0px;
+}
+.persons-grid{
+    padding-left: 0;
+    padding-right: 0;
+}
+}
+

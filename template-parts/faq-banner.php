@@ -12,10 +12,10 @@ $seccao_banner_faq = get_field('seccao_banner_faq');
 <section class="faq">
     <div class="container">
         <div class="row reveal-block">
-            <div class="col-md-12">
+            <div class="col-md-12 col-sm-offset-1 col-md-offset-0 col-xs-offset-1"">
                 <h1><?php echo $titulo; ?></h1>
                 <p><?php echo $texto; ?></p>
-                <a href="<?php echo $link_url; ?>" class="btn btn-yellow"><?php echo $link_title; ?></a>
+                <a href=" <?php echo $link_url; ?>" class="btn btn-yellow"><?php echo $link_title; ?></a>
             </div>
         </div>
     </div>

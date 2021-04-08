@@ -11,10 +11,10 @@ get_header();
 
 ?>
 
-<div class="hero">   
+<div class="hero">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">    
+            <div class="col-md-12 col-md-offset-0 col-sm-offset-1 col-xs-offset-1 ">
                 <h1 class="reveal-block"><?php echo get_field( "titulo_header" );?></h1>
                 <p class="reveal-block"><?php echo get_field( "texto_header" );?></p>
             </div>
@@ -25,17 +25,19 @@ get_header();
 
     <!--about section-->
     <section class="about text-image-block">
-            <div class="container">
-                <div class="row reveal-block">
-                    <div class="col-md-4"><small class="text-muted"><?php echo get_field('muted_text_sobre');?></small></div>
+        <div class="container">
+            <div class="row reveal-block">
+                <div class="col-md-4 col-md-offset-0 col-sm-offset-1 col-xs-offset-1"><small
+                        class="text-muted"><?php echo get_field('muted_text_sobre');?></small>
                 </div>
-                <div class="row reveal-block">
-                    <div class="col-md-4">    
-                        <h2 class="section-title"><?php echo get_field('titulo_sobre');?></h2>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="row sp-60">
-                            <?php 
+            </div>
+            <div class="row reveal-block">
+                <div class="col-md-4 col-md-offset-0 col-sm-offset-1 col-xs-offset-1">
+                    <h2 class="section-title"><?php echo get_field('titulo_sobre');?></h2>
+                </div>
+                <div class="col-md-8 col-md-offset-0 col-sm-offset-1 col-xs-offset-1">
+                    <div class="row sp-60">
+                        <?php 
                                 $bloco_textos = get_field('texto_sobre');
                                 if( $bloco_textos ){
                                     $texto_1 = $bloco_textos['bloco1'];
@@ -43,9 +45,9 @@ get_header();
                                 }
                                  
                             ?>
-                            <div class="col-sm-6"><?php echo $texto_1; ?></div>
-                            <div class="col-sm-6"><?php echo $texto_2; ?></div>
-                        </div>
+                        <div class="col-sm-6"><?php echo $texto_1; ?></div>
+                        <div class="col-sm-6"><?php echo $texto_2; ?></div>
+                    </div>
                     <hr class="light-grey">
                     <div class="row counting-numbers-row">
                         <?php 
@@ -64,10 +66,10 @@ get_header();
                         }
                         ?>
                     </div>
-                    </div>
-                </div>   
-                <!--In Company-->
-                <?php
+                </div>
+            </div>
+            <!--In Company-->
+            <?php
                     $bloco_imagem_texto = get_field('bloco_imagem_texto');
                         if( $bloco_imagem_texto ){
                             $imagem = $bloco_imagem_texto['imagem'];
@@ -80,66 +82,69 @@ get_header();
                             $link_title = $btn['title'];
                         }
                 ?>
-                <div class="row is-flex v-center row-in_company">
-                    <div class="col-xs-12 col-md-6">
-                        <div class="img__wipe__container">
-                            <div class="img__transition__wipe"></div>
-                            <div class="img__transition__inner">
-                                <img src="<?php echo $imagem; ?>">
-                            </div>
+            <div class="row is-flex v-center row-in_company">
+                <div class="col-xs-12 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-offset-0 col-md-6">
+                    <div class="img__wipe__container">
+                        <div class="img__transition__wipe"></div>
+                        <div class="img__transition__inner">
+                            <img src="<?php echo $imagem; ?>">
                         </div>
                     </div>
-                    <div class="col-md-12 col-md-6 reveal-block">
-                        <div class="box-center">
-                            <div class="box-center-inner">                                
-                                <small class="text-muted"><?php echo $mute_text;?></small>
-                                <h2><?php echo $titulo;?></h2>
-                                <?php echo $texto;?>
-                                <div class="btn btn-slide">
-                                    <a href="<?php echo $link_url; ?>" class="btn btn-transparent"><?php echo $link_title; ?></a>
-                                </div>
+                </div>
+                <div class="col-md-12 col-xs-offset-1 col-md-6 col-sm-10 col-sm-offset-1 col-md-offset-0 reveal-block">
+                    <div class="box-center">
+                        <div class="box-center-inner">
+                            <small class="text-muted"><?php echo $mute_text;?></small>
+                            <h2><?php echo $titulo;?></h2>
+                            <?php echo $texto;?>
+                            <div class="btn btn-slide">
+                                <a href="<?php echo $link_url; ?>"
+                                    class="btn btn-transparent"><?php echo $link_title; ?></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!--parceiros-->
-        <?php
+    <!--parceiros-->
+    <?php
             $bloco_logos = get_field('bloco_logos');
             if( $bloco_logos ){
                 $titulo = $bloco_logos['titulo'];
                 $logos = $bloco_logos['logos'];
             }
         ?>
-        <section class="parceiros bleeded">
-            <div class="container">
-                <div class="row reveal-block">
-                    <div class="col-md-12"><h3><?php echo $titulo;?></h3></div>
+    <section class="parceiros bleeded">
+        <div class="container">
+            <div class="row reveal-block">
+                <div class="col-md-12 col-sm-offset-1 col-md-offset-0 col-xs-offset-1">
+                    <h3><?php echo $titulo;?></h3>
                 </div>
-                <div class="row grid-sp-40 logos-grid reveal-block">
-                    <?php
+            </div>
+            <div class="row grid-sp-40 logos-grid reveal-block">
+                <?php
                     if( $logos ) {
                         foreach( $logos as $row ) {
                                 
                     ?>
-                    <div class="col-xs-6  col-md-3 col-sm-6">
-                        <div class="grid-box">
-                            <img src="<?php echo $row['imagem'];?>">
-                        </div>
+                <div class="col-xs-6  col-md-3 col-sm-6 col-sm-offset-1 col-md-offset-0 col-xs-offset-1">
+                    <div class="grid-box">
+                        <img src="<?php echo $row['imagem'];?>">
                     </div>
-                    <?php
+                </div>
+                <?php
                         }
                     }
-                    ?>                    
-                </div>      
+                    ?>
             </div>
-        </section>
+        </div>
+    </section>
 
 
-        <!--alumni-->
-        <?php
+    <!--alumni-->
+    <?php
             $seccao_alumni = get_field('seccao_alumni');
             if( $seccao_alumni ){
                 $muted_text = $seccao_alumni['muted_text'];
@@ -147,49 +152,51 @@ get_header();
                 $texto = $seccao_alumni['texto'];                
             }
         ?>
-        <section class="alumni">
-            <div class="container">
-                <div class="row reveal-block">
-                    <div class="col-md-4"><small class="text-muted"><?php echo $muted_text; ?></small></div>
+    <section class="alumni">
+        <div class="container">
+            <div class="row reveal-block">
+                <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-1"><small
+                        class="text-muted"><?php echo $muted_text; ?></small></div>
+            </div>
+            <div class="row mb-85 reveal-block">
+                <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-1">
+                    <h2 class="section-title"><?php echo $titulo; ?></h2>
                 </div>
-                <div class="row mb-85 reveal-block">
-                    <div class="col-md-4">    
-                        <h2 class="section-title"><?php echo $titulo; ?></h2>
-                    </div>
-                    <div class="col-md-8">
-                        <p><?php echo $texto; ?></p>
-                    </div>
+                <div class="col-sm-11 col-md-8 col-sm-offset-1 col-md-offset-0 col-xs-offset-1">
+                    <p><?php echo $texto; ?></p>
                 </div>
             </div>
-            <?php get_template_part( 'template-parts/alumni', 'slider' ); ?>
-        </section>
+        </div>
+        <?php get_template_part( 'template-parts/alumni', 'slider' ); ?>
+    </section>
 
-        <!--tutores-->
-        <?php
+    <!--tutores-->
+    <?php
             $seccao_equipa = get_field('seccao_equipa');
             if( $seccao_equipa ){
                 $muted_text = $seccao_equipa['muted_text'];
                 $titulo = $seccao_equipa['titulo'];                
             }
         ?>
-        <section class="tutores">
-            <div class="container">
-                <div class="row reveal-block">
-                    <div class="col-md-4"><small class="text-muted"><?php echo $muted_text; ?></small></div>
-                </div>
-                <div class="row reveal-block mb-85">
-                    <div class="col-md-4">    
-                        <h2 class="section-title"><?php echo $titulo; ?></h2>
-                    </div>
-                    <div class="col-md-8">
-                        <p><?php echo $texto; ?></p>
-                    </div>
-                </div>
-            <?php get_template_part( 'template-parts/equipa' ); ?>
+    <section class="tutores">
+        <div class="container">
+            <div class="row reveal-block">
+                <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-1"><small
+                        class="text-muted"><?php echo $muted_text; ?></small></div>
             </div>
-        </section>
+            <div class="row reveal-block mb-85">
+                <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-1">
+                    <h2 class="section-title"><?php echo $titulo; ?></h2>
+                </div>
+                <div class="col-sm-11 col-md-8 col-sm-offset-1 col-md-offset-0 col-xs-offset-1">
+                    <p><?php echo $texto; ?></p>
+                </div>
+            </div>
+            <?php get_template_part( 'template-parts/equipa' ); ?>
+        </div>
+    </section>
 
-        <!--faq banner-->
-        <?php get_template_part( 'template-parts/faq', 'banner' ); ?>
-        
-<?php get_footer(); ?>
+    <!--faq banner-->
+    <?php get_template_part( 'template-parts/faq', 'banner' ); ?>
+
+    <?php get_footer(); ?>

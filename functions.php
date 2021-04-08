@@ -98,12 +98,14 @@ add_action( 'widgets_init', 'weareedit_widgets_init' );
  */
 function weareedit_scripts() {
 
-    wp_enqueue_style( 'weareedit-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css', _S_VERSION );
+    // wp_enqueue_style( 'weareedit-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css', _S_VERSION );
+	wp_enqueue_style( 'weareedit-bootstrap', get_template_directory_uri() . '/css/grid/bootstrap.css', _S_VERSION );
 	wp_enqueue_style( 'weareedit-fonts', get_template_directory_uri() . '/css/fonts/fonts.css?ver=5.3.6' , _S_VERSION );
     wp_enqueue_style( 'weareedit-social-icons', get_template_directory_uri() . '/css/fonts/social-icons.css' , _S_VERSION );
     wp_enqueue_style( 'weareedit-swiper', 'https://unpkg.com/swiper/swiper-bundle.min.css' , _S_VERSION );
     wp_enqueue_style( 'weareedit-icons-edit', get_template_directory_uri() . '/css/icons-edit.css' , _S_VERSION );
     wp_enqueue_style( 'weareedit-menu-styles', get_template_directory_uri() . '/css/menu.css' , _S_VERSION );
+	wp_enqueue_style( 'weareedit-mobile-styles', get_template_directory_uri() . '/css/mobile.css' , _S_VERSION );
     wp_enqueue_style( 'weareedit-style', get_stylesheet_uri(), array(), _S_VERSION );
 
     wp_enqueue_script( 'jquery', '//code.jquery.com/jquery-1.11.0.min.js', _S_VERSION, true );
