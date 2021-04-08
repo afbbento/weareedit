@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+    <g fill="none" fill-rule="evenodd">
+        <g fill="#FEDA00">
+            <g>
+                <g>
+                    <path d="M47 30h30V0H47v30zm18.373-16.037h9.858V1.77h-9.858v12.194zm-16.602 0h14.833V1.77H48.771v12.194zm6.357 14.27h20.104v-12.5H55.128v12.5zm-6.357 0h4.588v-12.5H48.77v12.5z" transform="translate(-221 -196) translate(0 196) translate(174)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
