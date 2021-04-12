@@ -1,6 +1,6 @@
 @media (max-width: 992px){
 .courses-container {
-    padding-left: 110px;
+        padding-left: 3%;
 }
 .persons-grid{
     padding-left: 60px;
@@ -11,6 +11,70 @@
     height: 40vw !important;
 }
 
+
+#info_bar {
+    width: 100%;
+}
+.formacao-info-bar {
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: transparent;
+    height: auto;
+    padding: 0px 4%;
+}
+.formacao-info-bar .cols {
+    width: 50%;
+    background-color: white;
+    margin-bottom: 10px;
+    height: 80px;
+}
+.formacao-info-bar .col-btn {
+    background-color: #ffdd06;
+}
+.formacao-info-bar .col-btn {
+    width: 50%;
+}
+#info_bar.sticky_info .formacao-info-bar {
+    padding:0
+}
+.info_bar_container.sticky_info .formacao-info-bar .cols {
+        width: 50% !important;
+    margin-bottom: 0;
+}
+.info_bar_container.sticky_info .col-btn {
+     width: 50%;
+}
+.formacao-info-bar .cols .drop-inner {
+    z-index: 2;
+}
+.formacao-info-bar .cols:nth-child(1) {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.visao-geral .certificacao div:first-child{
+   justify-content: flex-start;
+}
+
+.box-circle {
+    margin: 0 auto;
+}
+
+.contact-form .text-left {
+    padding-left: 0;
+}
+
+.contact-form .text-left {
+    text-align: center;
+}
+.contact-form  .col-center .center-cell {
+    height: auto;
+    display: block;
+}
+
+.related-card{
+    margin-bottom: 30px;
+}
 }
 
 @media (max-width: 768px){
