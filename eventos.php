@@ -47,7 +47,12 @@ get_header();
                             $titulo_evento = get_field('titulo'); 
                             $evento_inicio = get_field('data_inicio');
                             $imagem = get_field('home_image');
-                            
+                            $localizacao_evento = get_field('localizacao');
+                            if( $localizacao_evento ){
+                                foreach( $localizacao_evento as $localizacao_evento_row ){
+                                    $localizacao = get_the_title( $localizacao_evento_row->ID );                                    
+                                }
+                            }
                             $evento_inicio_format = DateTime::createFromFormat('Ymd', $evento_inicio); 
                             $dia_evento = $evento_inicio_format->format('d');
                             $mes_evento = $evento_inicio_format->format('m');
@@ -64,7 +69,7 @@ get_header();
                                 <div class="course-text">
                                     <div class="course-time">Evento</div>
                                     <div class="course-title"><?php echo $titulo_evento; ?></div>
-                                    <div class="course-date"><?php echo $dia_evento; ?> de <?php echo $mes_texto; ?>, Lisboa</div>
+                                    <div class="course-date"><?php echo $dia_evento; ?> de <?php echo $mes_texto; ?>, <?php echo $localizacao;?></div>
                                 </div>
                             </div>                                        
                         
