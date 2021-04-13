@@ -1134,7 +1134,23 @@ a.headerDesktop__inCompany:hover{
 }	
 .formacao-info-bar ul li:hover{	
     background-color: #f6f6f6 ;	
-}	
+}
+/*EVENTOS*/
+.filter-result.result-events .course-text {
+    position: relative;
+    padding: 33px 40px;
+}
+.filter-result.result-events .course-time,
+.filter-result.result-events .course-date{
+    color:#8f8f8f;
+}
+.filter-result.result-events .course-time{
+    text-transform: uppercase;
+}
+.filter-result.result-events .course-title{
+    color:#FFFFFF;
+}
+
 /*FOOTER*/	
 footer{	
     background-color: #000000;	
