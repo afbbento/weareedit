@@ -65,10 +65,10 @@ get_header();
                         ?>
                     
                             <div class="col-sm-6 col-md-6">
-                                <a href="#" class="course-box" style="background-image:url(<?php echo $imagem['url']; ?>"></a>    
+                                <a href="<?php echo $link_evento; ?>" class="course-box" style="background-image:url(<?php echo $imagem['url']; ?>"></a>    
                                 <div class="course-text">
                                     <div class="course-time">Evento</div>
-                                    <div class="course-title"><?php echo $titulo_evento; ?></div>
+                                    <div class="course-title"><a href="<?php echo $link_evento; ?>"><?php echo $titulo_evento; ?></a></div>
                                     <div class="course-date"><?php echo $dia_evento; ?> de <?php echo $mes_texto; ?>, <?php echo $localizacao;?></div>
                                 </div>
                             </div>                                        

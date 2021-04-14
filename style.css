@@ -1150,6 +1150,14 @@ a.headerDesktop__inCompany:hover{
 .filter-result.result-events .course-title{
     color:#FFFFFF;
 }
+/*SINGLE EVENTO*/
+.single-eventos .info_bar_container .vagas span{
+    color: #a6a6a6;
+}
+.single-eventos .hero{
+    padding-top: 0;
+}
+
 
 /*FOOTER*/	
 footer{	
@@ -1362,7 +1370,8 @@ footer .other-projects [class^="col-"]:not(:last-child){
     padding: 140px 0;	
 }	
 .page-template-escola section.about,	
-.den-template section.about{	
+.den-template section.about, 
+.single-eventos section.about{	
     padding-top: 110px;	
     position: relative;	
     margin-top: -207px;	
@@ -1502,11 +1511,13 @@ ul.breadcrumb li a {
     line-height: 0.67;	
     letter-spacing: -1px;	
 }	
-.formacao-template-default .head{	
+.formacao-template-default .head,
+.single-eventos .head{	
     padding-top: 200px;	
     background: #000000;	
 }	
-.formacao-template-default .head h1{	
+.formacao-template-default .head h1,
+.single-eventos .head h1{	
     font-size: 100px;	
     font-weight: bold;	
     font-stretch: normal;	
@@ -1541,7 +1552,8 @@ ul.breadcrumb li a {
 .formacao-info [class^="col-"]:nth-child(-n+3){	
     margin-right: 5%;	
 }	
-.formacao-template-default .banner-image{	
+.formacao-template-default .banner-image,
+.single-eventos .banner-image{	
     height: 560px;	
     background-repeat: no-repeat;	
     background-size: cover;	
@@ -2420,7 +2432,8 @@ section.relacionados{
     .alumni-slider .slider-text {	
         padding: 40px 30px 15px 30px;	
     }	
-    .formacao-template-default .head h1{	
+    .formacao-template-default .head h1,
+    .single-eventos .head h1{	
         font-size: 70px;	
         line-height: 1;	
         letter-spacing: -2.33px;	
@@ -2436,7 +2449,8 @@ section.relacionados{
     ul.breadcrumb{	
         background-size: 11px;	
     }	
-    .formacao-template-default .banner-image {	
+    .formacao-template-default .banner-image,
+    .single-eventos .banner-image {	
         height: 400px;	
     }	
     .persons-grid [class^="col-"]:nth-child(2n+0) {	
