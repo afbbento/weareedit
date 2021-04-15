@@ -22,18 +22,7 @@ get_header();
                     </div>
                 </div>
                 <div class="row grid-sp-40 hero-menu">
-                    <div class="col-md-3">
-                        <a href="recrutamento.php">Recrutamento</a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="campus.php" class="active">Campus</a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="alunos.php">Alunos</a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="den.php">DEN</a>
-                    </div>
+                    <?php get_template_part( 'template-parts/menu', 'escola' ); ?>
                 </div>
             </div>
         </div>
@@ -75,42 +64,42 @@ get_header();
                 <div class="row grid-sp-40 logos-grid">
                     <div class="col-xs-6  col-md-3 col-sm-6">
                         <div class="grid-box">
-                            <img src="img/burocratik-transp.png">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-3 col-sm-6">
                         <div class="grid-box">
-                            <img src="img/burocratik-transp.png">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
                         </div>
                     </div>
                    <div class="col-xs-6 col-md-3 col-sm-6">
                         <div class="grid-box">
-                            <img src="img/burocratik-transp.png">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-3 col-sm-6">
                         <div class="grid-box">
-                            <img src="img/burocratik-transp.png">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-3 col-sm-6">
                         <div class="grid-box">
-                            <img src="img/burocratik-transp.png">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-3 col-sm-6">
                         <div class="grid-box">
-                            <img src="img/burocratik-transp.png">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-3 col-sm-6">
                         <div class="grid-box">
-                            <img src="img/burocratik-transp.png">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
                         </div>
                     </div>
                     <div class="col-xs-6 col-md-3 col-sm-6">
                         <div class="grid-box">
-                            <img src="img/burocratik-transp.png">
+                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
                         </div>
                     </div>
                 </div>
