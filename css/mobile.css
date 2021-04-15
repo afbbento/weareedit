@@ -103,5 +103,51 @@ html.mobile .navigation__secondary___13rln:after {
     padding-left: 0;
     padding-right: 0;
 }
+
+
+
+
+
+
+.formacao-template-default .head h1 {
+    font-size: 36px;
+
+}
+
+.sobre-curso {
+    padding: 0;
+}
+section.programa h1{
+    font-size: 36px;
+}
+section.course-faq h1{
+    font-size: 36px;
+}
+
+.info-form {
+    padding: 0;
+}
+
+.row-faq [class^="col-"]:nth-child(odd) {
+    padding-right: 0; 
+}
+
+section.course-faq .row-faq {
+    margin: 50px 0;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.contact-form {
+    padding:45px 0;
+    background-color: #FFFFFF;
+}
+.box-circle {
+    width: 150px;
+    height: 150px;
+
+}
+
+
 }
 
