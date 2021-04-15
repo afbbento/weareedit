@@ -19,30 +19,7 @@ get_header();
                     </div>
                 </div>
                 <div class="row grid-sp-40 hero-menu">
-                    <div class="col-md-3">
-                        <div class="btn btn-slide active">
-                            <a href="recrutamento.php">Recrutamento</a>
-                            <span class="icon-edit-arrow-right"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="btn btn-slide">
-                            <a href="campus.php">Campus</a>
-                            <span class="icon-edit-arrow-right"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="btn btn-slide">
-                            <a href="alunos.php">Alunos</a>
-                            <span class="icon-edit-arrow-right"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="btn btn-slide">
-                            <a href="den.php">DEN</a>
-                            <span class="icon-edit-arrow-right"></span>
-                        </div>
-                    </div>
+                    <?php get_template_part( 'template-parts/menu', 'escola' ); ?>
                 </div>
             </div>
         <div class="about-image" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/banner-sobre-nos@2x.jpg)"></div>
