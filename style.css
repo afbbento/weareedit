@@ -1378,7 +1378,8 @@ footer .other-projects [class^="col-"]:not(:last-child){
 .page-template-escola section.about,	
 .den-template section.about, 
 .single-eventos section.about, 
-.page-template-in-company section.about{	
+.page-template-in-company section.about, 
+.page-template-recrutamento section.about{	
     padding-top: 110px;	
     position: relative;	
     margin-top: -207px;	
@@ -1394,6 +1395,9 @@ footer .other-projects [class^="col-"]:not(:last-child){
 }	
 .page-template-escola section.tutores{	
     padding-top: 90px;	
+}
+.page-template-recrutamento section.parceiros{
+    margin: 90px 0 30px;
 }	
 .campus-template section.parceiros h3{	
     margin-top: 0;	
