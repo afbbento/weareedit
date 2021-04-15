@@ -1379,7 +1379,8 @@ footer .other-projects [class^="col-"]:not(:last-child){
 .den-template section.about, 
 .single-eventos section.about, 
 .page-template-in-company section.about, 
-.page-template-recrutamento section.about{	
+.page-template-recrutamento section.about,
+.page-template-alunos section.about{	
     padding-top: 110px;	
     position: relative;	
     margin-top: -207px;	
