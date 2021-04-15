@@ -223,6 +223,9 @@ a.btn{
     border-radius: 0;	
     -webkit-transition: all 0.4s ease-in-out;	
     transition: all 0.1s ease-in-out;	
+}
+.btn.full-width{
+    width: 100%;
 }	
 .btn-transparent{	
     border: solid 2px #2e2e2e;	
@@ -1158,7 +1161,10 @@ a.headerDesktop__inCompany:hover{
     padding-top: 0;
 }
 
-
+/*IN-COMPANY*/
+.page-template-in-company section.about .btn.full-width{
+    margin: 35px 0;
+}
 /*FOOTER*/	
 footer{	
     background-color: #000000;	
@@ -1371,7 +1377,8 @@ footer .other-projects [class^="col-"]:not(:last-child){
 }	
 .page-template-escola section.about,	
 .den-template section.about, 
-.single-eventos section.about{	
+.single-eventos section.about, 
+.page-template-in-company section.about{	
     padding-top: 110px;	
     position: relative;	
     margin-top: -207px;	
