@@ -118,10 +118,7 @@
                                                         </span>
                                                 </li>
                                                 <li class="primaryNavItem___1k6aC" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                                    <a class="primaryNavItem__link___3s0mn" href="/industries">Escola</a>
-                                                        <span class="primaryNavItem__arrow___17w0M">
-                                                            <svg class="primaryNavItem__svg___1VE2h" width="9px" height="15px"><path fill="currentColor" fill-rule="evenodd" d="M7 9l-6 6-1-1 6-6-6-6 1-1 7 7-1 1z"></path></svg>
-                                                        </span>
+                                                    <a class="primaryNavItem__link___3s0mn" href="/escola">Escola</a>                                                       
                                                 </li>
                                             </ul>
                                         </div>
