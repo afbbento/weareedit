@@ -1375,17 +1375,17 @@ footer .other-projects [class^="col-"]:not(:last-child){
 .block-main-content{	
     padding: 140px 0;	
 }	
-.page-template-escola section.about,	
-.den-template section.about, 
+.page-template-escola section.about,
 .single-eventos section.about, 
 .page-template-in-company section.about, 
 .page-template-recrutamento section.about,
-.page-template-alunos section.about{	
+.page-template-alunos section.about,
+.page-template-den section.about{	
     padding-top: 110px;	
     position: relative;	
     margin-top: -207px;	
 }	
-.den-template .parceiros{	
+.page-template-den .parceiros{	
     margin-top: 90px;	
 }	
 .page-template-escola section.parceiros{	
@@ -1458,20 +1458,20 @@ section.campus-locations{
     margin-top: 30px;	
     margin-bottom: 30px;	
 }	
-.den-template section.parceiros {	
+.page-template-den section.parceiros {	
     margin-bottom: 0;	
 }	
-.den-template .swiper-button-next, 	
-.den-template .swiper-button-prev {	
+.page-template-den .swiper-button-next, 	
+.page-template-den .swiper-button-prev {	
     width: 40px;	
     height: 40px;	
 }	
-.den-template .slideshow{	
+.page-template-den .slideshow{	
     padding-bottom: 80px;	
     margin-top: -90px;	
     margin-bottom: -140px;	
 }	
-.den-template .swiper-pagination{	
+.page-template-den .swiper-pagination{	
     position: relative;	
     margin-top: 10px;	
 }	
