@@ -55,7 +55,17 @@ a{
     background-color: #937F00;	
     border-color: #937F00;	
     color: #000000;	
-}	
+}
+.btn-black.btn.full-width:hover{
+    background-color:#ffdd06;
+    border-color: #ffdd06;
+    color: #000000;
+}
+.btn.full-width:hover{
+    background-color:#ffdd06;
+    border-color: #ffdd06;
+    color: #000000;
+}
 .headerDesktop__contact:hover{	
     background-color: #937F00;	
     border-color: #937F00;	
@@ -141,6 +151,10 @@ h4.border.border-light-grey{
     color:#000000;	
     border-color: #dedede;	
     font-weight: 500;	
+}
+.btn-black.btn.full-width{
+    color:#FFFFFF;
+    border-color: #000000;
 }	
 .block-main-content.bg-light-grey .btn-slide a{	
     color:#000000;	
@@ -304,7 +318,7 @@ a.btn{
 .bg-black h4 {	
     color: #FFFFFF;	
 }	
-section.bg-light-grey h2,	
+section.bg-light-grey h2:not(.info-banner h2),	
 section.bg-light-grey h4{	
     color: #000000;	
 }	
@@ -1162,9 +1176,32 @@ a.headerDesktop__inCompany:hover{
 }
 
 /*IN-COMPANY*/
-.page-template-in-company section.about .btn.full-width{
+.page-template-in-company .text-block-container .btn.full-width{
     margin: 35px 0;
 }
+.page-template-in-company .hero .btn{
+    margin: 50px 0 90px;
+}
+.page-template-in-company .parceiros{
+    margin: 50px 0 0px;
+}
+.page-template-in-company .block-main-content {
+    padding: 20px 0 65px 0;
+}
+.page-template-in-company .info-banner .btn {
+    border-color: #ffdd06;
+}
+.page-template-in-company .info-banner .btn:hover {
+    border-color: #937F00;
+}   
+.page-template-in-company .text-block-container .btn-slide{
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+.page-template-in-company section.tutores{
+    padding-top: 105px;
+}
+
 /*FOOTER*/	
 footer{	
     background-color: #000000;	

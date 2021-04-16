@@ -70,7 +70,7 @@ get_header();
                                         <p>As aulas têm um foco assente na componente prática, com a realização de projetos individuais e em grupo, análise de case studies, workshops temáticos e inside knowledge dos tutores e oradores convidados, profissionais de renome na indústria web e digital.</p>
                                     </div>
                                     <div class="col-sm-12">
-                                        <p><a href="#" class="btn full-width">Perguntas Frequentes</a></p>
+                                        <p><a href="#" class="btn full-width">Pedir informação</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +155,7 @@ get_header();
                             <div class="info-form">
                                 <div class="col-md-6">
                                     <small class="text-muted"><?php echo $muted_text_banner; ?></small>
-                                    <h2><?php echo $titulo_banner; ?></h2>
+                                    <h2 class="text-white"><?php echo $titulo_banner; ?></h2>
                                 </div>
                                 <div class="col-md-6 col-center">
                                     <div class="center-cell">
@@ -167,47 +167,43 @@ get_header();
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4"><small class="text-muted ">PORQUÊ A DEN?</small></div>
+                        <div class="col-md-4"><small class="text-muted">METODOLOGIA</small></div>
                     </div>
-                    <div class="row">
+                    <div class="row reveal-block">
                         <div class="col-md-4">    
-                            <h2 class="reveal-block section-title">Estar a par da atualidade e das verdadeiras tendências da indústria digital.</h2>
+                            <h2 class="section-title">Elaboramos formações à medida para as suas equipas</h2>
                         </div>
                         <div class="col-md-8">
                             
                             <div class="text-block-container">
                                 <div class="row sp-60">
                                     <div class="col-sm-12">
-                                        <p>Promovemos o envolvimento direto das agências interativas e de marketing digital nacionais, que são nossas parceiras, na consultoria e adequação dos conteúdos dos nossos programas, o que nos permite estar a par da atualidade e das verdadeiras tendências da indústria digital.</p>
+                                        <p>Escutamos as suas necessidades e elaboramos programas à medida de forma a fornecermos a formação necessária às suas equipas.</p>
+                                        <div class="btn btn-slide btn-download">
+                                            <a href="#">PDF Formação In-Company</a>
+                                            <span class="icon-edit-download"></span>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="text-block-container">
-                                <div class="row sp-60">
+                                    <div class="col-md-6">
+                                        <h4 class="text-white border">Diagnóstico</h4>
+                                        <p>Numa primeira fase, que corresponde ao Diagnóstico, é efetuada uma consultoria e levantamento das necessidades de formação junto do cliente, mediante uma reunião com Key Employees/ Direção da Empresa.</p>                                
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4 class="text-white border">Preparação</h4>
+                                        <p>A fase seguinte implica a escolha de uma tutoria especializada e a preparação e criação do conteúdo programático, com o desenvolvimento de um programa específico adaptado às necessidades do cliente.</p>                                
+                                    </div>
                                     <div class="col-md-12">
-                                        <h4 class="text-white border">Evento anual</h4>
+                                        <h4 class="text-white border">Material de Apoio</h4>
+                                    </div>
+                                    <div class="col-md-6">                                        
+                                        <p>Após a adjudicação da proposta formativa é facultada uma série de Material de Apoio em formato de documentação digital, pelo tutor, aliado ao apoio E-Learning (Pré & Pós Formação).</p>                                
+                                    </div>
+                                    <div class="col-md-6">                                        
+                                        <p>Caso seja necessário, faz-se uso também da plataforma Slack para estabelecer uma melhor dinâmica e comunicação nos grupos de aprendizagem e existindo ainda a disponibilidade para um acompanhamento pós-curso, via e-mail pela tutoria designada.</p>                                
                                     </div>
                                     <div class="col-sm-12">
-                                        <p>Um evento anual organizado pela EDIT., que permite colocar os participantes a a falar da atualidade e das tendências da indústria digital. Aqui, serão abordados sob dois prismas essenciais:</p>
+                                        <p><a href="#" class="btn btn-black full-width">Pedir informação</a></p>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <p>
-                                            <span class="highlight">Recrutamento</span><br>
-                                                Ao saber o que procuram as marcas e
-                                                agências no mercado, qual a seleção
-                                                efetuada e perfis ideais de candidatos, que
-                                                dificuldades encontram e quais as principais
-                                                áreas de recrutamento.
-                                        </p>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <p><span class="highlight">Pedagogia e ensino</span><br>                                    
-Foco principal é a aproximação ao mercado e às diferentes áreas de ensino dentro da escola, a abordagem de novas metodologias para as práticas educativas e a exposição de tendências e novos paradigmas.</p>
-                                    </div>         
-                                    <div class="col-sm-12">
-                                        <p>Deste modo será promovida uma sinergia educação-indústria única, com a garantia de que as formações estão atualizadas e vão efetivamente de encontro ao mercado nos dias de hoje.</p>
-                                    </div> 
                                 </div>
                             </div>
                         </div>
@@ -215,7 +211,31 @@ Foco principal é a aproximação ao mercado e às diferentes áreas de ensino d
                 </div>
             </div>
         </section>
-
+        <!--tutores-->
+        <?php
+                    $seccao_equipa = get_field('seccao_equipa');
+                    if( $seccao_equipa ){
+                        $muted_text = $seccao_equipa['muted_text'];
+                        $titulo = $seccao_equipa['titulo'];
+                        $texto = $seccao_equipa['texto'];                
+                    }
+                ?>
+        <section class="tutores">
+            <div class="container">
+                <div class="row reveal-block">
+                    <div class="col-md-4"><small class="text-muted"><?php echo $muted_text; ?></small></div>
+                </div>
+                <div class="row reveal-block mb-85">
+                    <div class="col-md-4">
+                        <h2 class="section-title"><?php echo $titulo; ?></h2>
+                    </div>
+                    <div class="col-md-8">
+                        <p><?php echo $texto; ?></p>
+                    </div>
+                </div>
+                <?php get_template_part( 'template-parts/equipa' ); ?>
+            </div>
+        </section>
         
         
         <!--TUTORES SECTION-->
