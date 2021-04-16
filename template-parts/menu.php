@@ -118,7 +118,7 @@
                                                         </span>
                                                 </li>
                                                 <li class="primaryNavItem___1k6aC" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-                                                    <a class="primaryNavItem__link___3s0mn" href="/escola">Escola</a>                                                       
+                                                    <a class="primaryNavItem__link___3s0mn link__" href="/escola">Escola</a>                                                       
                                                 </li>
                                             </ul>
                                         </div>
