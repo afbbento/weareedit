@@ -1,5 +1,5 @@
 <div class="col-md-3">
-    <div class="btn btn-slide active">
+    <div class="btn btn-slide">
         <a href="/escola/recrutamento">Recrutamento</a>
         <span class="icon-edit-arrow-right"></span>
     </div>
