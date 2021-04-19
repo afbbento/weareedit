@@ -2126,6 +2126,49 @@ section.relacionados{
     -o-transition: color 0.2s ease-in-out;	
     transition: color 0.2s ease-in-out;	
 }	
+/*EVENTOS SINGLE*/
+.event-time-block h4{
+    margin-bottom: 35px;
+}
+.event-time-block .event-detail-text:last-child{
+    margin-bottom: 7px;
+} 
+.event-time-block h4 span.event-time{
+    color:#ffdd06;
+    margin-right: 10px;
+}
+.single-eventos section.tutores{
+    margin-top: 100px;
+}
+.single-eventos section.programa {
+    padding-bottom: 120px;
+    margin-bottom: 0;
+}
+.single-eventos section.relacionados{
+    padding-top: 100px;
+}
+.event-detail-label{
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #8f8f8f;
+    margin-bottom: 7px;
+    display: block;
+} 
+.event-detail-text{
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: -0.56px;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 22px;
+}
 /*FORMACAO AREA*/	
 .filter-header{	
     padding-top: 190px;	

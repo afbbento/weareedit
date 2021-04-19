@@ -35,7 +35,7 @@ get_header();
                     <?php 
                 $duracao = get_field('duracao');
                 $preco = get_field('preco');
-                
+                $horarios = get_field('horarios');
                 
                 $fundo_header = get_field('fundo_header');
                 ?>
@@ -77,47 +77,63 @@ get_header();
                     $vagas_totais = get_field('vagas_totais');
                     $vagas_ocupadas = get_field('vagas_ocupadas');
                     $programa_download = get_field('programa_download');
+                    $fundo_header = get_field('fundo_header');
                 ?>
                 <div class="inner"><?php echo $vagas_ocupadas; ?> / <span><?php echo $vagas_totais; ?></span> Vagas</div>    
             </div>
-            <div class="cols drop">
-                <?php 
-                        $rows_horarios = get_field('horario_formacao' );
-                        if( $rows_horarios ){
 
-                            $first_date = $rows_horarios[0]['data'];
+            <?php
+                if( get_field('tipo_de_datas') == 'inicio_fim' ) {
+                    $evento_inicio = get_field('data_inicio');
+                    $evento_inicio_format = DateTime::createFromFormat('Ymd', $evento_inicio);
+                    $evento_fim = get_field('data_fim');
+                    $evento_fim_format = DateTime::createFromFormat('Ymd', $evento_fim); 
+                    
+                    $dia_evento_ini = $evento_inicio_format->format('d');
+                    $mes_evento_ini = $evento_inicio_format->format('m');
+                    $dia_evento_fim = $evento_fim_format->format('d');
+                    $mes_evento_fim = $evento_fim_format->format('m');
 
-                            while( have_rows('horario_formacao') ) {
-                            the_row();
+                    $mes_ini_texto = substr(getMes($mes_evento_ini), 0, 3);
 
-                            //echo $sub_value = get_sub_field('data');
-                                $horario = get_sub_field('horario');
-                                
-                                foreach( $horario as $row_horario ){
-                                    //echo get_the_title( $row_horario->ID );
-                                }
-                                
-                            }                 
-                        }
-                        ?>
-                <div class="inner">10 Mar - 23 Jul</div>
-                <div class="drop-inner" style="display:none;">
-                    <ul>
-                        <li>10 Mar</li>
-                        <li>23 Jul</li>
-                    </ul>
-                </div>
-            </div>
+                    if ($evento_inicio_format==$evento_fim_format){
+                        //DATA UNICA
+                        $data_evento =  $dia_evento_ini." ".getMes($mes_evento_ini);
+                    }else{
+                        //RANGE ex: 10 Mar - 23 Jul
+                        $mes_fim_texto = substr(getMes($mes_evento_fim), 0, 3);
+                        $data_evento = $dia_evento_ini.' '.$mes_ini_texto.' - '.$dia_evento_fim.' '.$mes_fim_texto;
+
+                    }
+
+                    echo '<div class="cols">                           
+                            <div class="inner">'.$data_evento.'</div>                            
+                        </div>';
+                }
+                if( get_field('tipo_de_datas') == 'multiplas' ) {
+                    echo '<div class="cols drop">                           
+                        <div class="inner">10 Mar - 23 Jul</div>
+                        <div class="drop-inner" style="display:none;">                    
+                            <ul>
+                                <li>10 Mar</li>
+                                <li>23 Jul</li>
+                            </ul>
+                        </div>
+                    </div>';
+                }
+                
+                ?>
+           
             <div class="cols download-icon">
                 <div class="inner"><a href="<?php echo $programa_download['url']; ?>">Descarregar programa </a></div>
             </div>
-            <div class="cols col-btn">Pedir informação</div>
+            <div class="cols col-btn">Participar</div>
         </div>
     </div>
 </div>
 
 <div class="hero">   
-        <div class="about-image" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/banner-sobre-nos@2x.jpg)"></div>
+        <div class="about-image" style="background-image:url(<?php echo $fundo_header; ?>)"></div>
         </div>
         <section class="about">
             <div class="bleeded grey">
@@ -154,7 +170,7 @@ get_header();
                 </div>
             </div>
         </section>
-<!--tutores-->
+    <!--tutores-->
     <?php
             $seccao_equipa = get_field('seccao_equipa');
             if( $seccao_equipa ){
@@ -192,45 +208,34 @@ get_header();
         <div class="row">
             <div class="col-md-3 col-sm-11 col-sm-offset-1 col-offset-right-1">
                 <?php 
-                        $programa = get_field('programa');
-                        if( $programa ){
-                            $texto_apresentacao = $programa['texto_apresentacao'];
-                        }
-                        ?>
-                <p class="reveal-block"><?php echo $texto_apresentacao; ?></p>
+                    $texto_programa_evento = get_field('texto_programa_evento');            
+                ?>
+                <p class="reveal-block"><?php echo $texto_programa_evento; ?></p>
             </div>
             <div class="col-md-8 col-sm-11 col-sm-offset-1">
                 <?php
-                        $programa = get_field('programa');
-                        if( $programa ){
-                            $blocos_programa = $programa['bloco_programa']; 
-                            if( $blocos_programa ) {
-                                foreach( $blocos_programa as $row ) {
-                                    echo '<div class="text-block-container">                            
-                                            <div class="row sp-60">
-                                                <div class="col-sm-12">
-                                                    <h4 class="border reveal-block">'.$row['titulo'].'</h4>
-                                                </div>
-                                            </div>
-                                            <div class="grid">
-                                                <div class="grid-sizer"></div>';
-                                    
-                                    $items_programa = $row['item'];
-                                    foreach( $items_programa as $row_item ) {
-                                        
-                                        echo '<div class="grid-item">
-                                                <p class="list-title">'.$row_item['titulo'].'</p>
-                                                '.$row_item['texto'].'                        
-                                              </div> ';
+                $bloco_horario = get_field('bloco_horario');
+                if( $bloco_horario ){
+                    foreach( $bloco_horario as $row_bloco_horario ) {
+                        
+                    echo '<div class="text-block-container reveal-block event-time-block">
+                            <div class="row sp-60">
+                                <div class="col-sm-12">
+                                    <h4 class="border"><span class="event-time">'.$row_bloco_horario["hora"].'</span>'.$row_bloco_horario["titulo"].'</h4>';
 
+                                    $bloco_programa_detalhe = $row_bloco_horario['bloco_programa_detalhe'];
+                                    foreach( $bloco_programa_detalhe as $row_horario_detalhe ) {
+                                        echo '<span class="event-detail-label">'.$row_horario_detalhe["label_item"].'</span>';
+                                        echo '<span class="event-detail-text">'.$row_horario_detalhe["texto_detalhe"].'</span>';
                                     }
-
-                                    echo '</div>
-                                    </div>';
-                                }
-                            }                           
-                        }
-                        ?>
+                    echo '</div>                         
+                        </div>
+                    </div>';
+                
+                    
+                    }
+                }
+                ?>
             </div>
         </div>
     </div>
