@@ -1,8 +1,6 @@
 <div class="courses-container split-bg black-dark-grey">
     <div class="row">
         <div class="col-md-12 col-md-offset-0 col-sm-offset-1 col-xs-offset-1 ">
-            <!--SLIDER ALUMNI-->
-
             <div class="swiper-boxes">
                 <div class="swiper-wrapper">
 
@@ -45,22 +43,39 @@
                                 $tipoFormacao = get_field('tipo_formacao');
                                 $icon = get_field('icon',$tipoFormacao[0]);
                                 $cssClassType = get_field('class',$tipoFormacao[0]);
-                                echo $tipo_formacao_array[0]->post_title; 
-                
+
+                            
+
+                                if( $tipoFormacao ){
+                                    foreach( $tipoFormacao as $tipo_formacao_row ){
+                                        $link_tipo_formacao = get_permalink( $tipo_formacao_row->ID );
+                                        $titulo_tipo_formacao = get_the_title( $tipo_formacao_row->ID );
+                                        $tipo_formacao_bg = get_field( 'imagem_background', $tipo_formacao_row->ID );
+                                        $tipo_formacao_icon = get_field( 'icon', $tipo_formacao_row->ID );
+                                        $tipo_formacao_class = get_field( 'class', $tipo_formacao_row->ID );
+                                        
+                                    }
+                                    
+                                }
+                                if ($tipo_formacao_class=='curso'){
+                                    $text_color = "text-black";
+                                }else{
+                                    $text_color = "text-white";
+                                }                   
                            
                     ?>
-                    <div class="swiper-slide tipo-curso">
+                    <div class="swiper-slide <?php echo $text_color; ?>">
                         <a href="<?php echo get_permalink(); ?>">
                             <div class="slide-bg">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/bg-curso.svg">
+                                <img src="<?php echo $tipo_formacao_bg; ?>">
                             </div>
                             <div class="slide-inner">
                                 <div class="course-icon"><img
-                                        src="<?php echo get_template_directory_uri(); ?>/img/curso.svg"></div>
+                                        src="<?php echo $tipo_formacao_icon; ?>"></div>
                                 <div class="course-text">
                                     <div class="course-category"><?php echo $tipo_formacao_array[0]->post_title; ?>
                                     </div>
-                                    <div class="course-title text-black"><?php the_field('home_titulo');?></div>
+                                    <div class="course-title"><?php the_field('home_titulo');?></div>
                                 </div>
                                 <div class="course-view">
                                     <span>Ver curso</span>
@@ -75,86 +90,7 @@
                         }
                     }
                     ?>
-                    <div class="swiper-slide text-white">
-                        <div class="slide-bg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/bg-curso-intensivo.svg">
-                        </div>
-                        <div class="slide-inner">
-                            <div class="course-icon"><img
-                                    src="<?php echo get_template_directory_uri(); ?>/img/curso-intensivo.svg"></div>
-                            <div class="course-text">
-                                <div class="course-category">Curso Intensivo</div>
-                                <div class="course-title">Ecommerce Marketing Strategy & Growth</div>
-                            </div>
-                            <div class="course-view">
-                                <span>Ver curso</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide tipo-remote text-white">
-                        <div class="slide-bg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/bg-remote.svg">
-                        </div>
-                        <div class="slide-inner">
-                            <div class="course-icon"><img
-                                    src="<?php echo get_template_directory_uri(); ?>/img/remote-learning.svg"></div>
-                            <div class="course-text">
-                                <div class="course-category">Curso</div>
-                                <div class="course-title">Front-End Development</div>
-                            </div>
-                            <div class="course-view">
-                                <span>Ver curso</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide tipo-curso">
-                        <div class="slide-bg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/bg-curso.svg">
-                        </div>
-                        <div class="slide-inner">
-                            <div class="course-icon"><img
-                                    src="<?php echo get_template_directory_uri(); ?>/img/curso.svg"></div>
-                            <div class="course-text">
-                                <div class="course-category">Curso</div>
-                                <div class="course-title text-black">Front-End Development</div>
-                            </div>
-                            <div class="course-view">
-                                <span>Ver curso</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide tipo-curso-intensivo text-white">
-                        <div class="slide-bg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/bg-curso-intensivo.svg">
-                        </div>
-                        <div class="slide-inner">
-                            <div class="course-icon"><img
-                                    src="<?php echo get_template_directory_uri(); ?>/img/curso-intensivo.svg"></div>
-                            <div class="course-text">
-                                <div class="course-category">Curso Intensivo</div>
-                                <div class="course-title">Ecommerce Marketing Strategy & Growth</div>
-                            </div>
-                            <div class="course-view">
-                                <span>Ver curso</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide tipo-remote text-white">
-                        <div class="slide-bg">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/bg-remote.svg">
-                        </div>
-                        <div class="slide-inner">
-                            <div class="course-icon"><img
-                                    src="<?php echo get_template_directory_uri(); ?>/img/remote-learning.svg"></div>
-                            <div class="course-text">
-                                <div class="course-category">Curso</div>
-                                <div class="course-title">Front-End Development</div>
-                            </div>
-                            <div class="course-view">
-                                <span>Ver curso</span>
-                            </div>
-                        </div>
-                    </div>
+                    
                 </div>
             </div>
             <div class="swiper-button-next"></div>

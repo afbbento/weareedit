@@ -729,6 +729,12 @@ section.tutores{
     font-style: normal;	
     line-height: 1.09;	
     letter-spacing: -0.72px;	
+}
+.courses-container .swiper-slide.text-black a{
+    color: #000000;
+}
+.courses-container .swiper-slide.text-white a{
+    color: #FFFFFF;
 }	
 .course-icon{	
     display: flex;	
