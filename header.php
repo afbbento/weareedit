@@ -23,8 +23,11 @@
 <body <?php body_class(); ?>>
 <?php get_template_part( 'template-parts/menu' ); ?>
 
-<?php wp_body_open(); ?>
-<div id="page" class="site">
+<?php wp_body_open(); 
+$tipo_formacao = getTipoClass();
+
+?>
+<div id="page" class="site <?php echo $tipo_formacao['class']; ?>">
 	
 	<header id="masthead" class="site-header">
 		

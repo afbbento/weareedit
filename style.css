@@ -1151,6 +1151,12 @@ a.headerDesktop__inCompany:hover{
     background-color: #ffdd06;	
     padding: 0;	
     text-align: center;	
+}
+.single-formacao #info_bar .col-btn.class-curso{
+    background-color: #ffdd06;
+}
+.single-formacao #info_bar .col-btn.class-remote-learning{
+    background-color: #0090eb;
 }	
 .formacao-info-bar .cols.drop.open:after{	
     width:100%;	
@@ -1534,10 +1540,12 @@ ul.breadcrumb li {
     display: inline;	
     font-size: 30px;	
     line-height: 30px;	
-    color: #ffdd06;	
 }	
-.breadcrumb.text-yellow a{	
+.breadcrumb.class-curso a{	
     color: #ffdd06;	
+}
+.breadcrumb.class-remote-learning a{	
+    color: #0090eb;	
 }	
 ul.breadcrumb li.logo-formacao img {	
     transform: translateY(-2px);	
@@ -1550,11 +1558,15 @@ ul.breadcrumb li:nth-child(1)+li:before{
 }	
 ul.breadcrumb li+li:before {	
     padding: 0px 0 0 5px;	
-    color: #ffdd06;	
     content: "/\00a0";	
-}	
-ul.breadcrumb li a:hover {	
-    color: #ffdd06;	
+}
+ul.breadcrumb.class-curso li+li:before{
+    color: #ffdd06;
+}
+ul.breadcrumb.class-remote-learning li+li:before{
+    color: #0090eb;
+}		
+ul.breadcrumb li a:hover {		
     text-decoration: none;	
 }	
 ul.breadcrumb li a {	

@@ -6,15 +6,21 @@
 
 
 get_header();
-
+$tipoFormacao = get_field('tipo_formacao');
+if( $tipoFormacao ){
+    foreach( $tipoFormacao as $tipo_formacao_row ){
+        $link_tipo_formacao = get_permalink( $tipo_formacao_row->ID );
+        $titulo_tipo_formacao = get_the_title( $tipo_formacao_row->ID );
+        $tipo_formacao_bg = get_field( 'imagem_background', $tipo_formacao_row->ID );
+        $tipo_formacao_icon = get_field( 'icon', $tipo_formacao_row->ID );
+        $tipo_formacao_class = get_field( 'class', $tipo_formacao_row->ID );
+    }
+}
 ?>
 <div class="head">
     <div class="container">
-
-
-
         <div class="col-md-12 col-sm-10 col-sm-offset-1">
-            <ul class="breadcrumb reveal-block text-yellow">
+            <ul class="breadcrumb reveal-block class-<?php echo $tipo_formacao_class;?>">
                 <li class="logo-formacao"><img src="<?php echo get_template_directory_uri(); ?>/img/formacao.svg"></li>
                 <li><a href="#">Formação</a></li>
                 <li><a href="#">Design</a></li>
@@ -90,39 +96,39 @@ get_header();
                         ?>
                 </ul>
             </div>
-        </div>
-        <div class="cols drop">
-            <?php 
-                    $rows_horarios = get_field('horario_formacao' );
-                    if( $rows_horarios ){
+        
+            <div class="cols drop">
+                <?php 
+                        $rows_horarios = get_field('horario_formacao' );
+                        if( $rows_horarios ){
 
-                        $first_date = $rows_horarios[0]['data'];
+                            $first_date = $rows_horarios[0]['data'];
 
-                        while( have_rows('horario_formacao') ) {
-                        the_row();
+                            while( have_rows('horario_formacao') ) {
+                            the_row();
 
-                        //echo $sub_value = get_sub_field('data');
-                            $horario = get_sub_field('horario');
-                            
-                            foreach( $horario as $row_horario ){
-                                //echo get_the_title( $row_horario->ID );
-                            }
-                            
-                        }                 
-                    }
-                    ?>
-            <div class="inner">10 Mar - 23 Jul</div>
-            <div class="drop-inner" style="display:none;">
-                <ul>
-                    <li>10 Mar</li>
-                    <li>23 Jul</li>
-                </ul>
+                            //echo $sub_value = get_sub_field('data');
+                                $horario = get_sub_field('horario');
+                                
+                                foreach( $horario as $row_horario ){
+                                    //echo get_the_title( $row_horario->ID );
+                                }
+                                
+                            }                 
+                        }
+                        ?>
+                <div class="inner">10 Mar - 23 Jul</div>
+                <div class="drop-inner" style="display:none;">
+                    <ul>
+                        <li>10 Mar</li>
+                        <li>23 Jul</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <div class="cols download-icon">
-            <div class="inner"><a href="<?php echo $info_documento; ?>">Descarregar programa </a></div>
-        </div>
-        <div class="cols col-btn">Pedir informação</div>
+            <div class="cols download-icon">
+                <div class="inner"><a href="<?php echo $info_documento; ?>">Descarregar programa </a></div>
+            </div>
+            <div class="cols col-btn class-<?php echo $tipo_formacao_class;?>">Pedir informação</div>
     </div>
 </div>
 </div>

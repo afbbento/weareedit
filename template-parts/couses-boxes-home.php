@@ -43,8 +43,7 @@
                                 $tipoFormacao = get_field('tipo_formacao');
                                 $icon = get_field('icon',$tipoFormacao[0]);
                                 $cssClassType = get_field('class',$tipoFormacao[0]);
-
-                            
+             
 
                                 if( $tipoFormacao ){
                                     foreach( $tipoFormacao as $tipo_formacao_row ){
