@@ -601,84 +601,6 @@ function register_cpt_categorias_blog() {
     register_post_type( 'categorias_blog', $args );
 }
 
-function register_cpt_recrutamento() {
-
-    $labels = array( 
-        'name' => _x( 'Recrutamentos', 'recrutamento' ),
-        'singular_name' => _x( 'Recrutamento', 'recrutamento' ),
-        'add_new' => _x( 'Adicionar Recrutamento', 'recrutamento' ),
-        'add_new_item' => _x( 'Adicionar Recrutamento', 'recrutamento' ),
-        'edit_item' => _x( 'Editar Recrutamento', 'recrutamento' ),
-        'new_item' => _x( 'Novo Recrutamento', 'recrutamento' ),
-        'view_item' => _x( 'Ver Recrutamento', 'recrutamento' ),
-        'search_items' => _x( 'Procurar Recrutamento', 'recrutamento' ),
-        'not_found' => _x( 'Nenhum Recrutamento encontrado', 'recrutamento' ),
-        'not_found_in_trash' => _x( 'Nenhuma Recrutamento encontrado no lixo', 'recrutamento' ),
-        'parent_item_colon' => _x( 'Recrutamento Pai:', 'recrutamento' ),
-        'menu_name' => _x( 'Recrutamento', 'recrutamento' ),
-    );
-
-    $args = array( 
-        'labels' => $labels,
-        'hierarchical' => true,
-        'supports' => array('title', 'page-attributes', 'revisions'),
-        'taxonomies' => array('category','post_tag'),
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'menu_position' => 20,
-        'hierarchical' => true,
-        'show_in_nav_menus' => true,
-        'publicly_queryable' => true,
-        'exclude_from_search' => false,
-        'has_archive' => false,
-        'query_var' => true,
-        'can_export' => true,
-        'capability_type' => 'page'
-    );
-
-    register_post_type( 'recrutamento', $args );
-}
-
-function register_cpt_empresa_recrutamento() {
-
-    $labels = array( 
-        'name' => _x( 'Empresas Recrutamento', 'empresa_recrutamento' ),
-        'singular_name' => _x( 'Empresa Recrutamento', 'empresa_recrutamento' ),
-        'add_new' => _x( 'Adicionar Empresa Recrutamento', 'empresa_recrutamento' ),
-        'add_new_item' => _x( 'Adicionar Empresa Recrutamento', 'empresa_recrutamento' ),
-        'edit_item' => _x( 'Editar Empresa Recrutamento', 'empresa_recrutamento' ),
-        'new_item' => _x( 'Nova Empresa Recrutamento', 'empresa_recrutamento' ),
-        'view_item' => _x( 'Ver Empresa Recrutamento', 'empresa_recrutamento' ),
-        'search_items' => _x( 'Procurar Empresa Recrutamento', 'empresa_recrutamento' ),
-        'not_found' => _x( 'Nenhuma Empresa Recrutamento encontrado', 'empresa_recrutamento' ),
-        'not_found_in_trash' => _x( 'Nenhuma Empresa Recrutamento encontrado no lixo', 'empresa_recrutamento' ),
-        'parent_item_colon' => _x( 'Empresa Recrutamento Pai:', 'empresa_recrutamento' ),
-        'menu_name' => _x( 'Empresa Recrutamento', 'empresa_recrutamento' ),
-    );
-
-    $args = array( 
-        'labels' => $labels,
-        'hierarchical' => true,
-        'supports' => array('title', 'page-attributes', 'revisions'),
-        'taxonomies' => array('category','post_tag'),
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'menu_position' => 20,
-        'hierarchical' => true,
-        'show_in_nav_menus' => true,
-        'publicly_queryable' => true,
-        'exclude_from_search' => false,
-        'has_archive' => false,
-        'query_var' => true,
-        'can_export' => true,
-        'capability_type' => 'page'
-    );
-
-    register_post_type( 'empresa_recrutamento', $args );
-}
-
 function register_custom_post_types() {
     register_cpt_noticias();
 
@@ -704,10 +626,6 @@ function register_custom_post_types() {
     
 
     register_cpt_localizacoes();
-    
-    //Recrutamento
-    register_cpt_recrutamento();
-    register_cpt_empresa_recrutamento();
 
    
 }
