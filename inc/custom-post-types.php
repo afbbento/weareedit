@@ -8,44 +8,6 @@
  * @author edit
  */
 
-function register_cpt_slider() {
-
-    $labels = array( 
-        'name' => _x( 'Slider', 'slider' ),
-        'singular_name' => _x( 'Slider item', 'slider' ),
-        'add_new' => _x( 'Adicionar Slide', 'slider' ),
-        'add_new_item' => _x( 'Adicionar Slide', 'slider' ),
-        'edit_item' => _x( 'Editar Slide', 'slider' ),
-        'new_item' => _x( 'Novo Slide', 'slider' ),
-        'view_item' => _x( 'Ver Slide', 'slider' ),
-        'search_items' => _x( 'Procurar Slide', 'slider' ),
-        'not_found' => _x( 'Nenhum Slide encontrado', 'slider' ),
-        'not_found_in_trash' => _x( 'Nenhum Slide encontrado no lixo', 'slider' ),
-        'parent_item_colon' => _x( 'Slide Pai:', 'slider' ),
-        'menu_name' => _x( 'Slider', 'slider' ),
-    );
-
-    $args = array( 
-        'labels' => $labels,
-        'hierarchical' => true,
-        'supports' => array('title', 'page-attributes', 'revisions'),
-        'taxonomies' => array('category','post_tag'),
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'menu_position' => 20,
-        'hierarchical' => true,
-        'show_in_nav_menus' => true,
-        'publicly_queryable' => true,
-        'exclude_from_search' => false,
-        'has_archive' => false,
-        'query_var' => true,
-        'can_export' => true,
-        'capability_type' => 'page'
-    );
-
-    register_post_type( 'slider', $args );
-}
 
 function register_cpt_noticias() {
 
@@ -718,7 +680,6 @@ function register_cpt_empresa_recrutamento() {
 }
 
 function register_custom_post_types() {
-    register_cpt_slider();
     register_cpt_noticias();
 
     register_cpt_formacao();
