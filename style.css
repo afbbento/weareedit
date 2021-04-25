@@ -321,7 +321,32 @@ a.btn{
 section.bg-light-grey h2:not(.info-banner h2),	
 section.bg-light-grey h4{	
     color: #000000;	
-}	
+}
+.single-formacao #page.curso section.programa .row.info-banner .btn{
+    background-color: #ffdd06;
+    color: #000000;
+    border-color: #ffdd06;
+}
+.btn-remote-learning{
+    background-color: #0090eb;
+    color: #FFFFFF;
+    border-color: #0090eb;
+}
+.btn-curso-intensivo{
+    background-color: #ec8172;
+    color: #000000;
+    border-color: #ec8172;
+}
+.btn-workshop{
+    background-color: #60c5b3;
+    color: #FFFFFF;
+    border-color: #60c5b3;
+}
+.btn-bootcamp{
+    background-color: #f92869;
+    color: #FFFFFF;
+    border-color: #f92869;
+}
 section.bg-light-grey p{	
     color: #717171;	
 }	
@@ -1152,12 +1177,42 @@ a.headerDesktop__inCompany:hover{
     padding: 0;	
     text-align: center;	
 }
+.single-formacao .headerDesktop__contact{
+    display: none;
+}
+.single-formacao .headerDesktop__inCompany{
+    right: 40px;
+}
+.single-formacao .border-animation-center:after{
+    border-bottom: solid 3px #0090eb;
+}
 .single-formacao #info_bar .col-btn.class-curso{
     background-color: #ffdd06;
 }
 .single-formacao #info_bar .col-btn.class-remote-learning{
     background-color: #0090eb;
-}	
+}
+.single-formacao #info_bar .col-btn.class-curso-intensivo{
+    background-color: #ec8172;
+}
+.single-formacao #info_bar .col-btn.class-workshop{
+    background-color: #60c5b3;
+}
+.single-formacao #info_bar .col-btn.class-bootcamp{
+    background-color: #f92869;
+}
+.single-formacao #page.remote-learning section.programa h4.border{
+    border-left: 3px solid #0090eb;
+}
+.single-formacao #page.curso-intensivo section.programa h4.border{
+    border-left: 3px solid #ec8172;
+}
+.single-formacao #page.workshop section.programa h4.border{
+    border-left: 3px solid #60c5b3;
+}
+.single-formacao #page.bootcamp section.programa h4.border{
+    border-left: 3px solid #f92869;
+}
 .formacao-info-bar .cols.drop.open:after{	
     width:100%;	
 }	
@@ -1546,7 +1601,17 @@ ul.breadcrumb li {
 }
 .breadcrumb.class-remote-learning a{	
     color: #0090eb;	
+}
+.breadcrumb.class-curso-intensivo a{	
+    color: #ec8172;	
+}
+.breadcrumb.class-workshop a{	
+    color: #60c5b3;	
 }	
+.breadcrumb.class-bootcamp a{	
+    color: #f92869;	
+}	
+		
 ul.breadcrumb li.logo-formacao img {	
     transform: translateY(-2px);	
 }	
@@ -1565,6 +1630,15 @@ ul.breadcrumb.class-curso li+li:before{
 }
 ul.breadcrumb.class-remote-learning li+li:before{
     color: #0090eb;
+}
+ul.breadcrumb.class-curso-intensivo li+li:before{
+    color: #ec8172;	
+}
+ul.breadcrumb.class-workshop li+li:before{
+    color: #60c5b3;	
+}
+ul.breadcrumb.class-bootcamp li+li:before{
+    color: #f92869;	
 }		
 ul.breadcrumb li a:hover {		
     text-decoration: none;	
@@ -1971,10 +2045,22 @@ section.relacionados h3{
     -moz-transition : all 500ms ease-out;	
     -o-transition : all 500ms ease-out;	
 }	
-.accordion-container .accordion-title.open::after {	
+.single-formacao #page.curso .accordion-container .accordion-title.open::after {	
     width: 100%;	
     border-bottom-color: #ffdd06;   	
+}
+.single-formacao #page.remote-learning .accordion-container .accordion-title.open:after{
+    border-bottom-color: #0090eb;   
+}
+.single-formacao #page.curso-intensivo .accordion-container .accordion-title.open:after{
+    border-bottom-color: #ec8172;   
 }	
+.single-formacao #page.workshop .accordion-container .accordion-title.open:after{
+    border-bottom-color: #60c5b3;   
+}
+.single-formacao #page.bootcamp .accordion-container .accordion-title.open:after{
+    border-bottom-color: #f92869;   
+}			
 .accordion-container .accordion-title{	
     background-image: url('img/mais.svg');	
     background-repeat: no-repeat;	
@@ -2001,7 +2087,24 @@ section.relacionados h3{
 .accordion-container .accordion-title:hover:after {	
     width: 100%;	
     border-bottom-color: #ffdd06;   	
-}	
+}
+.single-formacao #page.remote-learning .accordion-container .accordion-title.open:after,	
+.single-formacao #page.remote-learning .accordion-container .accordion-title:hover:after {
+    border-bottom-color: #0090eb;
+}
+.single-formacao #page.curso-intensivo .accordion-container .accordion-title.open:after,	
+.single-formacao #page.curso-intensivo .accordion-container .accordion-title:hover:after {
+    border-bottom-color: #ec8172;
+}
+.single-formacao #page.workshop .accordion-container .accordion-title.open:after,	
+.single-formacao #page.workshop .accordion-container .accordion-title:hover:after {
+    border-bottom-color: #60c5b3;
+}
+.single-formacao #page.bootcamp .accordion-container .accordion-title.open:after,	
+.single-formacao #page.bootcamp .accordion-container .accordion-title:hover:after {
+    border-bottom-color: #f92869;
+}
+				
 section.course-faq .row-faq {	
     margin: 50px 0;	
 }	
