@@ -2296,11 +2296,11 @@ section.relacionados{
     background-color:#000000;	
     padding-bottom: 300px;	
 }	
-.formacao-area-template ul.breadcrumb{	
+.page-template-page-formacao ul.breadcrumb{	
     background-image: none;	
     padding: 5px 0px;	
 }	
-.formacao-area-template .filter-select{	
+.page-template-page-formacao .filter-select{	
     font-size: 90px;	
     font-weight: bold;	
     font-stretch: normal;	
@@ -2309,7 +2309,7 @@ section.relacionados{
     letter-spacing: -3px;	
     color: #ffffff;	
 }	
-.formacao-area-template .filter-select .select-location{	
+.page-template-page-formacao .filter-select .select-location{	
     color:#FFFFFF;	
     background-image: url(img/filter-arrow.svg);	
     background-repeat: no-repeat;	
@@ -2318,7 +2318,7 @@ section.relacionados{
     border-bottom: 5px solid #242424;	
     cursor: pointer;	
 }	
-.formacao-area-template .filter-select .select-location.unselected{	
+.page-template-page-formacao .filter-select .select-location.unselected{	
     color: #242424;	
 }	
 .filter-result{	
@@ -2328,12 +2328,23 @@ section.relacionados{
 .filter-result .course-box{	
     height:360px;	
     display: block;	
-    color: #000000;	
     background-size: cover;	
     padding: 40px;	
     margin-bottom: 40px;	
     background-position: center;	
 }	
+.filter-result .course-box.text-white {	
+    color:#FFFFFF;
+}
+.filter-result .course-box.text-white:hover{	
+    color:#FFFFFF !important;
+}
+.filter-result .course-box.text-black{	
+    color:#000000;
+}
+.filter-result .course-box.text-black:hover{	
+    color:#000000 !important;
+}
 .filter-result .course-text{	
     position: absolute;	
     bottom: 40px;	
@@ -2348,7 +2359,7 @@ section.relacionados{
     line-height: 1.43;	
     letter-spacing: normal;	
     margin-bottom: 8px;	
-    color: #000000;	
+    text-transform: uppercase;
 }	
 .course-text .course-title{	
     font-size: 30px;	
@@ -2365,7 +2376,6 @@ section.relacionados{
     font-style: normal;	
     line-height: 1.75;	
     letter-spacing: -0.63px;	
-    color: #000000;	
 }	
 .side-filter{	
     position: fixed;	
