@@ -133,8 +133,15 @@ $localizacao_formacao = get_field('localizacao');
                 ?>                   
             </div>
         
-            <div class="cols <?php echo $col_drop; ?>">        
-                <div class="inner"><?php echo $dia_formacao_ini;?> <?php echo $mes_ini_texto; ?> - <?php echo $dia_formacao_fim;?> <?php echo $mes_fim_texto;?></div>
+            <div class="cols <?php echo $col_drop; ?>"> 
+                <?php
+                if ($data_ini==$data_fim){
+                    $mes_ini_texto = getMes($formacao_format_ini->format('m'));
+                    echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.'</div>';
+                }else{
+                    echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.' - '.$dia_formacao_fim.' '.$mes_fim_texto.'</div>';
+                }
+                ?>       
                 <div class="drop-inner" style="display:none;">
                     <ul>
                         <?php 
@@ -142,7 +149,7 @@ $localizacao_formacao = get_field('localizacao');
                                 $data_formacao = DateTime::createFromFormat('d/m/Y', $row_datas);
                                 $dia_formacao_drop = $data_formacao->format('d');
                                 $mes_formacao_texto = getMes($data_formacao->format('m'));
-
+                                
                                 echo '<li>'.$dia_formacao_drop.' '.$mes_formacao_texto.'</li>';
                             }
                         ?>
