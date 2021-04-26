@@ -1770,13 +1770,14 @@ section.programa p.list-title{
     letter-spacing: -0.56px;	
     color: #ffffff;	
 }	
-section.programa ul{	
+section.programa ul{
+    position: relative;	
     padding-left: 0px;	
     list-style: none;	
     margin-bottom: 30px;	
 }		
 section.programa ul li{	
-     font-size: 18px;	
+    font-size: 18px;	
     font-weight: normal;	
     font-stretch: normal;	
     font-style: normal;	
@@ -1788,7 +1789,7 @@ section.programa ul li{
 section.programa ul li:before{	
     content: "•";	
     position: absolute;	
-    left: 25px;	
+    left: 11px;
 }	
 section.programa .block-formacao{	
     margin-bottom: 50px;	
