@@ -1,12 +1,12 @@
 <section class="relacionados">
     <div class="container">
         <div class="row reveal-block">
-            <div class="col-md-12 col-sm-10 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">
                 <h2>Relacionados</h2>
             </div>
         </div>
         <div class="row reveal-block">
-            <div class="col-md-12 col-sm-10 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">
                 <div class="related-header">
                     <h3>Formação</h3>
                     <a href="#">Ver todas</a>
@@ -59,7 +59,7 @@
                     ?>
         </div>
         <div class="row">
-            <div class="col-md-12 col-sm-10 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">
                 <div class="row row-related reveal-block">
                     <div class="col-md-6 ">
                         <div class="related-header">
@@ -116,7 +116,7 @@
                                                         $titulo_relacionado_entrevista = get_the_title( $entrevistas_row->ID );
                                                         $imagem_relacionado_entrevista = get_field( 'home_image_small', $entrevistas_row->ID );
                                         ?>
-                                    <div class="col-sm-6">
+                                    <div class="col-md-3 col-sm-6">
                                         <div class="related-card">
                                             <div class="related-card-image-wrap">
                                                 <img class="related-card-img"
@@ -143,7 +143,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 col-sm-10 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">
                 <div class="row row-related reveal-block">
                     <div class="col-md-12">
                         <div class="related-header">
@@ -151,7 +151,7 @@
                             <a href="#">Ver todos</a>
                         </div>
                         <div class="row reveal-block">
-                            <div class="col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="related-card">
                                     <div class="related-card-image-wrap">
                                         <img class="related-card-img"
@@ -164,7 +164,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="related-card">
                                     <div class="related-card-image-wrap">
                                         <img class="related-card-img"
@@ -177,7 +177,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="related-card">
                                     <div class="related-card-image-wrap">
                                         <img class="related-card-img"
@@ -190,7 +190,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-md-3 col-sm-6">
                                 <div class="related-card">
                                     <div class="related-card-image-wrap">
                                         <img class="related-card-img"
@@ -209,7 +209,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12 col-sm-10 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0 col-sm-10 col-sm-offset-1">
                 <div class="row row-related reveal-block">
                     <div class="col-md-6">
                         <div class="related-header">

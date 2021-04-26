@@ -147,15 +147,15 @@ get_header();
                 }
                 ?>
         <div class="row">
-            <div class="col-md-4 col-sm-11 col-sm-offset-1"><small
+            <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1"><small
                     class="text-muted reveal-block"><?php echo $muted_text_visao_geral; ?></small>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 col-sm-11 col-sm-offset-1">
+            <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1">
                 <h2 class="intro reveal-block"><?php echo $title_visao_geral; ?></h2>
             </div>
-            <div class="col-md-8 col-sm-11 col-sm-offset-1">
+            <div class="col-md-8 col-md-offset-0 col-sm-11 col-sm-offset-1">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text-block-container">
@@ -182,7 +182,7 @@ get_header();
         </div>
 
         <div class="row certificacao is-flex v-center reveal-block">
-            <div class="col-md-4 pad0 col-sm-5 col-sm-offset-1">
+            <div class="col-md-4 col-md-offset-0 pad0 col-sm-5 col-sm-offset-1">
                 <img src="<?php echo get_template_directory_uri(); ?>/img/bitmap@2x.png">
             </div>
             <div class="col-md-8 col-sm-5 col-sm-offset-0">
@@ -199,12 +199,12 @@ get_header();
 <section class="programa bg-black">
     <div class="container">
         <div class="row reveal-block">
-            <div class="col-md-12 col-sm-11 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0  col-sm-11 col-sm-offset-1">
                 <h1>Programa</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-sm-11 col-sm-offset-1 col-offset-right-1">
+            <div class="col-md-3 col-md-offset-0 col-sm-11 col-sm-offset-1 col-offset-right-1">
                 <?php 
                         $programa = get_field('programa');
                         if( $programa ){
@@ -213,7 +213,7 @@ get_header();
                         ?>
                 <p class="reveal-block"><?php echo $texto_apresentacao; ?></p>
             </div>
-            <div class="col-md-8 col-sm-11 col-sm-offset-1">
+            <div class="col-md-8 col-md-offset-0  col-sm-11 col-sm-offset-1">
                 <?php
                         $programa = get_field('programa');
                         if( $programa ){
@@ -248,10 +248,10 @@ get_header();
             </div>
         </div>
         <div class="row ferramentas">
-            <div class="col-md-12 col-sm-11 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0  col-sm-11 col-sm-offset-1">
                 <h3 class="reveal-block"><?php echo get_field('titulo_ferramentas'); ?></h3>
             </div>
-            <div class="col-md-12 col-sm-11 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0   col-sm-11 col-sm-offset-1">
                 <div class="row grid-sp-40 logos-grid reveal-block">
                     <?php
                             $ferramentas = get_field('ferramentas_de_trabalho');
@@ -326,13 +326,13 @@ get_header();
                     }
                 ?>
         <div class="row">
-            <div class="col-md-12 col-sm-11 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0   col-sm-11 col-sm-offset-1">
                 <small class="text-muted reveal-block">PROJETO 360º - <?php echo $titulo_projecto; ?></small>
             </div>
-            <div class="col-md-4 col-sm-11 col-sm-offset-1">
+            <div class="col-md-4 col-md-offset-0   col-sm-11 col-sm-offset-1">
                 <h2 class="intro reveal-block"><?php echo $subtitulo_projecto; ?></h2>
             </div>
-            <div class="col-md-8 col-sm-11 col-sm-offset-1">
+            <div class="col-md-8 col-md-offset-0  col-sm-11 col-sm-offset-1">
                 <div class="row sp-60">
                     <div class="col-md-12">
                         <p class="reveal-block"><?php echo $texto_projecto; ?></p>
@@ -471,12 +471,12 @@ jQuery(document).ready(function() {
 <section class="course-faq">
     <div class="container">
         <div class="row reveal-block">
-            <div class="col-md-12 col-sm-11 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0  col-sm-11 col-sm-offset-1">
                 <h1 class="text-white">Perguntas frequentes</h1>
             </div>
         </div>
         <div class="row row-faq reveal-block">
-            <div class="col-md-6 col-sm-11 col-sm-offset-1">
+            <div class="col-md-6 col-md-offset-0  col-sm-11 col-sm-offset-1">
                 <?php
                         $rows_faq = get_field('faq' );
                         if( $rows_faq ){                           
