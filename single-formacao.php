@@ -394,7 +394,7 @@ $localizacao_formacao = get_field('localizacao');
                         ?>
         </div>
         <div class="video-vimeo">
-            <iframe src="https://player.vimeo.com/video/333126047" width="100%" height="640" frameborder="0"
+            <iframe src="<?php echo $video_projecto;?>" width="100%" height="640" frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
