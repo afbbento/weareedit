@@ -15,6 +15,7 @@ if( $tipoFormacao ){
         $tipo_formacao_icon = get_field( 'icon', $tipo_formacao_row->ID );
         $tipo_formacao_class = get_field( 'class', $tipo_formacao_row->ID );
         $tipo_formacao_icon_color = get_field( 'icon_colorido', $tipo_formacao_row->ID );
+        $tipo_formacao_certificado = get_field( 'imagem_certificado', $tipo_formacao_row->ID );
     }
 }
 $area_formacao = get_field('area_formacao');
@@ -221,7 +222,7 @@ $localizacao_formacao = get_field('localizacao');
 
         <div class="row certificacao is-flex v-center reveal-block">
             <div class="col-md-4 col-md-offset-0 pad0 col-sm-5 col-sm-offset-1">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/bitmap@2x.png">
+                <img src="<?php echo $tipo_formacao_certificado; ?>">
             </div>
             <div class="col-md-8 col-sm-5 col-sm-offset-0">
                 <h4>Curso certificado pela DGERT</h4>
