@@ -136,11 +136,13 @@ $localizacao_formacao = get_field('localizacao');
         
             <div class="cols <?php echo $col_drop; ?>"> 
                 <?php
-                if ($data_ini==$data_fim){
-                    $mes_ini_texto = getMes($formacao_format_ini->format('m'));
-                    echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.'</div>';
-                }else{
-                    echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.' - '.$dia_formacao_fim.' '.$mes_fim_texto.'</div>';
+                if( $rows_horarios ){
+                    if ($data_ini==$data_fim){
+                        $mes_ini_texto = getMes($formacao_format_ini->format('m'));
+                        echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.'</div>';
+                    }else{
+                        echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.' - '.$dia_formacao_fim.' '.$mes_fim_texto.'</div>';
+                    }
                 }
                 ?>       
                 <div class="drop-inner" style="display:none;">
