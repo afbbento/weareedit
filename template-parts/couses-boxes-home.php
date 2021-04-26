@@ -6,7 +6,6 @@
 
                     <?php
                     
-                    if(get_field('slider_cursos')){
                         $date = date('Ymd');
                         $meta_query = array('relation' => 'AND',
                             array(
@@ -31,10 +30,8 @@
                             'meta_key'          => 'home_data',
                             'order'             => 'ASC'
                         ));
-                        //$posts_slider = $the_query->get_posts();
-                        
-                         
-                        if ( $the_query->have_posts() ) { 
+                       
+                       if ( $the_query->have_posts() ) { 
                             while ( $the_query->have_posts() ) {
                                 $the_query->the_post(); 
                                  
@@ -43,8 +40,7 @@
                                 $tipoFormacao = get_field('tipo_formacao');
                                 $icon = get_field('icon',$tipoFormacao[0]);
                                 $cssClassType = get_field('class',$tipoFormacao[0]);
-
-                            
+             
 
                                 if( $tipoFormacao ){
                                     foreach( $tipoFormacao as $tipo_formacao_row ){
@@ -84,13 +80,10 @@
                         </a>
                     </div>
                     <?php
-
                             }
                             wp_reset_postdata(); 
                         }
-                    }
                     ?>
-                    
                 </div>
             </div>
             <div class="swiper-button-next"></div>

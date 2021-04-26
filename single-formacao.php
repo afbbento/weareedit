@@ -6,18 +6,38 @@
 
 
 get_header();
+$tipoFormacao = get_field('tipo_formacao');
+if( $tipoFormacao ){
+    foreach( $tipoFormacao as $tipo_formacao_row ){
+        $link_tipo_formacao = get_permalink( $tipo_formacao_row->ID );
+        $titulo_tipo_formacao = get_the_title( $tipo_formacao_row->ID );
+        $tipo_formacao_bg = get_field( 'imagem_background', $tipo_formacao_row->ID );
+        $tipo_formacao_icon = get_field( 'icon', $tipo_formacao_row->ID );
+        $tipo_formacao_class = get_field( 'class', $tipo_formacao_row->ID );
+        $tipo_formacao_icon_color = get_field( 'icon_colorido', $tipo_formacao_row->ID );
+    }
+}
+$area_formacao = get_field('area_formacao');
+    if( $area_formacao ){     
+        foreach($area_formacao as $area_row){
+            $titulo_area = get_the_title( $area_row->ID );
+        }
+    }
 
+$localizacao_formacao = get_field('localizacao');
+    if( $localizacao_formacao ){     
+        foreach($localizacao_formacao as $localizacao_row){
+            $localizacao_formacao = get_the_title( $localizacao_row->ID );
+        }
+    }
 ?>
 <div class="head">
     <div class="container">
-
-
-
         <div class="col-md-12 col-sm-10 col-sm-offset-1">
-            <ul class="breadcrumb reveal-block text-yellow">
-                <li class="logo-formacao"><img src="<?php echo get_template_directory_uri(); ?>/img/formacao.svg"></li>
-                <li><a href="#">Formação</a></li>
-                <li><a href="#">Design</a></li>
+            <ul class="breadcrumb reveal-block class-<?php echo $tipo_formacao_class;?>">
+                <li class="logo-formacao"><img src="<?php echo $tipo_formacao_icon_color['url']; ?>"></li>
+                <li><a href="#"><?php echo $titulo_tipo_formacao; ?></a></li>
+                <li><a href="#"><?php echo $titulo_area; ?></a></li>
             </ul>
             <h1 class="reveal-block"><?php the_field('titulo'); ?></h1>
         </div>
@@ -39,7 +59,7 @@ get_header();
                 ?>
                     <div class="col-xs-3 col-md-2">
                         <label>local</label>
-                        <div class="value">Lisboa</div>
+                        <div class="value"><?php echo $localizacao_formacao; ?></div>
                     </div>
                     <div class="col-xs-3 col-md-2">
                         <label>duração</label>
@@ -62,67 +82,78 @@ get_header();
     <!--INFO BAR-->
     <div id="info_bar" class="info_bar_container">
         <div class="formacao-info-bar reveal-block">
-            <div class="cols drop">
-
-                <?php 
-                        $rows_horarios = get_field('horario_formacao' );
-                        if( $rows_horarios ){
-                            $first_row = $rows_horarios[0];
-                            $first_row_title = $first_row['horario'];
-                            
-                            foreach( $first_row_title as $related_post ){
-                                echo '<div class="inner">'.get_the_title( $related_post->ID ).'</div>
-                                    <div class="drop-inner" style="display:none;">
-                                        <ul>';                        
-                            } 
-                         
-                            
-                            while( have_rows('horario_formacao') ) {
-                            the_row();
-
-                                $horario = get_sub_field('horario');
-                                
-                                foreach( $horario as $row_horario ){
-                                        echo "<li>".get_the_title( $row_horario->ID )."</li>";
-                                }
-                            }                 
-                        }
-                        ?>
-                </ul>
-            </div>
-        </div>
-        <div class="cols drop">
-            <?php 
-                    $rows_horarios = get_field('horario_formacao' );
+            <?php
+                $rows_horarios = get_field('horario_formacao' );
+                $horarios_count = count(get_field('horario_formacao'));
+                if ($horarios_count>1){
+                    $col_drop = 'drop';
+                }else{
+                    $col_drop = '';
+                }
+            ?>
+            <div class="cols <?php echo $col_drop; ?>">
+                <?php         
                     if( $rows_horarios ){
+                        
+                        $first_row = $rows_horarios[0];
+                        $first_row_title = $first_row['horario'];
+                        
+                        $data_ini = $first_row['data'];
+                        $data_fim = $first_row['data_fim'];
+                        
+                        $formacao_format_ini = DateTime::createFromFormat('d/m/Y', $data_ini);
+                        $formacao_format_fim = DateTime::createFromFormat('d/m/Y', $data_fim);
+                        $dia_formacao_ini = $formacao_format_ini->format('d');
+                        $dia_formacao_fim = $formacao_format_fim->format('d');
+                        
+                        $mes_ini_texto = substr(getMes($formacao_format_ini->format('m')), 0, 3);
+                        $mes_fim_texto = substr(getMes($formacao_format_fim->format('m')), 0, 3);
 
-                        $first_date = $rows_horarios[0]['data'];
-
+                        foreach( $first_row_title as $row_data_post ){                            
+                            echo '<div class="inner">'.get_the_title( $row_data_post->ID ).'</div>';                  
+                        } 
+                        
+                        $datas_formacao = array();
+                        echo '<div class="drop-inner" style="display:none;">';
+                        echo '<ul>';
                         while( have_rows('horario_formacao') ) {
-                        the_row();
-
-                        //echo $sub_value = get_sub_field('data');
+                            the_row();
                             $horario = get_sub_field('horario');
+                            array_push($datas_formacao, get_sub_field('data'));
+                            
                             
                             foreach( $horario as $row_horario ){
-                                //echo get_the_title( $row_horario->ID );
+                                
+                                    echo "<li>".get_the_title( $row_horario->ID )."</li>";
                             }
-                            
                         }                 
+                        echo '</ul>';
+                        echo '</div>';
                     }
-                    ?>
-            <div class="inner">10 Mar - 23 Jul</div>
-            <div class="drop-inner" style="display:none;">
-                <ul>
-                    <li>10 Mar</li>
-                    <li>23 Jul</li>
-                </ul>
+                ?>                   
             </div>
-        </div>
-        <div class="cols download-icon">
-            <div class="inner"><a href="<?php echo $info_documento; ?>">Descarregar programa </a></div>
-        </div>
-        <div class="cols col-btn">Pedir informação</div>
+        
+            <div class="cols <?php echo $col_drop; ?>">        
+                <div class="inner"><?php echo $dia_formacao_ini;?> <?php echo $mes_ini_texto; ?> - <?php echo $dia_formacao_fim;?> <?php echo $mes_fim_texto;?></div>
+                <div class="drop-inner" style="display:none;">
+                    <ul>
+                        <?php 
+                            foreach( $datas_formacao as $row_datas ){
+                                $data_formacao = DateTime::createFromFormat('d/m/Y', $row_datas);
+                                $dia_formacao_drop = $data_formacao->format('d');
+                                $mes_formacao_texto = getMes($data_formacao->format('m'));
+
+                                echo '<li>'.$dia_formacao_drop.' '.$mes_formacao_texto.'</li>';
+                            }
+                        ?>
+                    
+                    </ul>
+                </div>
+            </div>
+            <div class="cols download-icon">
+                <div class="inner"><a href="<?php echo $info_documento; ?>">Descarregar programa </a></div>
+            </div>
+            <div class="cols col-btn class-<?php echo $tipo_formacao_class;?>">Pedir informação</div>
     </div>
 </div>
 </div>
@@ -305,8 +336,7 @@ get_header();
                     </div>
                     <div class="col-md-6 col-center">
                         <div class="center-cell">
-                            <a href="<?php echo $banner_link_url; ?>"
-                                class="btn btn-yellow"><?php echo $banner_link_title; ?></a>
+                            <a href="<?php echo $banner_link_url; ?>" class="btn btn-<?php echo $tipo_formacao_class;?>"><?php echo $banner_link_title; ?></a>
                         </div>
                     </div>
                 </div>
@@ -364,7 +394,7 @@ get_header();
                         ?>
         </div>
         <div class="video-vimeo">
-            <iframe src="https://player.vimeo.com/video/333126047" width="100%" height="640" frameborder="0"
+            <iframe src="<?php echo $video_projecto;?>" width="100%" height="640" frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
@@ -545,7 +575,7 @@ jQuery(document).ready(function() {
                         <div class="center-cell">
                             <h3>Ajudamos-te a escolher o curso certo</h3>
                             <p>Estamos disponíveis para te orientar e ajudar-te a tomar a melhor decisão.</p>
-                            <a href="#" class="btn btn-yellow">Enviar mensagem</a>
+                            <a href="#" class="btn btn-<?php echo $tipo_formacao_class;?>">Enviar mensagem</a>
                         </div>
                     </div>
                 </div>

@@ -174,3 +174,22 @@ function getMes($mes){
 
 return $mes;
 }
+function getTipoClass(){
+
+
+$tipoFormacao = get_field('tipo_formacao');
+if( $tipoFormacao ){
+    foreach( $tipoFormacao as $tipo_formacao_row ){
+        $link_tipo_formacao = get_permalink( $tipo_formacao_row->ID );
+        $titulo_tipo_formacao = get_the_title( $tipo_formacao_row->ID );
+        $tipo_formacao_bg = get_field( 'imagem_background', $tipo_formacao_row->ID );
+        $tipo_formacao_icon = get_field( 'icon', $tipo_formacao_row->ID );
+        $tipo_formacao_class = get_field( 'class', $tipo_formacao_row->ID );
+        
+        $tipo_formacao['titulo'] = $titulo_tipo_formacao;
+        $tipo_formacao['class'] = $tipo_formacao_class;
+    }
+}
+
+return $tipo_formacao;
+}

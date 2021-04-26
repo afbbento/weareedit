@@ -62,7 +62,7 @@ $( ".primaryNav__list___1wlmQ a" ).click(function(event) {
     $( ".navigation__secondary___13rln .panel__nav___3mAkk .panel___3-Osv" ).eq( menu_number ).fadeIn("fast");
 });
 
-$( ".secondaryNav__list___24U7o a" ).click(function(event) {
+$( ".panel__secondary___10KZU .secondaryNav__list___24U7o a" ).click(function(event) {
     event.preventDefault();
 
     if ($('html').hasClass('mobile')){

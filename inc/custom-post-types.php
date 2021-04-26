@@ -8,44 +8,6 @@
  * @author edit
  */
 
-function register_cpt_slider() {
-
-    $labels = array( 
-        'name' => _x( 'Slider', 'slider' ),
-        'singular_name' => _x( 'Slider item', 'slider' ),
-        'add_new' => _x( 'Adicionar Slide', 'slider' ),
-        'add_new_item' => _x( 'Adicionar Slide', 'slider' ),
-        'edit_item' => _x( 'Editar Slide', 'slider' ),
-        'new_item' => _x( 'Novo Slide', 'slider' ),
-        'view_item' => _x( 'Ver Slide', 'slider' ),
-        'search_items' => _x( 'Procurar Slide', 'slider' ),
-        'not_found' => _x( 'Nenhum Slide encontrado', 'slider' ),
-        'not_found_in_trash' => _x( 'Nenhum Slide encontrado no lixo', 'slider' ),
-        'parent_item_colon' => _x( 'Slide Pai:', 'slider' ),
-        'menu_name' => _x( 'Slider', 'slider' ),
-    );
-
-    $args = array( 
-        'labels' => $labels,
-        'hierarchical' => true,
-        'supports' => array('title', 'page-attributes', 'revisions'),
-        'taxonomies' => array('category','post_tag'),
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'menu_position' => 20,
-        'hierarchical' => true,
-        'show_in_nav_menus' => true,
-        'publicly_queryable' => true,
-        'exclude_from_search' => false,
-        'has_archive' => false,
-        'query_var' => true,
-        'can_export' => true,
-        'capability_type' => 'page'
-    );
-
-    register_post_type( 'slider', $args );
-}
 
 function register_cpt_noticias() {
 
@@ -560,83 +522,6 @@ function register_cpt_clients360() {
     register_post_type( 'clientes360', $args );
 }
 
-function register_cpt_homeblocks() {
-
-    $labels = array( 
-        'name' => _x( 'Blocos', 'homeblocks' ),
-        'singular_name' => _x( 'Bloco', 'homeblocks' ),
-        'add_new' => _x( 'Adicionar Bloco', 'homeblocks' ),
-        'add_new_item' => _x( 'Adicionar Bloco', 'homeblocks' ),
-        'edit_item' => _x( 'Editar Bloco', 'homeblocks' ),
-        'new_item' => _x( 'Nova Bloco', 'homeblocks' ),
-        'view_item' => _x( 'Ver Bloco', 'homeblocks' ),
-        'search_items' => _x( 'Procurar Bloco', 'homeblocks' ),
-        'not_found' => _x( 'Nenhum Bloco encontrado', 'homeblocks' ),
-        'not_found_in_trash' => _x( 'Nenhum Bloco encontrado no lixo', 'homeblocks' ),
-        'parent_item_colon' => _x( 'Bloco Pai:', 'homeblocks' ),
-        'menu_name' => _x( 'Blocos Homepage', 'homeblocks' ),
-    );
-
-    $args = array( 
-        'labels' => $labels,
-        'hierarchical' => true,
-        'supports' => array('title', 'page-attributes', 'revisions'),
-        'taxonomies' => array('category','post_tag'),
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'menu_position' => 20,
-        'hierarchical' => true,
-        'show_in_nav_menus' => true,
-        'publicly_queryable' => true,
-        'exclude_from_search' => false,
-        'has_archive' => false,
-        'query_var' => true,
-        'can_export' => true,
-        'capability_type' => 'page'
-    );
-
-    register_post_type( 'homeblocks', $args );
-}
-
-function register_cpt_homenews() {
-
-    $labels = array( 
-        'name' => _x( 'Noticias', 'homenews' ),
-        'singular_name' => _x( 'Noticia', 'homenews' ),
-        'add_new' => _x( 'Adicionar Noticia', 'homenews' ),
-        'add_new_item' => _x( 'Adicionar Noticia', 'homenews' ),
-        'edit_item' => _x( 'Editar Noticia', 'homenews' ),
-        'new_item' => _x( 'Nova Noticia', 'homenews' ),
-        'view_item' => _x( 'Ver Noticia', 'homenews' ),
-        'search_items' => _x( 'Procurar Noticia', 'homenews' ),
-        'not_found' => _x( 'Nenhuma Noticia encontrada', 'homenews' ),
-        'not_found_in_trash' => _x( 'Nenhuma Noticia encontrada no lixo', 'homenews' ),
-        'parent_item_colon' => _x( 'Noticia Pai:', 'homenews' ),
-        'menu_name' => _x( 'Noticias Homepage', 'homenews' ),
-    );
-
-    $args = array( 
-        'labels' => $labels,
-        'hierarchical' => true,
-        'supports' => array('title', 'page-attributes', 'revisions'),
-        'taxonomies' => array('category','post_tag'),
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'menu_position' => 20,
-        'hierarchical' => true,
-        'show_in_nav_menus' => true,
-        'publicly_queryable' => true,
-        'exclude_from_search' => false,
-        'has_archive' => false,
-        'query_var' => true,
-        'can_export' => true,
-        'capability_type' => 'page'
-    );
-
-    register_post_type( 'homenews', $args );
-}
 
 function register_cpt_blog() {
 
@@ -716,143 +601,7 @@ function register_cpt_categorias_blog() {
     register_post_type( 'categorias_blog', $args );
 }
 
-function register_cpt_recrutamento() {
-
-    $labels = array( 
-        'name' => _x( 'Recrutamentos', 'recrutamento' ),
-        'singular_name' => _x( 'Recrutamento', 'recrutamento' ),
-        'add_new' => _x( 'Adicionar Recrutamento', 'recrutamento' ),
-        'add_new_item' => _x( 'Adicionar Recrutamento', 'recrutamento' ),
-        'edit_item' => _x( 'Editar Recrutamento', 'recrutamento' ),
-        'new_item' => _x( 'Novo Recrutamento', 'recrutamento' ),
-        'view_item' => _x( 'Ver Recrutamento', 'recrutamento' ),
-        'search_items' => _x( 'Procurar Recrutamento', 'recrutamento' ),
-        'not_found' => _x( 'Nenhum Recrutamento encontrado', 'recrutamento' ),
-        'not_found_in_trash' => _x( 'Nenhuma Recrutamento encontrado no lixo', 'recrutamento' ),
-        'parent_item_colon' => _x( 'Recrutamento Pai:', 'recrutamento' ),
-        'menu_name' => _x( 'Recrutamento', 'recrutamento' ),
-    );
-
-    $args = array( 
-        'labels' => $labels,
-        'hierarchical' => true,
-        'supports' => array('title', 'page-attributes', 'revisions'),
-        'taxonomies' => array('category','post_tag'),
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'menu_position' => 20,
-        'hierarchical' => true,
-        'show_in_nav_menus' => true,
-        'publicly_queryable' => true,
-        'exclude_from_search' => false,
-        'has_archive' => false,
-        'query_var' => true,
-        'can_export' => true,
-        'capability_type' => 'page'
-    );
-
-    register_post_type( 'recrutamento', $args );
-}
-
-function register_cpt_empresa_recrutamento() {
-
-    $labels = array( 
-        'name' => _x( 'Empresas Recrutamento', 'empresa_recrutamento' ),
-        'singular_name' => _x( 'Empresa Recrutamento', 'empresa_recrutamento' ),
-        'add_new' => _x( 'Adicionar Empresa Recrutamento', 'empresa_recrutamento' ),
-        'add_new_item' => _x( 'Adicionar Empresa Recrutamento', 'empresa_recrutamento' ),
-        'edit_item' => _x( 'Editar Empresa Recrutamento', 'empresa_recrutamento' ),
-        'new_item' => _x( 'Nova Empresa Recrutamento', 'empresa_recrutamento' ),
-        'view_item' => _x( 'Ver Empresa Recrutamento', 'empresa_recrutamento' ),
-        'search_items' => _x( 'Procurar Empresa Recrutamento', 'empresa_recrutamento' ),
-        'not_found' => _x( 'Nenhuma Empresa Recrutamento encontrado', 'empresa_recrutamento' ),
-        'not_found_in_trash' => _x( 'Nenhuma Empresa Recrutamento encontrado no lixo', 'empresa_recrutamento' ),
-        'parent_item_colon' => _x( 'Empresa Recrutamento Pai:', 'empresa_recrutamento' ),
-        'menu_name' => _x( 'Empresa Recrutamento', 'empresa_recrutamento' ),
-    );
-
-    $args = array( 
-        'labels' => $labels,
-        'hierarchical' => true,
-        'supports' => array('title', 'page-attributes', 'revisions'),
-        'taxonomies' => array('category','post_tag'),
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'menu_position' => 20,
-        'hierarchical' => true,
-        'show_in_nav_menus' => true,
-        'publicly_queryable' => true,
-        'exclude_from_search' => false,
-        'has_archive' => false,
-        'query_var' => true,
-        'can_export' => true,
-        'capability_type' => 'page'
-    );
-
-    register_post_type( 'empresa_recrutamento', $args );
-}
-function register_cpt_coordenadores() {
-
-    $labels = array( 
-        'name' => _x( 'Coordenadores', 'coordenadores' ),
-        'singular_name' => _x( 'Coordenador', 'coordenadores' ),
-        'add_new' => _x( 'Adicionar coordenador', 'coordenadores' ),
-        'add_new_item' => _x( 'Adicionar coordenador', 'coordenadores' ),
-        'edit_item' => _x( 'Editar coordenador', 'coordenadores' ),
-        'new_item' => _x( 'Novo coordenador', 'coordenadores' ),
-        'view_item' => _x( 'Ver coordenador', 'coordenadores' ),
-        'search_items' => _x( 'Procurar coordenador', 'coordenadores' ),
-        'not_found' => _x( 'Nenhum coordenador encontrado', 'coordenadores' ),
-        'not_found_in_trash' => _x( 'Nenhuma NL encontrada no lixo', 'coordenadores' ),
-        'parent_item_colon' => _x( 'Coordenador Pai:', 'coordenadores' ),
-        'menu_name' => _x( 'Coordenadores', 'coordenadores' ),
-    );
-
-    $args = array( 
-        'labels' => $labels,
-        'hierarchical' => true,
-        'supports' => array('title', 'page-attributes', 'revisions'),
-        'public' => true,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'menu_position' => 20,
-        'hierarchical' => true,
-        'show_in_nav_menus' => true,
-        'publicly_queryable' => true,
-        'exclude_from_search' => false,
-        'has_archive' => false,
-        'query_var' => true,
-        'can_export' => true,
-        'capability_type' => 'page'
-    );
-    $labels = array(
-        'name' => _x( 'Área', 'taxonomy general name' ),
-        'singular_name' => _x( 'Área', 'taxonomy singular name' ),
-        'search_items' =>  __( 'Search Types' ),
-        'all_items' => __( 'All Área' ),
-        'parent_item' => __( 'Parent Área' ),
-        'parent_item_colon' => __( 'Parent Área:' ),
-        'edit_item' => __( 'Edit Área' ), 
-        'update_item' => __( 'Update Área' ),
-        'add_new_item' => __( 'Add New Área' ),
-        'new_item_name' => __( 'New Área Name' ),
-        'menu_name' => __( 'Áreas' ),
-      ); 	
-     
-      register_taxonomy('area',array('coordenadores'), array(
-        'hierarchical' => true,
-        'labels' => $labels,
-        'show_ui' => true,
-        'show_admin_column' => true,
-        'query_var' => true,
-        'rewrite' => array( 'slug' => 'area' ),
-      ));
-    register_post_type( 'coordenadores', $args );
-}
 function register_custom_post_types() {
-    register_cpt_slider();
     register_cpt_noticias();
 
     register_cpt_formacao();
@@ -875,15 +624,9 @@ function register_custom_post_types() {
     register_cpt_blog();
     register_cpt_categorias_blog();
     
-    register_cpt_homeblocks();
-    register_cpt_localizacoes();
-    
-    //Recrutamento
-    register_cpt_recrutamento();
-    register_cpt_empresa_recrutamento();
 
-    //Coordenadores
-    register_cpt_coordenadores();
+    register_cpt_localizacoes();
+
    
 }
 

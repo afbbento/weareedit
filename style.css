@@ -321,7 +321,32 @@ a.btn{
 section.bg-light-grey h2:not(.info-banner h2),	
 section.bg-light-grey h4{	
     color: #000000;	
-}	
+}
+.single-formacao #page.curso section.programa .row.info-banner .btn{
+    background-color: #ffdd06;
+    color: #000000;
+    border-color: #ffdd06;
+}
+.btn-remote-learning{
+    background-color: #0090eb;
+    color: #FFFFFF;
+    border-color: #0090eb;
+}
+.btn-curso-intensivo{
+    background-color: #ec8172;
+    color: #000000;
+    border-color: #ec8172;
+}
+.btn-workshop{
+    background-color: #60c5b3;
+    color: #FFFFFF;
+    border-color: #60c5b3;
+}
+.btn-bootcamp{
+    background-color: #f92869;
+    color: #FFFFFF;
+    border-color: #f92869;
+}
 section.bg-light-grey p{	
     color: #717171;	
 }	
@@ -1151,7 +1176,43 @@ a.headerDesktop__inCompany:hover{
     background-color: #ffdd06;	
     padding: 0;	
     text-align: center;	
-}	
+}
+.single-formacao .headerDesktop__contact{
+    display: none;
+}
+.single-formacao .headerDesktop__inCompany{
+    right: 40px;
+}
+.single-formacao .border-animation-center:after{
+    border-bottom: solid 3px #0090eb;
+}
+.single-formacao #info_bar .col-btn.class-curso{
+    background-color: #ffdd06;
+}
+.single-formacao #info_bar .col-btn.class-remote-learning{
+    background-color: #0090eb;
+}
+.single-formacao #info_bar .col-btn.class-curso-intensivo{
+    background-color: #ec8172;
+}
+.single-formacao #info_bar .col-btn.class-workshop{
+    background-color: #60c5b3;
+}
+.single-formacao #info_bar .col-btn.class-bootcamp{
+    background-color: #f92869;
+}
+.single-formacao #page.remote-learning section.programa h4.border{
+    border-left: 3px solid #0090eb;
+}
+.single-formacao #page.curso-intensivo section.programa h4.border{
+    border-left: 3px solid #ec8172;
+}
+.single-formacao #page.workshop section.programa h4.border{
+    border-left: 3px solid #60c5b3;
+}
+.single-formacao #page.bootcamp section.programa h4.border{
+    border-left: 3px solid #f92869;
+}
 .formacao-info-bar .cols.drop.open:after{	
     width:100%;	
 }	
@@ -1534,11 +1595,23 @@ ul.breadcrumb li {
     display: inline;	
     font-size: 30px;	
     line-height: 30px;	
-    color: #ffdd06;	
 }	
-.breadcrumb.text-yellow a{	
+.breadcrumb.class-curso a{	
     color: #ffdd06;	
+}
+.breadcrumb.class-remote-learning a{	
+    color: #0090eb;	
+}
+.breadcrumb.class-curso-intensivo a{	
+    color: #ec8172;	
+}
+.breadcrumb.class-workshop a{	
+    color: #60c5b3;	
 }	
+.breadcrumb.class-bootcamp a{	
+    color: #f92869;	
+}	
+		
 ul.breadcrumb li.logo-formacao img {	
     transform: translateY(-2px);	
 }	
@@ -1550,11 +1623,24 @@ ul.breadcrumb li:nth-child(1)+li:before{
 }	
 ul.breadcrumb li+li:before {	
     padding: 0px 0 0 5px;	
-    color: #ffdd06;	
     content: "/\00a0";	
-}	
-ul.breadcrumb li a:hover {	
-    color: #ffdd06;	
+}
+ul.breadcrumb.class-curso li+li:before{
+    color: #ffdd06;
+}
+ul.breadcrumb.class-remote-learning li+li:before{
+    color: #0090eb;
+}
+ul.breadcrumb.class-curso-intensivo li+li:before{
+    color: #ec8172;	
+}
+ul.breadcrumb.class-workshop li+li:before{
+    color: #60c5b3;	
+}
+ul.breadcrumb.class-bootcamp li+li:before{
+    color: #f92869;	
+}		
+ul.breadcrumb li a:hover {		
     text-decoration: none;	
 }	
 ul.breadcrumb li a {	
@@ -1684,13 +1770,14 @@ section.programa p.list-title{
     letter-spacing: -0.56px;	
     color: #ffffff;	
 }	
-section.programa ul{	
+section.programa ul{
+    position: relative;	
     padding-left: 0px;	
     list-style: none;	
     margin-bottom: 30px;	
 }		
 section.programa ul li{	
-     font-size: 18px;	
+    font-size: 18px;	
     font-weight: normal;	
     font-stretch: normal;	
     font-style: normal;	
@@ -1702,7 +1789,7 @@ section.programa ul li{
 section.programa ul li:before{	
     content: "•";	
     position: absolute;	
-    left: 25px;	
+    left: 11px;
 }	
 section.programa .block-formacao{	
     margin-bottom: 50px;	
@@ -1748,8 +1835,18 @@ section.programa .block-formacao hr {
     transition: color 0.1s ease;	
 }	
 section.programa .video-vimeo{	
-    margin-bottom: -320px;	
+    margin-bottom: -320px;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;	
 }	
+section.programa .video-vimeo iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 .info-banner{	
     margin: 100px 0;	
 }	
@@ -1959,10 +2056,22 @@ section.relacionados h3{
     -moz-transition : all 500ms ease-out;	
     -o-transition : all 500ms ease-out;	
 }	
-.accordion-container .accordion-title.open::after {	
+.single-formacao #page.curso .accordion-container .accordion-title.open::after {	
     width: 100%;	
     border-bottom-color: #ffdd06;   	
+}
+.single-formacao #page.remote-learning .accordion-container .accordion-title.open:after{
+    border-bottom-color: #0090eb;   
+}
+.single-formacao #page.curso-intensivo .accordion-container .accordion-title.open:after{
+    border-bottom-color: #ec8172;   
 }	
+.single-formacao #page.workshop .accordion-container .accordion-title.open:after{
+    border-bottom-color: #60c5b3;   
+}
+.single-formacao #page.bootcamp .accordion-container .accordion-title.open:after{
+    border-bottom-color: #f92869;   
+}			
 .accordion-container .accordion-title{	
     background-image: url('img/mais.svg');	
     background-repeat: no-repeat;	
@@ -1989,7 +2098,24 @@ section.relacionados h3{
 .accordion-container .accordion-title:hover:after {	
     width: 100%;	
     border-bottom-color: #ffdd06;   	
-}	
+}
+.single-formacao #page.remote-learning .accordion-container .accordion-title.open:after,	
+.single-formacao #page.remote-learning .accordion-container .accordion-title:hover:after {
+    border-bottom-color: #0090eb;
+}
+.single-formacao #page.curso-intensivo .accordion-container .accordion-title.open:after,	
+.single-formacao #page.curso-intensivo .accordion-container .accordion-title:hover:after {
+    border-bottom-color: #ec8172;
+}
+.single-formacao #page.workshop .accordion-container .accordion-title.open:after,	
+.single-formacao #page.workshop .accordion-container .accordion-title:hover:after {
+    border-bottom-color: #60c5b3;
+}
+.single-formacao #page.bootcamp .accordion-container .accordion-title.open:after,	
+.single-formacao #page.bootcamp .accordion-container .accordion-title:hover:after {
+    border-bottom-color: #f92869;
+}
+				
 section.course-faq .row-faq {	
     margin: 50px 0;	
 }	
@@ -2181,11 +2307,11 @@ section.relacionados{
     background-color:#000000;	
     padding-bottom: 300px;	
 }	
-.formacao-area-template ul.breadcrumb{	
+.page-template-page-formacao ul.breadcrumb{	
     background-image: none;	
     padding: 5px 0px;	
 }	
-.formacao-area-template .filter-select{	
+.page-template-page-formacao .filter-select{	
     font-size: 90px;	
     font-weight: bold;	
     font-stretch: normal;	
@@ -2194,7 +2320,7 @@ section.relacionados{
     letter-spacing: -3px;	
     color: #ffffff;	
 }	
-.formacao-area-template .filter-select .select-location{	
+.page-template-page-formacao .filter-select .select-location{	
     color:#FFFFFF;	
     background-image: url(img/filter-arrow.svg);	
     background-repeat: no-repeat;	
@@ -2203,7 +2329,7 @@ section.relacionados{
     border-bottom: 5px solid #242424;	
     cursor: pointer;	
 }	
-.formacao-area-template .filter-select .select-location.unselected{	
+.page-template-page-formacao .filter-select .select-location.unselected{	
     color: #242424;	
 }	
 .filter-result{	
@@ -2213,12 +2339,23 @@ section.relacionados{
 .filter-result .course-box{	
     height:360px;	
     display: block;	
-    color: #000000;	
     background-size: cover;	
     padding: 40px;	
     margin-bottom: 40px;	
     background-position: center;	
 }	
+.filter-result .course-box.text-white {	
+    color:#FFFFFF;
+}
+.filter-result .course-box.text-white:hover{	
+    color:#FFFFFF !important;
+}
+.filter-result .course-box.text-black{	
+    color:#000000;
+}
+.filter-result .course-box.text-black:hover{	
+    color:#000000 !important;
+}
 .filter-result .course-text{	
     position: absolute;	
     bottom: 40px;	
@@ -2233,7 +2370,7 @@ section.relacionados{
     line-height: 1.43;	
     letter-spacing: normal;	
     margin-bottom: 8px;	
-    color: #000000;	
+    text-transform: uppercase;
 }	
 .course-text .course-title{	
     font-size: 30px;	
@@ -2250,7 +2387,6 @@ section.relacionados{
     font-style: normal;	
     line-height: 1.75;	
     letter-spacing: -0.63px;	
-    color: #000000;	
 }	
 .side-filter{	
     position: fixed;	
