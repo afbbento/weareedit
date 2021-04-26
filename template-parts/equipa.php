@@ -18,26 +18,26 @@
                     
                     ?>
 
-    <div class="col-md-3 col-sm-6 col-xs-10 col-xs-offset-1 col-sm-offset-0"">
+    <div class="col-md-3 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
         <a href=" <?php echo $link_elemento; ?>">
-        <div class="adaptImage reveal-block">
-            <div class="adaptImage__inner">
-                <div class="adaptImage__aspect" style="padding-bottom:145%;">
-                    <img class="adaptImage__image" src="<?php echo $foto['url']; ?>">
-                </div>
-
-                <div class="person-card">
-                    <div class="person-card-content">
-                        <div class="text">
-                            <div class="name"><?php echo $nome." ".$sobrenome; ?></div>
-                            <div class="job"><?php echo $cargo; ?></div>
-                            <div class="company"><?php echo $empresa; ?></div>
-                        </div>
+            <div class="adaptImage reveal-block">
+                <div class="adaptImage__inner">
+                    <div class="adaptImage__aspect" style="padding-bottom:145%;">
+                        <img class="adaptImage__image" src="<?php echo $foto['url']; ?>">
                     </div>
-                    <div class="link">Ver entrevista</div>
+
+                    <div class="person-card">
+                        <div class="person-card-content">
+                            <div class="text">
+                                <div class="name"><?php echo $nome." ".$sobrenome; ?></div>
+                                <div class="job"><?php echo $cargo; ?></div>
+                                <div class="company"><?php echo $empresa; ?></div>
+                            </div>
+                        </div>
+                        <div class="link">Ver entrevista</div>
+                    </div>
                 </div>
             </div>
-        </div>
         </a>
     </div>
     <?php
