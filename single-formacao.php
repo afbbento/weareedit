@@ -15,6 +15,7 @@ if( $tipoFormacao ){
         $tipo_formacao_icon = get_field( 'icon', $tipo_formacao_row->ID );
         $tipo_formacao_class = get_field( 'class', $tipo_formacao_row->ID );
         $tipo_formacao_icon_color = get_field( 'icon_colorido', $tipo_formacao_row->ID );
+        $tipo_formacao_certificado = get_field( 'imagem_certificado', $tipo_formacao_row->ID );
     }
 }
 $area_formacao = get_field('area_formacao');
@@ -101,14 +102,16 @@ $localizacao_formacao = get_field('localizacao');
                         $data_ini = $first_row['data'];
                         $data_fim = $first_row['data_fim'];
                         
-                        $formacao_format_ini = DateTime::createFromFormat('d/m/Y', $data_ini);
-                        $formacao_format_fim = DateTime::createFromFormat('d/m/Y', $data_fim);
-                        $dia_formacao_ini = $formacao_format_ini->format('d');
-                        $dia_formacao_fim = $formacao_format_fim->format('d');
-                        
-                        $mes_ini_texto = substr(getMes($formacao_format_ini->format('m')), 0, 3);
-                        $mes_fim_texto = substr(getMes($formacao_format_fim->format('m')), 0, 3);
-
+                        if (($data_ini!='') && ($data_fim!='')){
+                           
+                            $formacao_format_ini = DateTime::createFromFormat('d/m/Y', $data_ini);
+                            $formacao_format_fim = DateTime::createFromFormat('d/m/Y', $data_fim);
+                            $dia_formacao_ini = $formacao_format_ini->format('d');
+                            $dia_formacao_fim = $formacao_format_fim->format('d');
+                            
+                            $mes_ini_texto = substr(getMes($formacao_format_ini->format('m')), 0, 3);
+                            $mes_fim_texto = substr(getMes($formacao_format_fim->format('m')), 0, 3);
+                        }
                         foreach( $first_row_title as $row_data_post ){                            
                             echo '<div class="inner">'.get_the_title( $row_data_post->ID ).'</div>';                  
                         } 
@@ -133,8 +136,17 @@ $localizacao_formacao = get_field('localizacao');
                 ?>                   
             </div>
         
-            <div class="cols <?php echo $col_drop; ?>">        
-                <div class="inner"><?php echo $dia_formacao_ini;?> <?php echo $mes_ini_texto; ?> - <?php echo $dia_formacao_fim;?> <?php echo $mes_fim_texto;?></div>
+            <div class="cols <?php echo $col_drop; ?>"> 
+                <?php
+                if( $rows_horarios && ($data_ini!='') && ($data_fim!='')){
+                    if ($data_ini==$data_fim){
+                        $mes_ini_texto = getMes($formacao_format_ini->format('m'));
+                        echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.'</div>';
+                    }else{
+                        echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.' - '.$dia_formacao_fim.' '.$mes_fim_texto.'</div>';
+                    }
+                }
+                ?>       
                 <div class="drop-inner" style="display:none;">
                     <ul>
                         <?php 
@@ -142,7 +154,7 @@ $localizacao_formacao = get_field('localizacao');
                                 $data_formacao = DateTime::createFromFormat('d/m/Y', $row_datas);
                                 $dia_formacao_drop = $data_formacao->format('d');
                                 $mes_formacao_texto = getMes($data_formacao->format('m'));
-
+                                
                                 echo '<li>'.$dia_formacao_drop.' '.$mes_formacao_texto.'</li>';
                             }
                         ?>
@@ -214,7 +226,7 @@ $localizacao_formacao = get_field('localizacao');
 
         <div class="row certificacao is-flex v-center reveal-block">
             <div class="col-md-4 col-md-offset-0 pad0 col-sm-5 col-sm-offset-1">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/bitmap@2x.png">
+                <img src="<?php echo $tipo_formacao_certificado; ?>">
             </div>
             <div class="col-md-8 col-sm-5 col-sm-offset-0">
                 <h4>Curso certificado pela DGERT</h4>
