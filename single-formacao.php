@@ -102,14 +102,16 @@ $localizacao_formacao = get_field('localizacao');
                         $data_ini = $first_row['data'];
                         $data_fim = $first_row['data_fim'];
                         
-                        $formacao_format_ini = DateTime::createFromFormat('d/m/Y', $data_ini);
-                        $formacao_format_fim = DateTime::createFromFormat('d/m/Y', $data_fim);
-                        $dia_formacao_ini = $formacao_format_ini->format('d');
-                        $dia_formacao_fim = $formacao_format_fim->format('d');
-                        
-                        $mes_ini_texto = substr(getMes($formacao_format_ini->format('m')), 0, 3);
-                        $mes_fim_texto = substr(getMes($formacao_format_fim->format('m')), 0, 3);
-
+                        if (($data_ini!='') && ($data_fim='')){
+                           
+                            $formacao_format_ini = DateTime::createFromFormat('d/m/Y', $data_ini);
+                            $formacao_format_fim = DateTime::createFromFormat('d/m/Y', $data_fim);
+                            $dia_formacao_ini = $formacao_format_ini->format('d');
+                            $dia_formacao_fim = $formacao_format_fim->format('d');
+                            
+                            $mes_ini_texto = substr(getMes($formacao_format_ini->format('m')), 0, 3);
+                            $mes_fim_texto = substr(getMes($formacao_format_fim->format('m')), 0, 3);
+                        }
                         foreach( $first_row_title as $row_data_post ){                            
                             echo '<div class="inner">'.get_the_title( $row_data_post->ID ).'</div>';                  
                         } 
