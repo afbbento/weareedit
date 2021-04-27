@@ -34,7 +34,7 @@ $localizacao_formacao = get_field('localizacao');
 ?>
 <div class="head">
     <div class="container">
-        <div class="col-md-12 col-sm-10 col-sm-offset-1">
+        <div class="col-md-12 col-sm-10 col-sm-offset-1 col-md-offset-0">
             <ul class="breadcrumb reveal-block class-<?php echo $tipo_formacao_class;?>">
                 <li class="logo-formacao"><img src="<?php echo $tipo_formacao_icon_color['url']; ?>"></li>
                 <li><a href="#"><?php echo $titulo_tipo_formacao; ?></a></li>
@@ -133,10 +133,10 @@ $localizacao_formacao = get_field('localizacao');
                         echo '</ul>';
                         echo '</div>';
                     }
-                ?>                   
+                ?>
             </div>
-        
-            <div class="cols <?php echo $col_drop; ?>"> 
+
+            <div class="cols <?php echo $col_drop; ?>">
                 <?php
                 if( $rows_horarios && ($data_ini!='') && ($data_fim!='')){
                     if ($data_ini==$data_fim){
@@ -146,7 +146,7 @@ $localizacao_formacao = get_field('localizacao');
                         echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.' - '.$dia_formacao_fim.' '.$mes_fim_texto.'</div>';
                     }
                 }
-                ?>       
+                ?>
                 <div class="drop-inner" style="display:none;">
                     <ul>
                         <?php 
@@ -158,7 +158,7 @@ $localizacao_formacao = get_field('localizacao');
                                 echo '<li>'.$dia_formacao_drop.' '.$mes_formacao_texto.'</li>';
                             }
                         ?>
-                    
+
                     </ul>
                 </div>
             </div>
@@ -166,8 +166,8 @@ $localizacao_formacao = get_field('localizacao');
                 <div class="inner"><a href="<?php echo $info_documento; ?>">Descarregar programa </a></div>
             </div>
             <div class="cols col-btn class-<?php echo $tipo_formacao_class;?>">Pedir informação</div>
+        </div>
     </div>
-</div>
 </div>
 
 <section class="banner-image" style="background-image:url(<?php echo $fundo_header; ?>);"></section>
@@ -348,7 +348,8 @@ $localizacao_formacao = get_field('localizacao');
                     </div>
                     <div class="col-md-6 col-center">
                         <div class="center-cell">
-                            <a href="<?php echo $banner_link_url; ?>" class="btn btn-<?php echo $tipo_formacao_class;?>"><?php echo $banner_link_title; ?></a>
+                            <a href="<?php echo $banner_link_url; ?>"
+                                class="btn btn-<?php echo $tipo_formacao_class;?>"><?php echo $banner_link_title; ?></a>
                         </div>
                     </div>
                 </div>
