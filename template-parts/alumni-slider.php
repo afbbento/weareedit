@@ -22,6 +22,9 @@
                             if(get_field('logo_empresa', $story->ID)){                                                       
                                 $logo_empresa = get_field('logo_empresa', $story->ID);
                             }
+                            if(get_field('excerto', $story->ID)){                                                       
+                                $excerto = get_field('excerto', $story->ID);
+                            }
                             
                            
 
@@ -33,21 +36,10 @@
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 slider-text">
-                        <h3 class="text-white">“
+                        <h3 class="text-white">
                             <?php 
-                         if(get_field("blocos", $story->ID)){
-                                
-                                $blocos_stories = get_field("blocos", $story->ID);
-                                    foreach($blocos_stories as $blocos_storie){
-                                        $tipo_bloco =  $blocos_storie['tipo_de_bloco'];
-                                            foreach($tipo_bloco as $tipos_blocos){
-                                                $block_quote = $tipos_blocos['blockquote'];    
-                                                    echo $block_quote;
-                                            }
-                                    }
-                                                                                    
-                            }
-                        ?>”</h3>
+                                echo $excerto;
+                            ?></h3>
                         <div class="name"><?php echo $name; ?></div>
                         <p><?php echo $descricao_alumni; ?></p>
                         <div>

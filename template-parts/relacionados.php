@@ -116,7 +116,7 @@
                                                         $titulo_relacionado_entrevista = get_the_title( $entrevistas_row->ID );
                                                         $imagem_relacionado_entrevista = get_field( 'home_image_small', $entrevistas_row->ID );
                                         ?>
-                                    <div class="col-md-3 col-sm-6">
+                                    <div class="col-sm-6">
                                         <div class="related-card">
                                             <div class="related-card-image-wrap">
                                                 <img class="related-card-img"

@@ -209,10 +209,10 @@
                                                                     <h2 class="content__heading___3h6Kj">ÁREAS</h2>
                                                                     <div class="secondaryNav___2AXcM small___2fG2M">
                                                                         <ul class="secondaryNav__list___24U7o">
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=54&areaId=54">Design</a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=54&areaId=54">Development</a></li>
+                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=54&areaId=77">Design</a></li>
+                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=54&areaId=82">Development</a></li>
                                                                             <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=54&areaId=15343">Business</a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=54&areaId=54">Gestão </a></li>
+                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=54&areaId=1398">Gestão </a></li>
                                                                             <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=54&areaId=54">Redes Sociais</a></li>
                                                                         </ul>
                                                                     </div>
