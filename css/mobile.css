@@ -75,6 +75,12 @@
 .related-card{
     margin-bottom: 30px;
 }
+
+
+/* add with page class*/
+.bleeded:before {
+    width: 100%;
+}
 }
 
 @media (max-width: 768px){
@@ -146,6 +152,42 @@ section.course-faq .row-faq {
     width: 150px;
     height: 150px;
 
+}
+
+
+
+/* add with page class*/
+.section-title {
+   padding-right: 0;
+
+}
+
+/* add with page class*/
+.text-block-container:not(:last-child) {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+/* add with page class*/
+.info-banner {
+    margin-top: 25px;
+}
+
+/* add with page class*/
+.info-form {
+    padding: 0;
+    padding: 50px 0px;
+}
+
+/* add with page class*/
+a.btn {
+    padding: 19px 31px;
+    width: 100%;
+}
+/* add with page class*/
+.btn-fix.col-center,
+.center-cell{
+    display: block !important;
 }
 
 
