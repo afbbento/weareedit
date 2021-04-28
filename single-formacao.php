@@ -16,6 +16,7 @@ if( $tipoFormacao ){
         $tipo_formacao_class = get_field( 'class', $tipo_formacao_row->ID );
         $tipo_formacao_icon_color = get_field( 'icon_colorido', $tipo_formacao_row->ID );
         $tipo_formacao_certificado = get_field( 'imagem_certificado', $tipo_formacao_row->ID );
+        $contacto_informacao = get_field( 'contacto_informacao', $tipo_formacao_row->ID );
     }
 }
 $area_formacao = get_field('area_formacao');
@@ -29,6 +30,7 @@ $localizacao_formacao = get_field('localizacao');
     if( $localizacao_formacao ){     
         foreach($localizacao_formacao as $localizacao_row){
             $localizacao_formacao = get_the_title( $localizacao_row->ID );
+            $localizacao_id = $localizacao_row->ID;
         }
     }
 ?>
@@ -567,13 +569,22 @@ jQuery(document).ready(function() {
 </section>
 
 <?php
-        $contacto_informacao = get_field('contacto_informacao');
         if( $contacto_informacao ){
             foreach($contacto_informacao as $elemento_info){
-                $foto_info = get_field('foto', $elemento_info->ID);
-                $foto_info_url = $foto_info['url'];
+            
+                if ($elemento_info['localizacao'][0]->ID==$localizacao_id){
+                   
+                   
+                   $id_elemento =  $elemento_info['elemento'][0]->ID; 
+                   ///echo $nome = get_field('nome', $id_elemento);
+                   $foto_contacto = get_field('foto', $id_elemento);
+                   
+                }
+                
             }
         }
+
+        
         ?>
 <section class="course-contact">
     <div class="container">
@@ -582,7 +593,7 @@ jQuery(document).ready(function() {
                 <div class="contact-form inner-border reveal-block">
                     <div class="col-md-4">
                         <div class="box-circle">
-                            <div class="inner-border" style="background-image: url(<?php echo $foto_info_url; ?>)">
+                            <div class="inner-border" style="background-image: url(<?php echo $foto_contacto['url']; ?>)">
                             </div>
                         </div>
                     </div>
