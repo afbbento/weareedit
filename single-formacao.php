@@ -58,19 +58,19 @@ $localizacao_formacao = get_field('localizacao');
                 }
                 $fundo_header = get_field('fundo_header');
                 ?>
-                    <div class="col-xs-3 col-md-2">
+                    <div class="col-xs-4 col-md-2">
                         <label>local</label>
                         <div class="value"><?php echo $localizacao_formacao; ?></div>
                     </div>
-                    <div class="col-xs-3 col-md-2">
+                    <div class="col-xs-4 col-md-2">
                         <label>duração</label>
                         <div class="value"><?php echo $duracao; ?></div>
                     </div>
-                    <div class="col-xs-3 col-md-2">
+                    <div class="col-xs-4 col-md-2">
                         <label>INVESTIMENTO</label>
                         <div class="value"><?php echo $investimento; ?></div>
                     </div>
-                    <div class="col-xs-5 col-md-3">
+                    <div class="col-xs-9 col-md-3">
                         <label>HORÁRIOS</label>
                         <div class="value"><?php echo $horarios; ?></div>
                     </div>
@@ -190,15 +190,15 @@ $localizacao_formacao = get_field('localizacao');
                 }
                 ?>
         <div class="row">
-            <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1"><small
+            <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1"><small
                     class="text-muted reveal-block"><?php echo $muted_text_visao_geral; ?></small>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1">
+            <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1">
                 <h2 class="intro reveal-block"><?php echo $title_visao_geral; ?></h2>
             </div>
-            <div class="col-md-8 col-md-offset-0 col-sm-11 col-sm-offset-1">
+            <div class="col-md-8 col-md-offset-0 col-sm-10 col-sm-offset-1">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text-block-container">
@@ -242,12 +242,12 @@ $localizacao_formacao = get_field('localizacao');
 <section class="programa bg-black">
     <div class="container">
         <div class="row reveal-block">
-            <div class="col-md-12 col-md-offset-0  col-sm-11 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <h1>Programa</h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 col-md-offset-0 col-sm-11 col-sm-offset-1 col-offset-right-1">
+            <div class="col-md-3 col-md-offset-0 col-sm-10 col-sm-offset-1 col-offset-right-1">
                 <?php 
                         $programa = get_field('programa');
                         if( $programa ){
@@ -256,7 +256,7 @@ $localizacao_formacao = get_field('localizacao');
                         ?>
                 <p class="reveal-block"><?php echo $texto_apresentacao; ?></p>
             </div>
-            <div class="col-md-8 col-md-offset-0  col-sm-11 col-sm-offset-1">
+            <div class="col-md-8 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <?php
                         $programa = get_field('programa');
                         if( $programa ){
@@ -291,10 +291,10 @@ $localizacao_formacao = get_field('localizacao');
             </div>
         </div>
         <div class="row ferramentas">
-            <div class="col-md-12 col-md-offset-0  col-sm-11 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <h3 class="reveal-block"><?php echo get_field('titulo_ferramentas'); ?></h3>
             </div>
-            <div class="col-md-12 col-md-offset-0   col-sm-11 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0   col-sm-10 col-sm-offset-1">
                 <div class="row grid-sp-40 logos-grid reveal-block">
                     <?php
                             $ferramentas = get_field('ferramentas_de_trabalho');
@@ -369,13 +369,13 @@ $localizacao_formacao = get_field('localizacao');
                     }
                 ?>
         <div class="row">
-            <div class="col-md-12 col-md-offset-0   col-sm-11 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0   col-sm-10 col-sm-offset-1">
                 <small class="text-muted reveal-block">PROJETO 360º - <?php echo $titulo_projecto; ?></small>
             </div>
-            <div class="col-md-4 col-md-offset-0   col-sm-11 col-sm-offset-1">
+            <div class="col-md-4 col-md-offset-0   col-sm-10 col-sm-offset-1">
                 <h2 class="intro reveal-block"><?php echo $subtitulo_projecto; ?></h2>
             </div>
-            <div class="col-md-8 col-md-offset-0  col-sm-11 col-sm-offset-1">
+            <div class="col-md-8 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <div class="row sp-60">
                     <div class="col-md-12">
                         <p class="reveal-block"><?php echo $texto_projecto; ?></p>
@@ -471,13 +471,14 @@ jQuery(document).ready(function() {
 <section class="tutores">
     <div class="container">
         <div class="row reveal-block">
-            <div class="col-md-4"><small class="text-muted"><?php echo $muted_text; ?></small></div>
+            <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1"><small
+                    class="text-muted"><?php echo $muted_text; ?></small></div>
         </div>
         <div class="row reveal-block mb-85">
-            <div class="col-md-4">
+            <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <h2 class="section-title"><?php echo $titulo; ?></h2>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <p><?php echo $texto; ?></p>
             </div>
         </div>
@@ -497,13 +498,14 @@ jQuery(document).ready(function() {
 <section class="alumni">
     <div class="container">
         <div class="row reveal-block">
-            <div class="col-md-4"><small class="text-muted"><?php echo $muted_text; ?></small></div>
+            <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1"><small
+                    class="text-muted"><?php echo $muted_text; ?></small></div>
         </div>
         <div class="row mb-85 reveal-block">
-            <div class="col-md-4">
+            <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <h2 class="section-title"><?php echo $titulo; ?></h2>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-8 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <p><?php echo $texto; ?></p>
             </div>
         </div>
@@ -514,12 +516,12 @@ jQuery(document).ready(function() {
 <section class="course-faq">
     <div class="container">
         <div class="row reveal-block">
-            <div class="col-md-12 col-md-offset-0  col-sm-11 col-sm-offset-1">
+            <div class="col-md-12 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <h1 class="text-white">Perguntas frequentes</h1>
             </div>
         </div>
         <div class="row row-faq reveal-block">
-            <div class="col-md-6 col-md-offset-0  col-sm-11 col-sm-offset-1">
+            <div class="col-md-6 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <?php
                         $rows_faq = get_field('faq' );
                         if( $rows_faq ){                           
@@ -543,7 +545,7 @@ jQuery(document).ready(function() {
                         }
                     ?>
             </div>
-            <div class="col-md-6 col-sm-11 col-sm-offset-1">
+            <div class="col-md-6 col-sm-10 col-sm-offset-1">
                 <?php
                         $rows_faq = get_field('faq' );
                         if( $rows_faq ){                           

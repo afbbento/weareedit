@@ -18,7 +18,7 @@
                     
                     ?>
 
-    <div class="col-md-3 col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+    <div class="col-md-3 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0">
         <a href=" <?php echo $link_elemento; ?>">
             <div class="adaptImage reveal-block">
                 <div class="adaptImage__inner">

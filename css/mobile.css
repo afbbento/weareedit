@@ -1,3 +1,9 @@
+.single-formacao #page.curso section.programa .btn {
+    background-color: #ffdd06;
+    color: #000000;
+    border-color: #ffdd06;
+}
+
 @media (max-width: 992px){
 .courses-container {
         padding-left: 3%;
@@ -10,6 +16,13 @@
 .alumni-slider .slider-img > div {
     height: 40vw !important;
 }
+
+.logos-grid {
+    margin-left: calc(8.33333333% - 15px);
+}
+
+
+
 
 
 #info_bar {
@@ -76,6 +89,60 @@
     margin-bottom: 30px;
 }
 
+.formacao-info {
+    margin-top: 25px;
+}
+
+.formacao-info label {
+    margin-top: 25px;
+}
+
+section.visao-geral h4 {
+    margin-top: 0;
+}
+
+.single-formacao section.programa h1 {
+   font-size: 70px;
+}
+
+.text-block-container:not(:last-child) {
+    margin-bottom: 60px;
+    margin-top: 50px;
+    padding-bottom: 0px;
+}
+
+.single-formacao .logos-grid {
+    margin-left: -15px;
+}
+
+.single-formacao .info-form {
+    padding: 75px 0px 75px 35px;
+}
+
+.single-formacao .info-banner .col-center {
+    height: auto;
+
+}
+
+.course-faq h1{
+font-size: 60px;
+}
+
+.row-faq [class^="col-"]:nth-child(even) {
+    padding-left: 0;
+}
+
+ .contact-form h3 {
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.related-card-inner {
+height: auto;
+    min-height: 200px;
+
+}
+
 
 /* add with page class*/
 .bleeded:before {
@@ -84,6 +151,9 @@
 }
 
 @media (max-width: 768px){
+
+
+
 html.mobile .navigation__primary___3I64N:after {
     top: 115px;
 }
@@ -97,7 +167,70 @@ html.mobile .navigation__secondary___13rln:after {
     padding: 125px 35px 60px;
 }
 
+.formacao-template-default .head, .single-eventos .head {
+    padding-top: 100px;
+}
 
+.formacao-template-default .head h1 {
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: -1.33px
+}
+
+.formacao-info [class^="col-"]:nth-child(-n+3) {
+    margin-right: 0%;
+}
+
+.formacao-info .value {
+    font-size: 16px;
+}
+
+.formacao-info label {
+    font-size: 13px;
+}
+
+.sobre-curso [class^="col-"] {
+    padding: 35px;
+}
+.sobre-curso h3 {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing:-0.63px ;
+}
+
+section h2.intro {
+padding-right: 0; 
+margin-bottom: 30px;
+}
+
+.swiper-boxes {
+
+    margin-left: 0;
+}
+.hero p {
+    margin-top: 25px;
+}
+
+.img__wipe__container {
+    margin-bottom: 55px;
+}
+
+.logos-grid {
+      margin-left: -15px;
+}
+
+.courses-container {
+       margin-top: 30px;
+}
+
+.about p:first-child{
+margin-bottom: 20px;
+}
+
+
+.swiper-alumni {
+    width: 95vw;
+}
 .swiper-alumni .swiper-slide {
     width: 100% !important;
 }
