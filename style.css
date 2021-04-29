@@ -1903,6 +1903,9 @@ section.relacionados h3{
 }	
 .related-formacao img{	
     width: 100%;	
+}
+.related-formacao .course-box-wrapper{
+    position: relative;
 }	
 .related-formacao .course-text{	
     position: absolute;	
@@ -1933,8 +1936,7 @@ section.relacionados h3{
     letter-spacing: -0.5px;	
 }	
 .related-formacao .course-icon{	
-    left: 45px;	
-    top: 30px;	
+    padding: 30px;	
 }	
 .related-card {	
     display: flex;	

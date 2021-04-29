@@ -37,16 +37,18 @@
                     
                     ?>
             <div class="col-md-3 col-sm-6 <?php echo $text_color; ?>">
-                <div class="course-icon">
-                    <img src="<?php echo $tipo_formacao_icon; ?>">
-                </div>
-                <div class="course-text css-<?php echo $tipo_formacao_css; ?>">
-                    <div class="course-category"><a href="#"><?php echo $titulo_tipo_formacao; ?></a></div>
-                    <div class="course-title"><a
-                            href="<?php echo $link_relacionado_formacao; ?>"><?php echo $titulo_relacionado_formacao; ?></a>
+                <div class="course-box-wrapper">
+                    <div class="course-icon">
+                        <img src="<?php echo $tipo_formacao_icon; ?>">
                     </div>
+                    <div class="course-text css-<?php echo $tipo_formacao_css; ?>">
+                        <div class="course-category"><a href="#"><?php echo $titulo_tipo_formacao; ?></a></div>
+                        <div class="course-title"><a
+                                href="<?php echo $link_relacionado_formacao; ?>"><?php echo $titulo_relacionado_formacao; ?></a>
+                        </div>
+                    </div>
+                    <img src="<?php echo $tipo_formacao_bg; ?>">
                 </div>
-                <img src="<?php echo $tipo_formacao_bg; ?>">
             </div>
 
             <?php
