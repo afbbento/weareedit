@@ -584,7 +584,9 @@ jQuery(document).ready(function() {
             }
         }
 
-        
+        if($tipo_formacao_class!='remote-learning'){
+            $tipo_formacao_class = 'curso';
+        }
         ?>
 <section class="course-contact">
     <div class="container">
