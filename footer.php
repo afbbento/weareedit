@@ -226,7 +226,7 @@
         </div>
         <div class="row grid-sp-40 logos-grid">
             <?php
-            $footer_logos = get_field('footer');
+            $footer_logos = get_field('footer', 25794);
             if( $footer_logos ){
                 $logos_repeater = $footer_logos['logos'];
                 foreach( $logos_repeater as $row_logos ){
