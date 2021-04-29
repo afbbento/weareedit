@@ -344,12 +344,12 @@ section.bg-light-grey h4{
 }
 .btn-workshop{
     background-color: #60c5b3;
-    color: #FFFFFF;
+    color: #000000;
     border-color: #60c5b3;
 }
 .btn-bootcamp{
     background-color: #f92869;
-    color: #FFFFFF;
+    color: #000000;
     border-color: #f92869;
 }
 section.bg-light-grey p{	
@@ -1904,15 +1904,18 @@ section.relacionados h3{
 .related-formacao img{	
     width: 100%;	
 }	
-.related-formacao .curso-geral a{	
-    color: #000000;	
-}	
 .related-formacao .course-text{	
     position: absolute;	
     bottom: 0;	
     width: 100%;	
     padding: 30px;	
-}	
+}
+.related-formacao .course-text a{
+    color: #FFFFFF;	
+}
+.related-formacao .course-text.css-curso a{
+    color: #000000;	
+}		
 .related-formacao .course-text .course-title{	
     font-size: 23px;	
     font-weight: bold;	

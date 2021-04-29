@@ -29,14 +29,10 @@
                                     $titulo_tipo_formacao = get_the_title( $tipo_formacao_row->ID );
                                     $tipo_formacao_bg = get_field( 'imagem_background', $tipo_formacao_row->ID );
                                     $tipo_formacao_icon = get_field( 'icon', $tipo_formacao_row->ID );
+                                    $tipo_formacao_css = get_field( 'class', $tipo_formacao_row->ID );
                                     
                                 }
                                 
-                            }
-                            if ($titulo_tipo_formacao=='curso'){
-                                $text_color = "curso-geral";
-                            }else{
-                                $text_color = "";
                             }
                     
                     ?>
@@ -44,7 +40,7 @@
                 <div class="course-icon">
                     <img src="<?php echo $tipo_formacao_icon; ?>">
                 </div>
-                <div class="course-text">
+                <div class="course-text css-<?php echo $tipo_formacao_css; ?>">
                     <div class="course-category"><a href="#"><?php echo $titulo_tipo_formacao; ?></a></div>
                     <div class="course-title"><a
                             href="<?php echo $link_relacionado_formacao; ?>"><?php echo $titulo_relacionado_formacao; ?></a>
