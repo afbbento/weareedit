@@ -135,29 +135,6 @@ get_header();
                     </div>
                 </div>
 
-                <div class="col-md-3 col-sm-5 col-xs-6">
-                    <div class="grid-box">
-                        <img src="<?php echo $row['imagem'];?>">
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-5 col-xs-6">
-                    <div class="grid-box">
-                        <img src="<?php echo $row['imagem'];?>">
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-5 col-xs-6">
-                    <div class="grid-box">
-                        <img src="<?php echo $row['imagem'];?>">
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-5 col-xs-6">
-                    <div class="grid-box">
-                        <img src="<?php echo $row['imagem'];?>">
-                    </div>
-                </div>
                 <?php
                         }
                     }
