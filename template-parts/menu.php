@@ -154,9 +154,24 @@
                                                             <h2 class="content__heading___3h6Kj">Tipo</h2>
                                                             <div class="secondaryNav___2AXcM">
                                                                 <ul class="secondaryNav__list___24U7o">
+                                                                    <?php
+                                                                        $tipos_formacao = array();
+                                                                        $posts = get_posts(array(
+                                                                            'posts_per_page'	=> -1,
+                                                                            'post_type'			=> 'formacao_tipo',
+                                                                            'orderby'           => 'title',
+                                                                            'order'             => 'ASC',
+                                                                        ));
+                                                                        if( $posts ):
+                                                                        foreach( $posts as $post ): 
+                                                                        setup_postdata( $post );
+                                                                        array_push($tipos_formacao, get_the_ID());
+                                                                        
+                                                                    ?>
+                                                                    
                                                                     <li class="secondaryNav__item___2_Jrp">
                                                                         <div class="secondaryNavItem___35rAY">
-                                                                            <a class="secondaryNavItem__link___3JbgC " href="/services/assurance">Cursos</a>
+                                                                            <a class="secondaryNavItem__link___3JbgC " href="#"><?php echo get_the_title(); ?></a>
                                                                             <span class="secondaryNavItem__arrow____kvLq">
                                                                                 <svg class="secondaryNavItem__svg___PCAfR" width="9px" height="15px">
                                                                                     <path fill="currentColor" fill-rule="evenodd" d="M7 9l-6 6-1-1 6-6-6-6 1-1 7 7-1 1z"></path>
@@ -164,36 +179,10 @@
                                                                             </span>
                                                                         </div>
                                                                     </li>
-                                                                    <li class="secondaryNav__item___2_Jrp">
-                                                                        <div class="secondaryNavItem___35rAY">
-                                                                            <a class="secondaryNavItem__link___3JbgC" href="/services/baker-tilly-digital">Cursos Intensivos</a>
-                                                                            <span class="secondaryNavItem__arrow____kvLq">
-                                                                                <svg class="secondaryNavItem__svg___PCAfR" width="9px" height="15px">
-                                                                                    <path fill="currentColor" fill-rule="evenodd" d="M7 9l-6 6-1-1 6-6-6-6 1-1 7 7-1 1z"></path>
-                                                                                </svg>
-                                                                            </span>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li class="secondaryNav__item___2_Jrp">
-                                                                        <div class="secondaryNavItem___35rAY ">
-                                                                            <a class="secondaryNavItem__link___3JbgC" href="/services/consulting">Workshops</a>
-                                                                            <span class="secondaryNavItem__arrow____kvLq">
-                                                                                <svg class="secondaryNavItem__svg___PCAfR" width="9px" height="15px">
-                                                                                    <path fill="currentColor" fill-rule="evenodd" d="M7 9l-6 6-1-1 6-6-6-6 1-1 7 7-1 1z"></path>
-                                                                                </svg>
-                                                                            </span>
-                                                                        </div>
-                                                                    </li>
-                                                                    <li class="secondaryNav__item___2_Jrp">
-                                                                        <div class="secondaryNavItem___35rAY">
-                                                                            <a class="secondaryNavItem__link___3JbgC" href="/services/international">Bootcamps </a>
-                                                                            <span class="secondaryNavItem__arrow____kvLq">
-                                                                                <svg class="secondaryNavItem__svg___PCAfR" width="9px" height="15px">
-                                                                                    <path fill="currentColor" fill-rule="evenodd" d="M7 9l-6 6-1-1 6-6-6-6 1-1 7 7-1 1z"></path>
-                                                                                </svg>
-                                                                            </span>
-                                                                        </div>
-                                                                    </li>
+                                                                        <?php endforeach; ?>
+                                                                        <?php wp_reset_postdata(); ?>
+
+                                                                    <?php endif; ?>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -202,6 +191,11 @@
                                             </div>
                                             <div class="panel__tertiary___2WU_t">
                                                 <div class="panel__scroll___Dp-_L" style="height: 535px;">                                                   
+                                                    <?php
+                                                    foreach ($tipos_formacao as $key => $value):
+                                                        
+                                                    $tipo_id = $value;
+                                                    ?>
                                                     <div>
                                                         <div class="menu__container" style="display:none;">
                                                             <div class="content___2fMF1 featured">
@@ -209,55 +203,31 @@
                                                                     <h2 class="content__heading___3h6Kj">ÁREAS</h2>
                                                                     <div class="secondaryNav___2AXcM small___2fG2M">
                                                                         <ul class="secondaryNav__list___24U7o">
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=54&areaId=77">Design</a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=54&areaId=82">Development</a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=54&areaId=15343">Business</a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=54&areaId=1398">Gestão </a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=54&areaId=54">Redes Sociais</a></li>
+                                                                        <?php
+                                                                            $formacao_area = get_posts(array(
+                                                                                'posts_per_page'	=> -1,
+                                                                                'post_type'			=> 'formacao_area',
+                                                                                'orderby'           => 'title',
+                                                                                'order'             => 'ASC',
+                                                                            ));
+                                                                            if( $formacao_area ):
+                                                                                foreach( $formacao_area as $post ): 
+                                                                                setup_postdata( $post );
+                                                                                $area_id = get_the_ID();
+                                                                                $area_title = get_the_title();
+                                                                        ?>
+                                                                
+                                                                                  <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/formacao/?tipoId=<?php echo $tipo_id; ?>&areaId=<?php echo $area_id; ?>"><?php echo $area_title; ?></a></li>
+                                                                                <?php endforeach; ?>
+                                                                                <?php wp_reset_postdata(); ?>
+                                                                            <?php endif; ?>
                                                                         </ul>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div>
-                                                        <div class="menu__container" style="display:none;">
-                                                            <div class="content___2fMF1 featured">
-                                                                <div class="content__inner___1liSK">
-                                                                    <h2 class="content__heading___3h6Kj">ÁREAS</h2>
-                                                                    <div class="secondaryNav___2AXcM small___2fG2M">
-                                                                        <ul class="secondaryNav__list___24U7o">
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/specialties/bankruptcy-restructuring">Design 2</a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/specialties/cfo-advisory">Development</a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/specialties/complex-disputes-and-litigation">Business</a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/specialties/development-advisory">Gestão </a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/specialties/forensic-accounting">Redes Sociais</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div>
-                                                        <div class="menu__container" style="display:none;">
-                                                            <div class="content___2fMF1 featured">
-                                                                <div class="content__inner___1liSK">
-                                                                    <h2 class="content__heading___3h6Kj">ÁREAS</h2>
-                                                                    <div class="secondaryNav___2AXcM small___2fG2M">
-                                                                        <ul class="secondaryNav__list___24U7o">
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/specialties/bankruptcy-restructuring">Design 3</a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/specialties/cfo-advisory">Development</a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/specialties/complex-disputes-and-litigation">Business</a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/specialties/development-advisory">Gestão </a></li>
-                                                                            <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/specialties/forensic-accounting">Redes Sociais</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div></div>
-                                                    <div></div>
+                                                    <?php endforeach; ?>
                                                 </div>
                                             </div>
                                         </div>
