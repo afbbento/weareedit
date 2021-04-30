@@ -41,7 +41,7 @@ $localizacao_formacao = get_field('localizacao');
         <div class="col-md-12 col-sm-10 col-sm-offset-1 col-md-offset-0">
             <ul class="breadcrumb reveal-block class-<?php echo $tipo_formacao_class;?>">
                 <li class="logo-formacao"><img src="<?php echo $tipo_formacao_icon_color['url']; ?>"></li>
-                <li><a href="#"><?php echo $titulo_tipo_formacao; ?></a></li>
+                <li><a href="/tipo-formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>"><?php echo $titulo_tipo_formacao; ?></a></li>
                 <li><a href="/formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>&areaId=<?php echo $area_id; ?>"><?php echo $titulo_area; ?></a></li>
             </ul>
             <h1 class="reveal-block"><?php the_field('titulo'); ?></h1>
