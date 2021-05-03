@@ -17,12 +17,14 @@ if( $tipoFormacao ){
         $tipo_formacao_icon_color = get_field( 'icon_colorido', $tipo_formacao_row->ID );
         $tipo_formacao_certificado = get_field( 'imagem_certificado', $tipo_formacao_row->ID );
         $contacto_informacao = get_field( 'contacto_informacao', $tipo_formacao_row->ID );
+        $tipo_formacao_ID = $tipo_formacao_row->ID;
     }
 }
 $area_formacao = get_field('area_formacao');
     if( $area_formacao ){     
         foreach($area_formacao as $area_row){
             $titulo_area = get_the_title( $area_row->ID );
+            $area_id = $area_row->ID;
         }
     }
 
@@ -39,8 +41,8 @@ $localizacao_formacao = get_field('localizacao');
         <div class="col-md-12 col-sm-10 col-sm-offset-1 col-md-offset-0">
             <ul class="breadcrumb reveal-block class-<?php echo $tipo_formacao_class;?>">
                 <li class="logo-formacao"><img src="<?php echo $tipo_formacao_icon_color['url']; ?>"></li>
-                <li><a href="#"><?php echo $titulo_tipo_formacao; ?></a></li>
-                <li><a href="#"><?php echo $titulo_area; ?></a></li>
+                <li><a href="/tipo-formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>"><?php echo $titulo_tipo_formacao; ?></a></li>
+                <li><a href="/formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>&areaId=<?php echo $area_id; ?>"><?php echo $titulo_area; ?></a></li>
             </ul>
             <h1 class="reveal-block"><?php the_field('titulo'); ?></h1>
         </div>
@@ -270,22 +272,30 @@ $localizacao_formacao = get_field('localizacao');
                                                 <div class="col-sm-12">
                                                     <h4 class="border reveal-block">'.$row['titulo'].'</h4>
                                                 </div>
-                                            </div>
-                                            <div class="grid">
-                                                <div class="grid-sizer"></div>';
+                                            </div>';
                                     
                                     $items_programa = $row['item'];
+                                    $j = 1;
+                                    
+                                    echo '<div class="row sp-60">';
                                     foreach( $items_programa as $row_item ) {
-                                        
-                                        echo '<div class="grid-item">
-                                                <p class="list-title">'.$row_item['titulo'].'</p>
+                                    $j++;
+                                    
+                                    echo '<div class="col-sm-6">
+                                            <p class="list-title">'.$row_item['titulo'].'</p>
                                                 '.$row_item['texto'].'                        
-                                              </div> ';
-
+                                            </div>';
+                                        
+                                        $muliplo = $j % 2;
+                                        if ($muliplo !== 0){
+                                            echo '</div><div class="row sp-60">';
+                                        }
                                     }
-
-                                    echo '</div>
-                                    </div>';
+                                    echo '<!--end row item-->';
+                                    echo '</div>';
+                                
+                                echo '<!--end text-block-->';
+                                echo '</div>';
                                 }
                             }                           
                         }
@@ -585,7 +595,9 @@ jQuery(document).ready(function() {
             }
         }
 
-        
+        if($tipo_formacao_class!='remote-learning'){
+            $tipo_formacao_class = 'curso';
+        }
         ?>
 <section class="course-contact">
     <div class="container">

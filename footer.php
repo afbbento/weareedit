@@ -225,26 +225,23 @@
             </div>
         </div>
         <div class="row grid-sp-40 logos-grid">
+            <?php
+            $footer_logos = get_field('footer', 25794);
+            if( $footer_logos ){
+                $logos_repeater = $footer_logos['logos'];
+                foreach( $logos_repeater as $row_logos ){
+                    
+                         
+            ?>
             <div class="col-xs-6  col-md-3 col-sm-5 col-sm-offset-1 col-md-offset-0 ">
                 <div class="grid-box">
-                    <img src="img/edit-work.png">
+                    <img src="<?php echo $row_logos['logo'];?>">
                 </div>
             </div>
-            <div class="col-xs-6 col-md-3 col-sm-5 col-sm-offset-1 col-md-offset-0 ">
-                <div class="grid-box">
-                    <img src="img/edit-work.png">
-                </div>
-            </div>
-            <div class="col-xs-6 col-md-3 col-sm-5 col-sm-offset-1 col-md-offset-0 ">
-                <div class="grid-box">
-                    <img src="img/edit-work.png">
-                </div>
-            </div>
-            <div class="col-xs-6 col-md-3 col-sm-5 col-sm-offset-1 col-md-offset-0 ">
-                <div class="grid-box">
-                    <img src="img/edit-work.png">
-                </div>
-            </div>
+            <?php
+                }
+            }
+            ?>
         </div>
     </div>
 
