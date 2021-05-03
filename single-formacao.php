@@ -60,19 +60,19 @@ $localizacao_formacao = get_field('localizacao');
                 }
                 $fundo_header = get_field('fundo_header');
                 ?>
-                    <div class="col-xs-4 col-md-2">
+                    <div class="col-xs-4 col-sm-3 col-md-2">
                         <label>local</label>
                         <div class="value"><?php echo $localizacao_formacao; ?></div>
                     </div>
-                    <div class="col-xs-4 col-md-2">
+                    <div class="col-xs-4 col-sm-3 col-md-2">
                         <label>duração</label>
                         <div class="value"><?php echo $duracao; ?></div>
                     </div>
-                    <div class="col-xs-4 col-md-2">
+                    <div class="col-xs-4 col-sm-3 col-md-2">
                         <label>INVESTIMENTO</label>
                         <div class="value"><?php echo $investimento; ?></div>
                     </div>
-                    <div class="col-xs-9 col-md-3">
+                    <div class="col-xs-9 col-sm-5 col-md-3">
                         <label>HORÁRIOS</label>
                         <div class="value"><?php echo $horarios; ?></div>
                     </div>
@@ -305,7 +305,7 @@ $localizacao_formacao = get_field('localizacao');
                         
                             ?>
 
-                    <div class="col-md-3 col-sm-6">
+                    <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="adaptImage" style="border: 1px solid #242424;">
                             <div class="adaptImage__inner">
                                 <div class="adaptImage__aspect" style="padding-bottom:63%;"></div>
@@ -393,14 +393,15 @@ $localizacao_formacao = get_field('localizacao');
                             $imagem_cliente_360 = get_field('imagem', $clientes_360->ID);
                         ?>
 
-            <div class="col-md-3">
-                <div class="adaptImage">
+            <div class="col-md-3 col-sm-6 col-xs-6">
+                <img src="<?php echo $imagem_cliente_360; ?>">
+
+                <!-- <div class="adaptImage">
                     <div class="adaptImage__inner">
                         <div class="adaptImage__aspect">
-                            <img src="<?php echo $imagem_cliente_360; ?>">
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <?php
@@ -593,7 +594,8 @@ jQuery(document).ready(function() {
                 <div class="contact-form inner-border reveal-block">
                     <div class="col-md-4">
                         <div class="box-circle">
-                            <div class="inner-border" style="background-image: url(<?php echo $foto_contacto['url']; ?>)">
+                            <div class="inner-border"
+                                style="background-image: url(<?php echo $foto_contacto['url']; ?>)">
                             </div>
                         </div>
                     </div>
