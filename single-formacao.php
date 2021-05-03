@@ -272,22 +272,30 @@ $localizacao_formacao = get_field('localizacao');
                                                 <div class="col-sm-12">
                                                     <h4 class="border reveal-block">'.$row['titulo'].'</h4>
                                                 </div>
-                                            </div>
-                                            <div class="grid">
-                                                <div class="grid-sizer"></div>';
+                                            </div>';
                                     
                                     $items_programa = $row['item'];
+                                    $j = 1;
+                                    
+                                    echo '<div class="row sp-60">';
                                     foreach( $items_programa as $row_item ) {
-                                        
-                                        echo '<div class="grid-item">
-                                                <p class="list-title">'.$row_item['titulo'].'</p>
+                                    $j++;
+                                    
+                                    echo '<div class="col-sm-6">
+                                            <p class="list-title">'.$row_item['titulo'].'</p>
                                                 '.$row_item['texto'].'                        
-                                              </div> ';
-
+                                            </div>';
+                                        
+                                        $muliplo = $j % 2;
+                                        if ($muliplo !== 0){
+                                            echo '</div><div class="row sp-60">';
+                                        }
                                     }
-
-                                    echo '</div>
-                                    </div>';
+                                    echo '<!--end row item-->';
+                                    echo '</div>';
+                                
+                                echo '<!--end text-block-->';
+                                echo '</div>';
                                 }
                             }                           
                         }
