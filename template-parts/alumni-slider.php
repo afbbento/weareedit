@@ -48,37 +48,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="swiper-slide">
-                <div class="row is-flex v-center">
-                    <div class="col-sm-12 col-md-6 pad0 slider-img">
-                        <div style="background-image:url(<?php echo $foto;?>)">
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 slider-text">
-                        <h3 class="text-white">“
-                            <?php 
-                         if(get_field("blocos", $story->ID)){
-                                
-                                $blocos_stories = get_field("blocos", $story->ID);
-                                    foreach($blocos_stories as $blocos_storie){
-                                        $tipo_bloco =  $blocos_storie['tipo_de_bloco'];
-                                            foreach($tipo_bloco as $tipos_blocos){
-                                                $block_quote = $tipos_blocos['blockquote'];    
-                                                    echo $block_quote;
-                                            }
-                                    }
-                                                                                    
-                            }
-                        ?>”</h3>
-                        <div class="name"><?php echo $name; ?></div>
-                        <p><?php echo $descricao_alumni; ?></p>
-                        <div>
-                            <img src="<?php echo $logo_empresa;?>">
-                        </div>
-                    </div>
-                </div>
-            </div>
             <?php
                     }
                 }                                    
