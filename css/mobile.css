@@ -3,6 +3,14 @@
     color: #000000;
     border-color: #ffdd06;
 }
+.accordion-container .accordion-title {
+    padding: 0;
+    margin-bottom: 60px;
+}
+.accordion-container .accordion-title::after {
+    margin-top: 10px;
+    top: auto;
+}
 
 @media (max-width: 992px){
 .courses-container {
@@ -129,7 +137,7 @@ font-size: 60px;
 }
 
 .row-faq [class^="col-"]:nth-child(even) {
-    padding-left: 0;
+    padding-left: 15px;
 }
 
  .contact-form h3 {
@@ -148,6 +156,22 @@ height: auto;
 .bleeded:before {
     width: 100%;
 }
+
+
+
+.logos-adapt-center [class^="col-"] {
+    height: auto;
+    margin-bottom: 30px;
+}
+.logos-adapt-center [class^="col-"]:not(:last-child) {
+    border-right: 0px solid #242424;
+}
+.logos-adapt-center [class^="col-"]:nth-child(odd) {
+    border-right: 1px solid #242424;
+}
+
+
+
 }
 
 @media (max-width: 768px){
@@ -177,16 +201,26 @@ html.mobile .navigation__secondary___13rln:after {
     letter-spacing: -1.33px
 }
 
+
+.page-template-page-home section .text-muted {
+    margin-top: 30px;
+}
+
 .formacao-info [class^="col-"]:nth-child(-n+3) {
     margin-right: 0%;
 }
-
+.row.certificacao [class^="col-"]:nth-child(2) {
+    padding-left:0;
+}
+.single-formacao .info-form {
+    padding: 75px 0px 75px 0px;
+}
 .formacao-info .value {
     font-size: 16px;
 }
 
 .formacao-info label {
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .sobre-curso [class^="col-"] {
@@ -323,6 +357,47 @@ a.btn {
     display: block !important;
 }
 
+.logos-adapt-center {
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
 
+.logos-adapt-center [class^="col-"] {
+    height: auto;
+    margin-bottom: 30px;
+}
+.logos-adapt-center [class^="col-"]:not(:last-child) {
+    border-right: 0px solid #242424;
+}
+.logos-adapt-center [class^="col-"]:nth-child(odd) {
+    border-right: 1px solid #242424;
+}
+.ferramentas .img-icon img {
+    width: 30px;
+}
+
+.row.certificacao h4{
+    margin-top: 50px;
+        font-size: 20px;
+}
+
+.single-formacao #page.curso .accordion-container .accordion-title::after {
+    margin-top: 15px;
+}
+.accordion-container .accordion-title {
+    padding-right: 20px;
+}
+.accordion-content{
+    margin-bottom: 30px;
+}
+.contact-form .text-left {
+    padding-left: 15px;
+}
+
+/* Footer */
+
+.footer-menu .locations.show-mobile div {
+    margin-bottom: 30px;
+}
 }
 
