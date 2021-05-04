@@ -15,17 +15,17 @@
                             $excerto = '';
                             $link_story = get_permalink( $story->ID );
                             
-                            if(get_field('fundo_header', $story->ID)){                                                       
-                                $foto = get_field('fundo_header', $story->ID);                                                          
+                            if(get_field('imagem', $story->ID)){                                                       
+                                $foto = get_field('imagem', $story->ID);                                                          
                             }
                             if(get_field('home_titulo', $story->ID)){                                                       
                                 $name = get_field('home_titulo', $story->ID);
                             }
-                            if(get_field('home_description', $story->ID)){                                                       
-                                $descricao_alumni = get_field('home_description', $story->ID);
+                            if(get_field('profissaocurso', $story->ID)){                                                       
+                                $descricao_alumni = get_field('profissaocurso', $story->ID);
                             }
-                            if(get_field('logo_empresa', $story->ID)){                                                       
-                                $logo_empresa = get_field('logo_empresa', $story->ID);
+                            if(get_field('logo', $story->ID)){                                                       
+                                $logo_empresa = get_field('logo', $story->ID);
                             }
                             if(get_field('excerto', $story->ID)){                                                       
                                 $excerto = get_field('excerto', $story->ID);
