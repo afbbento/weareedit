@@ -8,6 +8,11 @@
                     $alumni = $seccao_alumni['alumni'];
                     if($alumni){
                         foreach($alumni as $story){
+                            $foto = '';
+                            $name = '';
+                            $descricao_alumni = '';
+                            $logo_empresa = '';
+                            $excerto = '';
                             $link_story = get_permalink( $story->ID );
                             
                             if(get_field('fundo_header', $story->ID)){                                                       
