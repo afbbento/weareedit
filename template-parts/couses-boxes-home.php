@@ -15,7 +15,7 @@
                                 $titulo_formacao = get_field('titulo', $destaque_row->ID);
                                 $tipo_formacao = get_field('tipo_formacao', $destaque_row->ID);
                                 
-                                
+                                $data_formacao ='';
                                 $data_formacao = get_field('home_data', $destaque_row->ID);
                                 if ($data_formacao){
                                     $formacao_data_format = DateTime::createFromFormat('d/m/Y', $data_formacao);
