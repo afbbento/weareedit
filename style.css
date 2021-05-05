@@ -575,19 +575,25 @@ hr.light-grey{
 }	
 .course-view span{	
     font-size: 16px;	
-    font-weight: normal;	
+    font-weight: 500;	
     font-stretch: normal;	
     font-style: normal;	
     line-height: 1.88;	
-    letter-spacing: -0.5px;	
-    text-decoration: underline;	
+    letter-spacing: -0.5px;		
+    display: block;
+    transition: transform .15s ease-in-out;
 }	
+.course-view span:nth-child(2){
+    text-decoration: underline;
+}
 .course-view{	
     position: absolute;	
-    bottom: 30px;	
+    bottom: 15px;	
     text-align: left;	
     transition: opacity .15s ease-out;	
-    opacity: 0;	
+    opacity: 1;	
+    height: 30px;
+    overflow: hidden;
 }	
 .alumni-slider{	
     margin-bottom: 90px;	
@@ -738,7 +744,7 @@ section.tutores{
 }	
 .courses-container .course-text{	
     position: absolute;	
-    bottom: 30px;	
+    bottom: 50px;	
     text-align: left;	
     padding-right: 30px;	
     -webkit-transition: transform 0.4s; /* For Safari 3.0 to 6.0 */	
@@ -2549,14 +2555,13 @@ section.relacionados{
 @media (min-width: 992px) { 	
    .swiper-boxes .swiper-slide:hover .slide-bg{	
         transform: scale(1.07);	
-    }	
-    .swiper-boxes .swiper-slide:hover .course-text,	
-    .filter-result .course-box:hover .course-text{	
-        transform: translateY(-40px);	
-    }	
+    }		
     .swiper-boxes .swiper-slide:hover .course-view, 	
     .course-box:hover .course-view{	
         opacity: 1;	
+    }
+    .swiper-boxes .swiper-slide:hover .course-view span{	
+        transform: translateY(-30px);	
     }	
     .show-tablet{	
         display: none;	

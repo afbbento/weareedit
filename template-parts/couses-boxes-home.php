@@ -6,57 +6,39 @@
 
                     <?php
                     
-                        $date = date('Ymd');
-                        $meta_query = array('relation' => 'AND',
-                            array(
-                                'key'           => 'home_data',
-                                'compare'       => '!=',
-                                'value'         =>  '',
-                            ),
-                            array(
-                                'key'           => 'home_data',
-                                'compare'       => '>=',
-                                'value'         =>  $date,
-                            ),
-                        );
-                        $ids = get_field('slider_cursos', false, false);
+                        $formacao_destaque = get_field('formacao_destaque');
                         
-                        $the_query = new WP_Query(array(
-                            'post_type'         => array('formacao'),
-                            'post__in'          => $ids,
-                            'post_status'       => 'publish',
-                            'orderby'           => 'meta_value',
-                            'meta_query'        => $meta_query,
-                            'meta_key'          => 'home_data',
-                            'order'             => 'ASC'
-                        ));
-                       
-                       if ( $the_query->have_posts() ) { 
-                            while ( $the_query->have_posts() ) {
-                                $the_query->the_post(); 
-                                 
-                                $tipo_formacao_array = get_field('tipo_formacao');
-                                $tipo_formacao_array[0]->post_title;
-                                $tipoFormacao = get_field('tipo_formacao');
-                                $icon = get_field('icon',$tipoFormacao[0]);
-                                $cssClassType = get_field('class',$tipoFormacao[0]);
-             
+                        if( $formacao_destaque ){
+                            foreach($formacao_destaque as $destaque_row){
+                                        
+                                $link_formacao = get_permalink( $destaque_row->ID );
+                                $titulo_formacao = get_field('titulo', $destaque_row->ID);
+                                $tipo_formacao = get_field('tipo_formacao', $destaque_row->ID);
+                                $data_formacao = get_field('home_data', $destaque_row->ID);
+                                $formacao_data_format = DateTime::createFromFormat('d/m/Y', $data_formacao);
+                                $dia_formacao_ini = $formacao_data_format->format('j');
+                                $mes_formacao = getMes($formacao_data_format->format('m'));
+                                
+                                $localizacao_formacao = get_field('localizacao', $destaque_row->ID);
+                                if( $localizacao_formacao ){     
+                                    foreach($localizacao_formacao as $localizacao_row){
+                                        $localizacao_formacao = get_the_title( $localizacao_row->ID );
+                                        $localizacao_id = $localizacao_row->ID;
+                                    }
+                                }
 
-                                if( $tipoFormacao ){
-                                    foreach( $tipoFormacao as $tipo_formacao_row ){
-                                        $link_tipo_formacao = get_permalink( $tipo_formacao_row->ID );
+                                if( $tipo_formacao ){
+                                    foreach( $tipo_formacao as $tipo_formacao_row ){
                                         $titulo_tipo_formacao = get_the_title( $tipo_formacao_row->ID );
                                         $tipo_formacao_bg = get_field( 'imagem_background', $tipo_formacao_row->ID );
                                         $tipo_formacao_icon = get_field( 'icon', $tipo_formacao_row->ID );
-                                        $tipo_formacao_class = get_field( 'class', $tipo_formacao_row->ID );
-                                        
                                     }
                                     
                                 }
                               
                     ?>
                     <div class="swiper-slide">
-                        <a href="<?php echo get_permalink(); ?>">
+                        <a href="<?php echo $link_formacao; ?>">
                             <div class="slide-bg">
                                 <img src="<?php echo $tipo_formacao_bg; ?>">
                             </div>
@@ -64,11 +46,12 @@
                                 <div class="course-icon"><img
                                         src="<?php echo $tipo_formacao_icon; ?>"></div>
                                 <div class="course-text">
-                                    <div class="course-category"><?php echo $tipo_formacao_array[0]->post_title; ?>
+                                    <div class="course-category"><?php echo $titulo_tipo_formacao; ?>
                                     </div>
-                                    <div class="course-title"><?php the_field('home_titulo');?></div>
+                                    <div class="course-title"><?php echo $titulo_formacao; ?></div>
                                 </div>
                                 <div class="course-view">
+                                    <span><?php echo $dia_formacao_ini." de ".$mes_formacao.", ".$localizacao_formacao; ?></span>
                                     <span>Ver curso</span>
                                 </div>
                             </div>
