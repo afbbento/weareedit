@@ -53,14 +53,9 @@
                                     }
                                     
                                 }
-                                if ($tipo_formacao_class=='curso'){
-                                    $text_color = "text-black";
-                                }else{
-                                    $text_color = "text-white";
-                                }                   
-                           
+                              
                     ?>
-                    <div class="swiper-slide <?php echo $text_color; ?>">
+                    <div class="swiper-slide">
                         <a href="<?php echo get_permalink(); ?>">
                             <div class="slide-bg">
                                 <img src="<?php echo $tipo_formacao_bg; ?>">

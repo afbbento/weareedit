@@ -753,19 +753,16 @@ section.tutores{
     letter-spacing: -0.5px;	
 }	
 .courses-container .course-text .course-title{	
-     font-size: 23px;	
+    font-size: 23px;	
     font-weight: bold;	
     font-stretch: normal;	
     font-style: normal;	
     line-height: 1.09;	
     letter-spacing: -0.72px;	
 }
-.courses-container .swiper-slide.text-black a{
+.courses-container .swiper-slide a{
     color: #000000;
 }
-.courses-container .swiper-slide.text-white a{
-    color: #FFFFFF;
-}	
 .course-icon{	
     display: flex;	
     position: absolute;	
