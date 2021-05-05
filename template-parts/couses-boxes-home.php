@@ -14,10 +14,15 @@
                                 $link_formacao = get_permalink( $destaque_row->ID );
                                 $titulo_formacao = get_field('titulo', $destaque_row->ID);
                                 $tipo_formacao = get_field('tipo_formacao', $destaque_row->ID);
+                                
+                                
                                 $data_formacao = get_field('home_data', $destaque_row->ID);
-                                $formacao_data_format = DateTime::createFromFormat('d/m/Y', $data_formacao);
-                                $dia_formacao_ini = $formacao_data_format->format('j');
-                                $mes_formacao = getMes($formacao_data_format->format('m'));
+                                if ($data_formacao){
+                                    $formacao_data_format = DateTime::createFromFormat('d/m/Y', $data_formacao);
+                                    $dia_formacao_ini = $formacao_data_format->format('j');
+                                    $mes_formacao = getMes($formacao_data_format->format('m'));
+                                }
+                                
                                 
                                 $localizacao_formacao = get_field('localizacao', $destaque_row->ID);
                                 if( $localizacao_formacao ){     
