@@ -235,7 +235,9 @@
             ?>
             <div class="col-xs-6  col-md-3 col-sm-5 col-sm-offset-1 col-md-offset-0 ">
                 <div class="grid-box">
-                    <img src="<?php echo $row_logos['logo'];?>">
+                    <a href="<?php echo $row_logos['link'];?>" target="_blank">
+                        <img src="<?php echo $row_logos['logo'];?>">
+                    </a>
                 </div>
             </div>
             <?php
