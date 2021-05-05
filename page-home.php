@@ -131,7 +131,9 @@ get_header();
                     ?>
                 <div class="col-md-3 col-sm-5 col-xs-6">
                     <div class="grid-box">
-                        <img src="<?php echo $row['imagem'];?>">
+                        <a href="<?php echo $row['link'];?>" target="_blank">
+                            <img src="<?php echo $row['imagem'];?>">
+                        </a>
                     </div>
                 </div>
 

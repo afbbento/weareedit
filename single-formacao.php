@@ -401,11 +401,13 @@ $localizacao_formacao = get_field('localizacao');
                         if( $clientes_projecto_360 ){
                             foreach($clientes_projecto_360 as $clientes_360){
                             $imagem_cliente_360 = get_field('imagem', $clientes_360->ID);
+                            $link_cliente_360 = get_field('link', $clientes_360->ID);
                         ?>
 
             <div class="col-md-3 col-sm-6 col-xs-6">
-                <img src="<?php echo $imagem_cliente_360; ?>">
-
+                <a href="<?php echo $link_cliente_360; ?>" target="_blank">
+                    <img src="<?php echo $imagem_cliente_360; ?>">
+                </a>
                 <!-- <div class="adaptImage">
                     <div class="adaptImage__inner">
                         <div class="adaptImage__aspect">
