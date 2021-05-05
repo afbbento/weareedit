@@ -488,7 +488,7 @@ hr.light-grey{
 }	
 .hero{	
     background-color: #000000;	
-    padding-top: 210px;	
+    padding-top: 100px;	
 }	
 .hero h1{	
     font-family: SctoGroteskA;	
@@ -729,7 +729,7 @@ section.tutores{
     margin-bottom: 80px;	
 }	
 .courses-container {	
-    margin-top: 130px;	
+    margin-top: 80px;	
 }	
 .swiper-boxes .slide-inner{	
     padding: 30px;	
