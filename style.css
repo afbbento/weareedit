@@ -1738,8 +1738,8 @@ section.visao-geral h4{
 section h2.intro{	
     padding-right: 15%;	
 }	
-.row.certificacao [class^="col-"]:nth-child(2){	
-    padding-left: 60px;	
+.row.certificacao .img-wrapper{
+    padding-right: 15%;
 }	
 section.visao-geral [class^="col-"] h4:not(:first-child) {	
     margin-top: 35px;	
@@ -2922,6 +2922,9 @@ section.relacionados{
     }	
     section h2 {	
         margin-bottom: 20px;	
+    }
+    .row.certificacao .img-wrapper {
+        padding-right: 0;
     }	
     .persons-grid [class^="col-"]:nth-child(2n+0) {	
         transform: translateY(0);	
