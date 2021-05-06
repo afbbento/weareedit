@@ -38,13 +38,13 @@
                 <div class="row is-flex v-center">
                     <div class="col-xs-12 col-sm-12 col-md-6 pad0 slider-img">
                         <div style="background-image:url(<?php echo $foto;?>)">
-                        </div>
+                        <a href="<?php echo $link_story; ?>"></a></div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 slider-text">
                         <h3 class="text-white">
-                            <?php 
+                            <a href="<?php echo $link_story; ?>"><?php 
                                 echo $excerto;
-                            ?></h3>
+                            ?></a></h3>
                         <div class="name"><?php echo $name; ?></div>
                         <p><?php echo $descricao_alumni; ?></p>
                         <div>

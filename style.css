@@ -614,6 +614,16 @@ hr.light-grey{
     margin-bottom: 35px;	
     margin-top: 0;	
     font-weight: 500;	
+}
+.alumni-slider .slider-img > div a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.alumni-slider h3 a{
+    color: #FFFFFF;
 }	
 .alumni-slider .swiper-slide{	
     opacity: 0;	
