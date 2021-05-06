@@ -2578,7 +2578,9 @@ section.relacionados{
         width: 950px;	
     }	
 }	
-@media (max-width: 992px) { 	
+@media (max-width: 992px) {
+    .grid-sizer,	
+    .grid-item { width: 100%; } 	
     .show-desktop{	
         display: none;	
     }	
