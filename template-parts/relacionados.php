@@ -58,7 +58,7 @@
                         <img src="<?php echo $tipo_formacao_icon; ?>">
                     </div>
                     <div class="course-text css-<?php echo $tipo_formacao_css; ?>">
-                        <div class="course-category"><a href="#"><?php echo $titulo_tipo_formacao; ?></a></div>
+                        <div class="course-category"><a href="<?php echo $link_relacionado_formacao; ?>"><?php echo $titulo_tipo_formacao; ?></a></div>
                         <div class="course-title"><a
                                 href="<?php echo $link_relacionado_formacao; ?>"><?php echo $titulo_relacionado_formacao; ?></a>
                         </div>
