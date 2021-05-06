@@ -588,7 +588,7 @@ hr.light-grey{
 }
 .course-view{	
     position: absolute;	
-    bottom: 15px;	
+    bottom: 20px;	
     text-align: left;	
     transition: opacity .15s ease-out;	
     opacity: 1;	
