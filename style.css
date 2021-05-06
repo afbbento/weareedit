@@ -581,6 +581,7 @@ hr.light-grey{
     line-height: 1.88;	
     letter-spacing: -0.5px;		
     display: block;
+    color: #000000;
     transition: transform .15s ease-in-out;
 }	
 .course-view span:nth-child(2){
@@ -1912,16 +1913,17 @@ section.relacionados h3{
 }	
 .related-formacao .course-text{	
     position: absolute;	
-    bottom: 0;	
+    bottom: -10px;
     width: 100%;	
     padding: 30px;	
 }
-.related-formacao .course-text a{
-    color: #FFFFFF;	
+.related-formacao .course-view {
+    position: relative;
+    bottom: auto;
 }
-.related-formacao .course-text.css-curso a{
+.related-formacao .course-text a{
     color: #000000;	
-}		
+}
 .related-formacao .course-text .course-title{	
     font-size: 23px;	
     font-weight: bold;	

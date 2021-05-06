@@ -22,6 +22,22 @@
                             $link_relacionado_formacao = get_permalink( $formacao_row->ID );
                             $titulo_relacionado_formacao = get_field('titulo', $formacao_row->ID);
                             $tipo_formacao = get_field('tipo_formacao', $formacao_row->ID);
+                            
+                            $data_formacao ='';
+                            $data_formacao = get_field('home_data', $destaque_row->ID);
+                            if ($data_formacao){
+                                $formacao_data_format = DateTime::createFromFormat('d/m/Y', $data_formacao);
+                                $dia_formacao_ini = $formacao_data_format->format('j');
+                                $mes_formacao = getMes($formacao_data_format->format('m'));
+                            }
+                            
+                            $localizacao_formacao = get_field('localizacao', $destaque_row->ID);
+                            if( $localizacao_formacao ){     
+                                foreach($localizacao_formacao as $localizacao_row){
+                                    $localizacao_formacao = get_the_title( $localizacao_row->ID );
+                                    $localizacao_id = $localizacao_row->ID;
+                                }
+                            }
 
                             if( $tipo_formacao ){
                                 foreach( $tipo_formacao as $tipo_formacao_row ){
@@ -45,6 +61,9 @@
                         <div class="course-category"><a href="#"><?php echo $titulo_tipo_formacao; ?></a></div>
                         <div class="course-title"><a
                                 href="<?php echo $link_relacionado_formacao; ?>"><?php echo $titulo_relacionado_formacao; ?></a>
+                        </div>
+                        <div class="course-view">
+                            <span><?php echo $dia_formacao_ini." de ".$mes_formacao.", ".$localizacao_formacao; ?></span>
                         </div>
                     </div>
                     <img src="<?php echo $tipo_formacao_bg; ?>">
