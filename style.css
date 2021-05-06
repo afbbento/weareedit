@@ -1319,7 +1319,17 @@ footer h3{
 .footer-menu .locations > div span{	
     font-weight: 500;	
     color: #ffffff;	
-}	
+}
+.footer-menu .locations > div{
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -0.47px;
+    color: #8f8f8f;
+    font-size: 15px;
+    margin-bottom: 25px;
+    line-height: 1.67;
+}
 .footer-menu > .row{	
     margin-bottom: 60px;	
 }	
