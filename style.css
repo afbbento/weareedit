@@ -1319,7 +1319,17 @@ footer h3{
 .footer-menu .locations > div span{	
     font-weight: 500;	
     color: #ffffff;	
-}	
+}
+.footer-menu .locations > div{
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: -0.47px;
+    color: #8f8f8f;
+    font-size: 15px;
+    margin-bottom: 25px;
+    line-height: 1.67;
+}
 .footer-menu > .row{	
     margin-bottom: 60px;	
 }	
@@ -1728,8 +1738,8 @@ section.visao-geral h4{
 section h2.intro{	
     padding-right: 15%;	
 }	
-.row.certificacao [class^="col-"]:nth-child(2){	
-    padding-left: 60px;	
+.row.certificacao .img-wrapper{
+    padding-right: 15%;
 }	
 section.visao-geral [class^="col-"] h4:not(:first-child) {	
     margin-top: 35px;	
@@ -2912,6 +2922,9 @@ section.relacionados{
     }	
     section h2 {	
         margin-bottom: 20px;	
+    }
+    .row.certificacao .img-wrapper {
+        padding-right: 0;
     }	
     .persons-grid [class^="col-"]:nth-child(2n+0) {	
         transform: translateY(0);	

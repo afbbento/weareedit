@@ -234,7 +234,9 @@ $localizacao_formacao = get_field('localizacao');
 
         <div class="row certificacao is-flex v-center reveal-block">
             <div class="col-md-4 col-md-offset-0 pad0 col-sm-5 col-sm-offset-1">
-                <img src="<?php echo $tipo_formacao_certificado; ?>">
+                <div class="intro img-wrapper">
+                    <img src="<?php echo $tipo_formacao_certificado; ?>">
+                </div>
             </div>
             <div class="col-md-8 col-sm-5 col-sm-offset-0">
                 <h4>Curso certificado pela DGERT</h4>
