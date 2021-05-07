@@ -194,13 +194,13 @@ get_header();
                         <div class="col-md-12 col-sm-12">
                             <h4 class="text-white border border-grey">Formação competitiva e relevante</h4>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-md-6 col-sm-12">
                             <p>Assim, o contacto com as marcas/clientes reais é igualmente essencial no método de ensino
                                 da EDIT.. Por isso, e no âmbito do projeto final dos programas, os alunos criam
                                 campanhas digitais multiplataforma, com o acompanhamento e supervisão dos tutores e de
                                 profissionais de empresas/agências parceiras.</p>
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-md-6 col-sm-12">
                             <p>Marcas como a ASUS, Samsung Portugal, Uber, Somersby, TAP Portugal, Farfetch,
                                 Mercedes-Benz, FOX Portugal, Continente Online, Redbull, Fnac, Hyundai, Lidl, Licor
                                 Beirão, Vans e Yorn (Vodafone) foram algumas das parcerias estabelecidas e trabalhadas

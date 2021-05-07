@@ -171,6 +171,11 @@ height: auto;
 }
 
 
+.row-faq [class^="col-"]:nth-child(odd),
+.row-faq [class^="col-"]:nth-child(even)  {
+    padding-right: 60px;
+}
+
 
 }
 
@@ -213,7 +218,7 @@ html.mobile .navigation__secondary___13rln:after {
     padding-left:0;
 }
 .single-formacao .info-form {
-    padding: 75px 0px 75px 0px;
+    padding: 75px 0px 75px 0px; 
 }
 .formacao-info .value {
     font-size: 16px;
@@ -373,7 +378,7 @@ a.btn {
     border-right: 1px solid #242424;
 }
 .ferramentas .img-icon img {
-    width: 30px;
+    width: 35px;
 }
 
 .row.certificacao h4{
@@ -392,6 +397,18 @@ a.btn {
 }
 .contact-form .text-left {
     padding-left: 15px;
+}
+
+.single-formacao section.programa p.list-title {
+    line-height: 1.47;
+}
+section.programa ul li {
+    line-height: 1.40;
+    margin-bottom: 5px;
+}
+
+.single-formacao .text-block-container p {
+    margin-bottom: 10px;
 }
 
 /* Footer */
