@@ -110,16 +110,19 @@ $localizacao_formacao = get_field('localizacao');
                         $data_ini = $first_row['data'];
                         $data_fim = $first_row['data_fim'];
                         
-                        if (($data_ini!='') && ($data_fim!='')){
+                        if ($data_ini!=''){
                            
                             $formacao_format_ini = DateTime::createFromFormat('d/m/Y', $data_ini);
-                            $formacao_format_fim = DateTime::createFromFormat('d/m/Y', $data_fim);
-                            $dia_formacao_ini = $formacao_format_ini->format('d');
-                            $dia_formacao_fim = $formacao_format_fim->format('d');
-                            
+                            $dia_formacao_ini = $formacao_format_ini->format('d');                            
                             $mes_ini_texto = substr(getMes($formacao_format_ini->format('m')), 0, 3);
+                            
+                        }
+                        if ($data_fim!=''){
+                            $formacao_format_fim = DateTime::createFromFormat('d/m/Y', $data_fim);
+                            $dia_formacao_fim = $formacao_format_fim->format('d');
                             $mes_fim_texto = substr(getMes($formacao_format_fim->format('m')), 0, 3);
                         }
+
                         foreach( $first_row_title as $row_data_post ){                            
                             echo '<div class="inner">'.get_the_title( $row_data_post->ID ).'</div>';                  
                         } 
@@ -130,7 +133,11 @@ $localizacao_formacao = get_field('localizacao');
                         while( have_rows('horario_formacao') ) {
                             the_row();
                             $horario = get_sub_field('horario');
-                            array_push($datas_formacao, get_sub_field('data'));
+                            
+                            if (get_sub_field('data')!=''){
+                                array_push($datas_formacao, get_sub_field('data'));    
+                            }
+                            
                             
                             
                             foreach( $horario as $row_horario ){
@@ -146,8 +153,8 @@ $localizacao_formacao = get_field('localizacao');
 
             <div class="cols <?php echo $col_drop; ?>">
                 <?php
-                if( $rows_horarios && ($data_ini!='') && ($data_fim!='')){
-                    if ($data_ini==$data_fim){
+                if( $rows_horarios && ($data_ini!='')){
+                    if ($data_fim==''){
                         $mes_ini_texto = getMes($formacao_format_ini->format('m'));
                         echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.'</div>';
                     }else{
@@ -157,14 +164,15 @@ $localizacao_formacao = get_field('localizacao');
                 ?>
                 <div class="drop-inner" style="display:none;">
                     <ul>
-                        <?php 
+                        <?php                         
                             foreach( $datas_formacao as $row_datas ){
+                                
                                 $data_formacao = DateTime::createFromFormat('d/m/Y', $row_datas);
                                 $dia_formacao_drop = $data_formacao->format('d');
                                 $mes_formacao_texto = getMes($data_formacao->format('m'));
                                 
                                 echo '<li>'.$dia_formacao_drop.' '.$mes_formacao_texto.'</li>';
-                            }
+                            }                        
                         ?>
 
                     </ul>
