@@ -332,25 +332,45 @@ section.bg-light-grey h4{
     color: #000000;
     border-color: #ffdd06;
 }
+.btn-curso:hover{
+    background-color: #937F00 !important;
+    border-color: #937F00 !important;
+}
 .btn-remote-learning{
     background-color: #0090eb;
     color: #FFFFFF;
     border-color: #0090eb;
+}
+.btn-remote-learning:hover{
+    background-color: #006AAD;
+    border-color: #006AAD;
 }
 .btn-curso-intensivo{
     background-color: #ec8172;
     color: #000000;
     border-color: #ec8172;
 }
+.btn-curso-intensivo:hover{
+    background-color: #B4594C;
+    border-color: #B4594C;
+}
 .btn-workshop{
     background-color: #60c5b3;
     color: #000000;
     border-color: #60c5b3;
 }
+.btn-workshop:hover{
+    background-color: #428A7D;
+    border-color: #428A7D;
+}
 .btn-bootcamp{
     background-color: #f92869;
     color: #000000;
     border-color: #f92869;
+}
+.btn-bootcamp:hover{
+    background-color: #C71F53;
+    border-color: #C71F53;
 }
 section.bg-light-grey p{	
     color: #717171;	
@@ -1208,17 +1228,32 @@ a.headerDesktop__inCompany:hover{
 .single-formacao #info_bar .col-btn.class-curso{
     background-color: #ffdd06;
 }
+.single-formacao #info_bar .col-btn.class-curso:hover{
+    background-color: #937F00;
+}
 .single-formacao #info_bar .col-btn.class-remote-learning{
     background-color: #0090eb;
+}
+.single-formacao #info_bar .col-btn.class-remote-learning:hover{
+    background-color: #006AAD;
 }
 .single-formacao #info_bar .col-btn.class-curso-intensivo{
     background-color: #ec8172;
 }
+.single-formacao #info_bar .col-btn.class-curso-intensivo:hover{
+    background-color: #B4594C;
+}
 .single-formacao #info_bar .col-btn.class-workshop{
     background-color: #60c5b3;
 }
+.single-formacao #info_bar .col-btn.class-workshop:hover{
+    background-color: #428A7D;
+}
 .single-formacao #info_bar .col-btn.class-bootcamp{
     background-color: #f92869;
+}
+.single-formacao #info_bar .col-btn.class-bootcamp{
+    background-color: #C71F53;
 }
 .single-formacao #page.remote-learning section.programa h4.border{
     border-left: 3px solid #0090eb;
