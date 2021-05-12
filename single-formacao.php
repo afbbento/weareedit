@@ -113,14 +113,17 @@ $localizacao_formacao = get_field('localizacao');
                         if ($data_ini!=''){
                            
                             $formacao_format_ini = DateTime::createFromFormat('d/m/Y', $data_ini);
-                            $dia_formacao_ini = $formacao_format_ini->format('d');                            
+                            $dia_formacao_ini = $formacao_format_ini->format('d');
+                            $ano_formacao_ini = $formacao_format_ini->format('Y');                            
                             $mes_ini_texto = substr(getMes($formacao_format_ini->format('m')), 0, 3);
                             
                         }
                         if ($data_fim!=''){
                             $formacao_format_fim = DateTime::createFromFormat('d/m/Y', $data_fim);
                             $dia_formacao_fim = $formacao_format_fim->format('d');
+                            $ano_formacao_fim = $formacao_format_fim->format('Y'); 
                             $mes_fim_texto = substr(getMes($formacao_format_fim->format('m')), 0, 3);
+                            
                         }
 
                         foreach( $first_row_title as $row_data_post ){                            
@@ -138,8 +141,6 @@ $localizacao_formacao = get_field('localizacao');
                                 array_push($datas_formacao, get_sub_field('data'));    
                             }
                             
-                            
-                            
                             foreach( $horario as $row_horario ){
                                 
                                     echo "<li>".get_the_title( $row_horario->ID )."</li>";
@@ -156,9 +157,9 @@ $localizacao_formacao = get_field('localizacao');
                 if( $rows_horarios && ($data_ini!='')){
                     if ($data_fim==''){
                         $mes_ini_texto = getMes($formacao_format_ini->format('m'));
-                        echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.'</div>';
+                        echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.' '.$ano_formacao_ini.'</div>';
                     }else{
-                        echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.' - '.$dia_formacao_fim.' '.$mes_fim_texto.'</div>';
+                        echo '<div class="inner">'.$dia_formacao_ini.' '.$mes_ini_texto.' '.$ano_formacao_ini.' - '.$dia_formacao_fim.' '.$mes_fim_texto.' '.$ano_formacao_fim.'</div>';
                     }
                 }
                 ?>
@@ -170,8 +171,9 @@ $localizacao_formacao = get_field('localizacao');
                                 $data_formacao = DateTime::createFromFormat('d/m/Y', $row_datas);
                                 $dia_formacao_drop = $data_formacao->format('d');
                                 $mes_formacao_texto = getMes($data_formacao->format('m'));
+                                $ano_formacao_drop = $data_formacao->format('Y');
                                 
-                                echo '<li>'.$dia_formacao_drop.' '.$mes_formacao_texto.'</li>';
+                                echo '<li>'.$dia_formacao_drop.' '.$mes_formacao_texto.' '.$ano_formacao_drop.'</li>';
                             }                        
                         ?>
 
