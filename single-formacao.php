@@ -318,6 +318,10 @@ $localizacao_formacao = get_field('localizacao');
                         ?>
             </div>
         </div>
+        <?php
+            $ferramentas = get_field('ferramentas_de_trabalho');
+            if( $ferramentas ) {
+        ?>
         <div class="row ferramentas">
             <div class="col-md-12 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <h3 class="reveal-block"><?php echo get_field('titulo_ferramentas'); ?></h3>
@@ -325,12 +329,8 @@ $localizacao_formacao = get_field('localizacao');
             <div class="col-md-12 col-md-offset-0   col-sm-10 col-sm-offset-1">
                 <div class="row grid-sp-40 logos-grid reveal-block">
                     <?php
-                            $ferramentas = get_field('ferramentas_de_trabalho');
-                            if( $ferramentas ) {
-                                foreach( $ferramentas as $row_ferramentas ) {
-                        
-                            ?>
-
+                        foreach( $ferramentas as $row_ferramentas ) {
+                    ?>
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="adaptImage" style="border: 1px solid #242424;">
                             <div class="adaptImage__inner">
@@ -347,12 +347,16 @@ $localizacao_formacao = get_field('localizacao');
                         </div>
                     </div>
                     <?php 
-                                } 
-                            }                              
-                            ?>
+                        //end foreach
+                        } 
+                    ?>
                 </div>
             </div>
         </div>
+        <?php 
+        //end ferramentas
+            }
+        ?>
         <hr class="light-grey">
 
         <?php
@@ -385,17 +389,18 @@ $localizacao_formacao = get_field('localizacao');
         </div>
 
         <?php
-                $projecto_360 = get_field('projecto_360');
-                    if( $projecto_360 ){
-                        foreach($projecto_360 as $elemento_360){
-                            $titulo_projecto = get_field('titulo', $elemento_360->ID);
-                            $subtitulo_projecto = get_field('subtitulo', $elemento_360->ID);
-                            $texto_projecto = get_field('texto', $elemento_360->ID);
-                            $video_projecto = get_field('video', $elemento_360->ID);
-                            $clientes_projecto_360 = get_field('cliente', $elemento_360->ID);
-                        }        
-                    }
-                ?>
+        $projecto_360 = get_field('projecto_360');
+        if( $projecto_360 ){
+        
+            foreach($projecto_360 as $elemento_360){
+                $titulo_projecto = get_field('titulo', $elemento_360->ID);
+                $subtitulo_projecto = get_field('subtitulo', $elemento_360->ID);
+                $texto_projecto = get_field('texto', $elemento_360->ID);
+                $video_projecto = get_field('video', $elemento_360->ID);
+                $clientes_projecto_360 = get_field('cliente', $elemento_360->ID);
+            }        
+            
+        ?>
         <div class="row">
             <div class="col-md-12 col-md-offset-0   col-sm-10 col-sm-offset-1">
                 <small class="text-muted reveal-block">PROJETO 360º - <?php echo $titulo_projecto; ?></small>
@@ -441,6 +446,10 @@ $localizacao_formacao = get_field('localizacao');
             <iframe src="<?php echo $video_projecto;?>" width="100%" height="640" frameborder="0"
                 allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
         </div>
+        <?php 
+        //end projecto 360
+        }
+        ?>
     </div>
 </section>
 <script>
