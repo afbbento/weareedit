@@ -995,6 +995,9 @@ section.faq{
 }	
 .persons-grid [class^="col-"]:nth-child(2n+0) {	
     transform: translateY(200px);	
+}
+.persons-grid.space-bottom{
+    margin-bottom: 200px;
 }	
 .person-card{	
     display: flex;	
