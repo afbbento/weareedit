@@ -4,6 +4,7 @@
     $seccao_equipa = get_field('seccao_equipa');
         if( $seccao_equipa ){
             $equipa = $seccao_equipa['elemento'];
+            $num_elementos = count($equipa);
             if($equipa){
                 $i = 0;
                 foreach($equipa as $elemento){
@@ -41,7 +42,10 @@
         </a>
     </div>
     <?php
-                    if ($i==5){
+                    if (($i==5 || $i==7 ) && $num_elementos<5){
+                        echo '<div class="col-md-3 col-sm-5"></div>';
+                    }
+                    if (($i==9 ) && $num_elementos>5){
                         echo '<div class="col-md-3 col-sm-5"></div>';
                     }
                     }
