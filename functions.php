@@ -118,7 +118,7 @@ function weareedit_scripts() {
     wp_enqueue_script( 'masonry', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js', _S_VERSION, true );
     
     wp_enqueue_script( 'weareedit-menu', get_template_directory_uri() . '/js/menu.js', _S_VERSION, true, true );
-    ///wp_enqueue_script( 'weareedit-animations', get_template_directory_uri() . '/js/animations.js', _S_VERSION, true, true );
+    //wp_enqueue_script( 'weareedit-animations', get_template_directory_uri() . '/js/animations.js', _S_VERSION, true, true );
     wp_enqueue_script( 'weareedit-app', get_template_directory_uri() . '/js/app.js', _S_VERSION, true, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

@@ -480,21 +480,10 @@ jQuery(document).ready(function() {
         endTrigger: "html",
         end: "bottom top",
         toggleClass: "sticky_info",
-        onEnter: () => show_btn(),
-        onLeaveBack: () => hide_btn(),
         pinSpacing: false,
         scrub: 1
     });
 
-    function show_btn() {
-        jQuery('.headerDesktop__contact').css("opacity", "0");
-        jQuery('.headerDesktop__inCompany').toggleClass('right');
-    }
-
-    function hide_btn() {
-        jQuery('.headerDesktop__contact').css("opacity", "1");
-        jQuery('.headerDesktop__inCompany').toggleClass('right');
-    }
 });
 </script>
 
