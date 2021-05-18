@@ -580,8 +580,7 @@ hr.light-grey{
 }	
 .swiper-boxes .swiper-slide{	
     width: 270px;	
-    height: 270px;	
-    opacity: 0;	
+    height: 270px;		
     cursor: pointer;	
     background-color: transparent;	
 }	
@@ -644,9 +643,6 @@ hr.light-grey{
 }
 .alumni-slider h3 a{
     color: #FFFFFF;
-}	
-.alumni-slider .swiper-slide{	
-    opacity: 0;	
 }	
 .alumni-slider .row{	
     margin: 0;	
@@ -806,7 +802,6 @@ section.tutores{
 }	
 .swiper-boxes .swiper-slide{	
     padding: 0;	
-    opacity: 0;	
 }	
 .row-in_company{	
     margin-top: 100px;	

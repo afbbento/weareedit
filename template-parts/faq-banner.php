@@ -11,7 +11,7 @@ $seccao_banner_faq = get_field('seccao_banner_faq');
 ?>
 <section class="faq">
     <div class="container">
-        <div class="row reveal-block">
+        <div class="row">
             <div class="col-md-12 col-md-offset-0 col-sm-offset-1 col-xs-offset-0">
                 <h1><?php echo $titulo; ?></h1>
                 <p><?php echo $texto; ?></p>

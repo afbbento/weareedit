@@ -1,4 +1,4 @@
-<div class="alumni-slider reveal-block">
+<div class="alumni-slider">
     <div class="swiper-alumni">
         <div class="swiper-wrapper">
             <?php

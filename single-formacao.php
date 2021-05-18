@@ -39,7 +39,7 @@ $localizacao_formacao = get_field('localizacao');
 <div class="head">
     <div class="container">
         <div class="col-md-12 col-sm-10 col-sm-offset-1 col-md-offset-0">
-            <ul class="breadcrumb reveal-block class-<?php echo $tipo_formacao_class;?>">
+            <ul class="breadcrumb  class-<?php echo $tipo_formacao_class;?>">
                 <li class="logo-formacao"><img src="<?php echo $tipo_formacao_icon_color['url']; ?>"></li>
                 <li><a
                         href="/tipo-formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>"><?php echo $titulo_tipo_formacao; ?></a>
@@ -48,12 +48,12 @@ $localizacao_formacao = get_field('localizacao');
                         href="/formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>&areaId=<?php echo $area_id; ?>"><?php echo $titulo_area; ?></a>
                 </li>
             </ul>
-            <h1 class="reveal-block"><?php the_field('titulo'); ?></h1>
+            <h1 class=""><?php the_field('titulo'); ?></h1>
         </div>
 
         <div class="col-md-12 col-sm-10 col-sm-offset-1">
             <div class="formacao-info ">
-                <div class="row reveal-block">
+                <div class="row ">
                     <?php 
                 $bloco_info = get_field('bloco_informacao');
                 
@@ -90,7 +90,7 @@ $localizacao_formacao = get_field('localizacao');
 
     <!--INFO BAR-->
     <div id="info_bar" class="info_bar_container">
-        <div class="formacao-info-bar reveal-block">
+        <div class="formacao-info-bar ">
             <?php
                 $rows_horarios = get_field('horario_formacao' );
                 $horarios_count = count(get_field('horario_formacao'));
@@ -193,7 +193,7 @@ $localizacao_formacao = get_field('localizacao');
 <!--VISAO GERAL-->
 <section class="visao-geral bg-light-grey">
     <div class="container">
-        <div class="row sobre-curso reveal-block">
+        <div class="row sobre-curso ">
             <div class="col-md-12">
                 <small class="text-muted">SOBRE O CURSO</small>
                 <h3><?php echo $info_descricao; ?></h3>
@@ -209,18 +209,18 @@ $localizacao_formacao = get_field('localizacao');
                 ?>
         <div class="row">
             <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1"><small
-                    class="text-muted reveal-block"><?php echo $muted_text_visao_geral; ?></small>
+                    class="text-muted "><?php echo $muted_text_visao_geral; ?></small>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1">
-                <h2 class="intro reveal-block"><?php echo $title_visao_geral; ?></h2>
+                <h2 class="intro "><?php echo $title_visao_geral; ?></h2>
             </div>
             <div class="col-md-8 col-md-offset-0 col-sm-10 col-sm-offset-1">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="text-block-container">
-                            <div class="grid reveal-block">
+                            <div class="grid ">
                                 <div class="grid-sizer"></div>
                                 <?php
                                         if( $blocos_visao_geral ) {
@@ -242,7 +242,7 @@ $localizacao_formacao = get_field('localizacao');
             </div>
         </div>
 
-        <div class="row certificacao is-flex v-center reveal-block">
+        <div class="row certificacao is-flex v-center ">
             <div class="col-md-4 col-md-offset-0 pad0 col-sm-5 col-sm-offset-1">
                 <div class="intro img-wrapper">
                     <img src="<?php echo $tipo_formacao_certificado; ?>">
@@ -261,7 +261,7 @@ $localizacao_formacao = get_field('localizacao');
 <!--PROGRAMA-->
 <section class="programa bg-black">
     <div class="container">
-        <div class="row reveal-block">
+        <div class="row ">
             <div class="col-md-12 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <h1>Programa</h1>
             </div>
@@ -274,7 +274,7 @@ $localizacao_formacao = get_field('localizacao');
                             $texto_apresentacao = $programa['texto_apresentacao'];
                         }
                         ?>
-                <p class="reveal-block"><?php echo $texto_apresentacao; ?></p>
+                <p class=""><?php echo $texto_apresentacao; ?></p>
             </div>
             <div class="col-md-8 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <?php
@@ -286,7 +286,7 @@ $localizacao_formacao = get_field('localizacao');
                                     echo '<div class="text-block-container">                            
                                             <div class="row sp-60">
                                                 <div class="col-sm-12">
-                                                    <h4 class="border reveal-block">'.$row['titulo'].'</h4>
+                                                    <h4 class="border ">'.$row['titulo'].'</h4>
                                                 </div>
                                             </div>';
                                     
@@ -324,10 +324,10 @@ $localizacao_formacao = get_field('localizacao');
         ?>
         <div class="row ferramentas">
             <div class="col-md-12 col-md-offset-0  col-sm-10 col-sm-offset-1">
-                <h3 class="reveal-block"><?php echo get_field('titulo_ferramentas'); ?></h3>
+                <h3 class=""><?php echo get_field('titulo_ferramentas'); ?></h3>
             </div>
             <div class="col-md-12 col-md-offset-0   col-sm-10 col-sm-offset-1">
-                <div class="row grid-sp-40 logos-grid reveal-block">
+                <div class="row grid-sp-40 logos-grid ">
                     <?php
                         foreach( $ferramentas as $row_ferramentas ) {
                     ?>
@@ -371,7 +371,7 @@ $localizacao_formacao = get_field('localizacao');
                     $banner_link_title = $botao_banner['title'];
                 }
                 ?>
-        <div class="row info-banner is-flex v-center reveal-block">
+        <div class="row info-banner is-flex v-center ">
             <div class="col-md-12" style="background-image: url(<?php echo $imagem_banner; ?>);">
                 <div class="info-form">
                     <div class="col-md-6">
@@ -403,15 +403,15 @@ $localizacao_formacao = get_field('localizacao');
         ?>
         <div class="row">
             <div class="col-md-12 col-md-offset-0   col-sm-10 col-sm-offset-1">
-                <small class="text-muted reveal-block">PROJETO 360º - <?php echo $titulo_projecto; ?></small>
+                <small class="text-muted ">PROJETO 360º - <?php echo $titulo_projecto; ?></small>
             </div>
             <div class="col-md-4 col-md-offset-0   col-sm-10 col-sm-offset-1">
-                <h2 class="intro reveal-block"><?php echo $subtitulo_projecto; ?></h2>
+                <h2 class="intro "><?php echo $subtitulo_projecto; ?></h2>
             </div>
             <div class="col-md-8 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <div class="row sp-60">
                     <div class="col-md-12">
-                        <p class="reveal-block"><?php echo $texto_projecto; ?></p>
+                        <p class=""><?php echo $texto_projecto; ?></p>
                     </div>
                 </div>
             </div>
@@ -510,11 +510,11 @@ jQuery(document).ready(function() {
         ?>
 <section class="tutores">
     <div class="container">
-        <div class="row reveal-block">
+        <div class="row ">
             <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1"><small
                     class="text-muted"><?php echo $muted_text; ?></small></div>
         </div>
-        <div class="row reveal-block mb-85">
+        <div class="row  mb-85">
             <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <h2 class="section-title"><?php echo $titulo; ?></h2>
             </div>
@@ -537,11 +537,11 @@ jQuery(document).ready(function() {
         ?>
 <section class="alumni">
     <div class="container">
-        <div class="row reveal-block">
+        <div class="row ">
             <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1"><small
                     class="text-muted"><?php echo $muted_text; ?></small></div>
         </div>
-        <div class="row mb-85 reveal-block">
+        <div class="row mb-85 ">
             <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <h2 class="section-title"><?php echo $titulo; ?></h2>
             </div>
@@ -555,12 +555,12 @@ jQuery(document).ready(function() {
 
 <section class="course-faq">
     <div class="container">
-        <div class="row reveal-block">
+        <div class="row ">
             <div class="col-md-12 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <h1 class="text-white">Perguntas frequentes</h1>
             </div>
         </div>
-        <div class="row row-faq reveal-block">
+        <div class="row row-faq ">
             <div class="col-md-6 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <?php
                         $rows_faq = get_field('faq' );
@@ -575,7 +575,7 @@ jQuery(document).ready(function() {
                                         $display = 'style="display:none;"';
                                     }                            
                                     echo '
-                                    <div id="accordion" class="accordion-container reveal-block">
+                                    <div id="accordion" class="accordion-container ">
                                         <h4 class="accordion-title js-accordion-title '.$open.'">'.$row_even["pergunta"].'</h4>
                                         <div class="accordion-content" '.$display.'>'.$row_even["resposta"].'</div>                            
                                     </div>';
@@ -592,7 +592,7 @@ jQuery(document).ready(function() {
                             foreach( $rows_faq as $key => $row_odd ) {                                
                                 if($key % 2 == 1){                                    
                                     echo '
-                                    <div id="accordion" class="accordion-container reveal-block">
+                                    <div id="accordion" class="accordion-container ">
                                         <h4 class="accordion-title js-accordion-title">'.$row_odd["pergunta"].'</h4>
                                         <div class="accordion-content" style="display:none;">'.$row_odd["resposta"].'</div>                            
                                     </div>';
@@ -630,7 +630,7 @@ jQuery(document).ready(function() {
     <div class="container">
         <div class="row is-flex v-center">
             <div class="col-md-12">
-                <div class="contact-form inner-border reveal-block">
+                <div class="contact-form inner-border ">
                     <div class="col-md-4">
                         <div class="box-circle">
                             <div class="inner-border"

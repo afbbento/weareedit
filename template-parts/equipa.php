@@ -27,7 +27,7 @@ if( $seccao_equipa ){
 
     <div class="col-md-3 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0 <?php echo $margin;?>">
         <a href=" <?php echo $link_elemento; ?>">
-            <div class="adaptImage reveal-block">
+            <div class="adaptImage ">
                 <div class="adaptImage__inner">
                     <div class="adaptImage__aspect" style="padding-bottom:145%;">
                         <img class="adaptImage__image" src="<?php echo $foto['url']; ?>">

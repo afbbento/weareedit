@@ -15,8 +15,8 @@ get_header();
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-md-offset-0 col-sm-offset-1 col-xs-offset-0 ">
-                <h1 class="reveal-block"><?php echo get_field( "titulo_header" );?></h1>
-                <p class="reveal-block"><?php echo get_field( "texto_header" );?></p>
+                <h1 class=""><?php echo get_field( "titulo_header" );?></h1>
+                <p class=""><?php echo get_field( "texto_header" );?></p>
             </div>
         </div>
     </div>
@@ -26,12 +26,12 @@ get_header();
     <!--about section-->
     <section class="about text-image-block">
         <div class="container">
-            <div class="row reveal-block">
+            <div class="row ">
                 <div class="col-md-4 col-md-offset-0 col-sm-offset-1 col-xs-offset-0"><small
                         class="text-muted"><?php echo get_field('muted_text_sobre');?></small>
                 </div>
             </div>
-            <div class="row reveal-block">
+            <div class="row ">
                 <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-offset-0">
                     <h2 class="section-title"><?php echo get_field('titulo_sobre');?></h2>
                 </div>
@@ -84,14 +84,14 @@ get_header();
                 ?>
             <div class="row is-flex v-center row-in_company">
                 <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1 col-md-offset-0 col-md-6">
-                    <div class="img__wipe__container">
+                    <div class="img__wipe__container active">
                         <div class="img__transition__wipe"></div>
                         <div class="img__transition__inner">
                             <img src="<?php echo $imagem; ?>">
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-xs-offset-0 col-md-6 col-sm-10 col-sm-offset-1 col-md-offset-0 reveal-block">
+                <div class="col-md-12 col-xs-offset-0 col-md-6 col-sm-10 col-sm-offset-1 col-md-offset-0 ">
                     <div class="box-center">
                         <div class="box-center-inner">
                             <small class="text-muted"><?php echo $mute_text;?></small>
@@ -118,12 +118,12 @@ get_header();
         ?>
     <section class="parceiros bleeded">
         <div class="container">
-            <div class="row reveal-block">
+            <div class="row ">
                 <div class="col-md-12 col-sm-offset-1 col-md-offset-0 col-xs-offset-0">
                     <h3><?php echo $titulo;?></h3>
                 </div>
             </div>
-            <div class="row grid-sp-40 logos-grid reveal-block">
+            <div class="row grid-sp-40 logos-grid ">
                 <?php
                     if( $logos ) {
                         foreach( $logos as $row ) {
@@ -157,11 +157,11 @@ get_header();
         ?>
     <section class="alumni">
         <div class="container">
-            <div class="row reveal-block">
+            <div class="row ">
                 <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-0"><small
                         class="text-muted"><?php echo $muted_text; ?></small></div>
             </div>
-            <div class="row mb-85 reveal-block">
+            <div class="row mb-85 ">
                 <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-0">
                     <h2 class="section-title"><?php echo $titulo; ?></h2>
                 </div>
@@ -183,11 +183,11 @@ get_header();
         ?>
     <section class="tutores">
         <div class="container">
-            <div class="row reveal-block">
+            <div class="row ">
                 <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-0"><small
                         class="text-muted"><?php echo $muted_text; ?></small></div>
             </div>
-            <div class="row reveal-block mb-85">
+            <div class="row  mb-85">
                 <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-0">
                     <h2 class="section-title"><?php echo $titulo; ?></h2>
                 </div>
