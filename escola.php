@@ -14,9 +14,9 @@ get_header();
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-md-offset-0 col-sm-11 col-sm-offset-1">
-                <h1 class="reveal-block">Sobre nós</h1>
-                <p class="reveal-block">A EDIT. é uma escola dedicada às áreas do Design Digital/Interativo,
-                    Criatividade, Desenvolvimento Tecnológico & Mobile e Marketing Digital. </p>
+                <h1>Sobre nós</h1>
+                <h2>A EDIT. é uma escola dedicada às áreas do Design Digital/Interativo,
+                    Criatividade, Desenvolvimento Tecnológico & Mobile e Marketing Digital. </h2>
             </div>
         </div>
         <div class="row grid-sp-40 hero-menu">
@@ -30,17 +30,17 @@ get_header();
     <div class="bleeded grey">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1"><small class="text-muted ">sobre a
-                        edit</small></div>
+                <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1"><h2 class="text-muted ">sobre a
+                        edit</h2></div>
             </div>
             <div class="row">
                 <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1">
-                    <h2 class="reveal-block section-title">Um modelo de formação inovador e dinâmico</h2>
+                    <h3 class="section-title">Um modelo de formação inovador e dinâmico</h3>
                 </div>
                 <div class="col-md-8 col-md-offset-0 col-sm-11 col-sm-offset-1">
                     <div class="row sp-60">
                         <div class="col-sm-6">
-                            <p class="reveal-blokck">A EDIT. foi fundada por profissionais da indústria
+                            <p>A EDIT. foi fundada por profissionais da indústria
                                 interativa/digital, e aplica um modelo de formação inovador e dinâmico, pensado para
                                 acompanhar a rápida evolução do setor. Localizada em Lisboa, Porto e Madrid, promove a
                                 cooperação entre os alunos e as agências interativas e digitais nacionais e
@@ -68,41 +68,41 @@ get_header();
                         </div>
                     </div>
                     <hr class="light-grey">
-
-                    <div class="row sp-60">
-                        <div class="col-md-12">
-                            <h4 class="text-white border">Formação</h4>
+                    <div class="text-block-container">
+                        <div class="row sp-60">
+                            <div class="col-md-12">
+                                <h3 class="text-white border">Formação</h3>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="font-weight-500 text-white">A EDIT. foi fundada por profissionais da indústria
+                                    interativa/digital, e aplica um modelo de formação inovador e dinâmico, pensado para
+                                    acompanhar a rápida evolução do setor. Localizada em Lisboa, Porto e Madrid, promove a
+                                    cooperação entre os alunos e as agências interativas e digitais nacionais e
+                                    internacionais. </p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p>Estes parceiros participam na adequação dos conteúdos programáticos dos cursos da EDIT.
+                                    às necessidades reais do mercado, sendo esta a melhor forma de conceder aos alunos uma
+                                    educação moderna e competitiva.</p>
+                                <p>As aulas são estruturadas por profissionais reconhecidos no setor digital nacional e
+                                    internacional. O input de profissionais ativos na indústria é essencial ao
+                                    desenvolvimento conceptual, criativo, teórico e prático dos alunos da EDIT.</p>
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <p class="font-weight-500 text-white">A EDIT. foi fundada por profissionais da indústria
-                                interativa/digital, e aplica um modelo de formação inovador e dinâmico, pensado para
-                                acompanhar a rápida evolução do setor. Localizada em Lisboa, Porto e Madrid, promove a
-                                cooperação entre os alunos e as agências interativas e digitais nacionais e
-                                internacionais. </p>
+                        <div class="row sp-60" style="margin-top:40px;">
+                            <div class="col-md-12">
+                                <h3 class="text-white border">Disruptive Digital Education</h3>
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="font-weight-500 text-white">O input de especialistas a atuar no mercado nacional e
+                                    internacional é essencial ao desenvolvimento dos programas da EDIT.</p>
+                            </div>
+                            <div class="col-sm-6">
+                                <p>A adequação dos conhecimentos à realidade da indústria criativa e tecnológica é essencial
+                                    ao desenvolvimento teórico e prático dos alunos da EDIT.</p>
+                            </div>
                         </div>
-                        <div class="col-sm-6">
-                            <p>Estes parceiros participam na adequação dos conteúdos programáticos dos cursos da EDIT.
-                                às necessidades reais do mercado, sendo esta a melhor forma de conceder aos alunos uma
-                                educação moderna e competitiva.</p>
-                            <p>As aulas são estruturadas por profissionais reconhecidos no setor digital nacional e
-                                internacional. O input de profissionais ativos na indústria é essencial ao
-                                desenvolvimento conceptual, criativo, teórico e prático dos alunos da EDIT.</p>
-                        </div>
-                    </div>
-
-                    <div class="row sp-60" style="margin-top:40px;">
-                        <div class="col-md-12">
-                            <h4 class="text-white border">Disruptive Digital Education</h4>
-                        </div>
-                        <div class="col-sm-6">
-                            <p class="font-weight-500 text-white">O input de especialistas a atuar no mercado nacional e
-                                internacional é essencial ao desenvolvimento dos programas da EDIT.</p>
-                        </div>
-                        <div class="col-sm-6">
-                            <p>A adequação dos conhecimentos à realidade da indústria criativa e tecnológica é essencial
-                                ao desenvolvimento teórico e prático dos alunos da EDIT.</p>
-                        </div>
-                    </div>
+                    </div>                    
                 </div>
             </div>
         </div>
@@ -118,7 +118,7 @@ get_header();
 
 <section class="parceiros bg-black">
     <div class="container">
-        <div class="row reveal-block">
+        <div class="row">
             <div class="col-md-12 col-md-offset-0 col-sm-11 col-sm-offset-1">
                 <h3>Parceiros de formação</h3>
             </div>
@@ -131,37 +131,37 @@ get_header();
             </div>
             <div class="col-xs-6 col-md-3 col-sm-6">
                 <div class="grid-box">
-                    <img src="img/logo_burok.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo_burok.jpg">
                 </div>
             </div>
             <div class="col-xs-6 col-md-3 col-sm-6">
                 <div class="grid-box">
-                    <img src="img/logo_burok.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo_burok.jpg">
                 </div>
             </div>
             <div class="col-xs-6 col-md-3 col-sm-6">
                 <div class="grid-box">
-                    <img src="img/logo_burok.jpg">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/logo_burok.jpg">
                 </div>
             </div>
             <div class="col-xs-6 col-md-3 col-sm-6">
                 <div class="grid-box">
-                    <img src="img/logo_burok.jpg">
+                    
                 </div>
             </div>
             <div class="col-xs-6 col-md-3 col-sm-6">
                 <div class="grid-box">
-                    <img src="img/logo_burok.jpg">
+                  
                 </div>
             </div>
             <div class="col-xs-6 col-md-3 col-sm-6">
                 <div class="grid-box">
-                    <img src="img/logo_burok.jpg">
+                   
                 </div>
             </div>
             <div class="col-xs-6 col-md-3 col-sm-6">
                 <div class="grid-box">
-                    <img src="img/logo_burok.jpg">
+                   
                 </div>
             </div>
         </div>
@@ -171,14 +171,14 @@ get_header();
 
 <section class="block-main-content bg-light-grey">
     <div class="container">
-        <div class="row reveal-block">
-            <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1"><small class="text-muted ">PORQUÊ A
-                    EDIT?</small></div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1"><h2 class="text-muted ">PORQUÊ A
+                    EDIT?</h2></div>
         </div>
         <div class="row">
             <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1">
-                <h2 class="reveal-block section-title">Envolvência direta com o mercado na estruturação da oferta
-                    formativa</h2>
+                <h3 class="section-title">Envolvência direta com o mercado na estruturação da oferta
+                    formativa</h3>
             </div>
             <div class="col-md-8 col-md-offset-0 col-sm-11 col-sm-offset-1">
                 <div class="text-block-container">
@@ -189,10 +189,10 @@ get_header();
                                 cursos intensivos completos, atualizados e competitivos, resultando em:</p>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h4 class="text-white border border-grey">Maior proximidade com o mercado de trabalho</h4>
+                            <h3 class="text-white border border-grey">Maior proximidade com o mercado de trabalho</h3>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h4 class="text-white border border-grey">Formação competitiva e relevante</h4>
+                            <h3 class="text-white border border-grey">Formação competitiva e relevante</h3>
                         </div>
                         <div class="col-md-6 col-sm-12">
                             <p>Assim, o contacto com as marcas/clientes reais é igualmente essencial no método de ensino
@@ -211,11 +211,11 @@ get_header();
                             </p>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h4 class="text-white border border-grey">Contacto com clientes reais</h4>
+                            <h3 class="text-white border border-grey">Contacto com clientes reais</h3>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h4 class="text-white border border-grey">Conhecimento da dinâmica de trabalho num ambiente
-                                profissional</h4>
+                            <h3 class="text-white border border-grey">Conhecimento da dinâmica de trabalho num ambiente
+                                profissional</h3>
                         </div>
                     </div>
                 </div>
@@ -227,11 +227,11 @@ get_header();
                                 exclusivos de apoio ao desenvolvimento de carreiras, como:</p>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h4 class="text-white border border-grey">Acesso a plataforma de recrutamento no mercado
-                                digital</h4>
+                            <h3 class="text-white border border-grey">Acesso a plataforma de recrutamento no mercado
+                                digital</h3>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h4 class="text-white border border-grey">Acesso a espaço cowork</h4>
+                            <h3 class="text-white border border-grey">Acesso a espaço cowork</h3>
                         </div>
                     </div>
                 </div>
@@ -242,20 +242,20 @@ get_header();
                             <p>Relativamente à metodologia de ensino, a EDIT. dispõe de:</p>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h4 class="text-white border border-grey">Equipamento, ferramentas e infrastruturas de topo
-                            </h4>
+                            <h3 class="text-white border border-grey">Equipamento, ferramentas e infrastruturas de topo
+                            </h3>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h4 class="text-white border border-grey">1x iMac ou ChromeBook por aluno</h4>
+                            <h3 class="text-white border border-grey">1x iMac ou ChromeBook por aluno</h3>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h4 class="text-white border border-grey">Projetor HD</h4>
+                            <h3 class="text-white border border-grey">Projetor HD</h3>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h4 class="text-white border border-grey">Documentação em formato digital</h4>
+                            <h3 class="text-white border border-grey">Documentação em formato digital</h3>
                         </div>
                         <div class="col-md-12 col-sm-12">
-                            <h4 class="text-white border border-grey">Escola certificada pela DGERT</h4>
+                            <h3 class="text-white border border-grey">Escola certificada pela DGERT</h3>
                         </div>
                     </div>
                 </div>

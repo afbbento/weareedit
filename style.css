@@ -144,7 +144,7 @@ h3.border{
 h3.border.border-light-grey{	
     border-left-color: #717171;	
 }	
-.block-main-content.bg-light-grey h4{	
+.block-main-content.bg-light-grey h3{	
     border-left-color: #717171;	
 }	
 .block-main-content.bg-light-grey .btn{	
@@ -1288,7 +1288,7 @@ a.headerDesktop__inCompany:hover{
 .formacao-info-bar ul li:hover{	
     background-color: #f6f6f6 ;	
 }
-.single-formacao .text-block-container h3{ 
+.text-block-container h3{ 
     font-size: 23px;
 }
 /*EVENTOS*/
