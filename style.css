@@ -936,7 +936,7 @@ section.parceiros h3{
     border: solid 1px #242424;	
     width: 100%;	
 }	
-section.faq h1{	
+section.faq .title{	
     font-size: 100px;	
     font-weight: bold;	
     font-stretch: normal;	
