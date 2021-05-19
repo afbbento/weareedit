@@ -13,12 +13,12 @@ get_header();
 <div class="hero">
     <div class="container">
         <ul class="breadcrumb">
-            <li><a href="#">Sobre nós</a></li>
+            <li><h2><a href="#">Sobre nós</a></h2></li>
         </ul>
-        <div class="row reveal-block">
+        <div class="row">
             <div class="col-md-12 col-md-offset-0 col-sm-11 col-sm-offset-1">
                 <h1>Recrutamento</h1>
-                <p>A EDIT. tem como constante preocupação a empregabilidade dos seus alunos. </p>
+                <h2>A EDIT. tem como constante preocupação a empregabilidade dos seus alunos. </h2>
             </div>
         </div>
         <div class="row grid-sp-40 hero-menu hero-no-image">
@@ -31,18 +31,18 @@ get_header();
     <div class="bleeded grey">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1"><small
-                        class="text-muted ">recrutamento</small></div>
+                <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1"><h2
+                        class="text-muted ">recrutamento</h2></div>
             </div>
-            <div class="row reveal-block">
+            <div class="row">
                 <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1">
-                    <h2 class="section-title">Acelaração da integração no mercado de trabalho</h2>
+                    <h3 class="section-title">Acelaração da integração no mercado de trabalho</h3>
                 </div>
                 <div class="col-md-8 col-md-offset-0 col-sm-11 col-sm-offset-1">
                     <div class="text-block-container">
                         <div class="row sp-60">
                             <div class="col-sm-12">
-                                <h4 class="text-white border">Empregabilidade</h4>
+                                <h3 class="text-white border">Empregabilidade</h3>
                             </div>
                             <div class="col-sm-6">
                                 <p>Desde o seu início que a EDIT. tem como constante preocupação a empregabilidade dos
@@ -73,7 +73,7 @@ get_header();
                     <div class="text-block-container">
                         <div class="row sp-60">
                             <div class="col-md-12 ">
-                                <h4 class="text-white border">Formação</h4>
+                                <h3 class="text-white border">Formação</h4>
                             </div>
                             <div class="col-sm-6">
                                 <p>De acordo com um inquérito de satisfação realizado a ex-alunos da EDIT., a qualidade
@@ -115,7 +115,7 @@ get_header();
                     <div class="text-block-container">
                         <div class="row sp-60">
                             <div class="col-md-12">
-                                <h4 class="text-white border">Parceiros de recrutamento</h4>
+                                <h3 class="text-white border">Parceiros de recrutamento</h3>
                             </div>
                             <div class="col-sm-6">
                                 <p>Os nossos parceiros de recrutamento assumem uma postura responsável e positiva face
