@@ -13,12 +13,12 @@ get_header();
         <div class="hero">   
             <div class="container">
                 <ul class="breadcrumb">
-                    <li><a href="#">Sobre nós</a></li>
+                    <li><h2><a href="#">Sobre nós</a></h2></li>
                 </ul>
                 <div class="row">
                     <div class="col-md-12">    
-                        <h1 class="reveal-block">Alunos</h1>
-                        <p class="reveal-block">A EDIT. tem como constante preocupação a empregabilidade dos seus alunos. </p>
+                        <h1>Alunos</h1>
+                        <h2>A EDIT. tem como constante preocupação a empregabilidade dos seus alunos. </p>
                     </div>
                 </div>
                 <div class="row grid-sp-40 hero-menu hero-no-image">
@@ -30,17 +30,17 @@ get_header();
         <section class="about">
             <div class="bleeded grey">
                 <div class="container">
-                    <div class="row reveal-block">
-                        <div class="col-md-4"><small class="text-muted ">A EDIT.</small></div>
+                    <div class="row">
+                        <div class="col-md-4"><h2 class="text-muted ">A EDIT.</h2></div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">    
-                            <h2 class="reveal-block section-title">Sinergia entre mercado, escola e alunos</h2>
+                            <h3 class="section-title">Sinergia entre mercado, escola e alunos</h3>
                         </div>
                         <div class="col-md-8">
                             <div class="row sp-60">
-                                <div class="col-sm-6"><p class="reveal-blokck">A EDIT. procurou desde sempre que o envolvimento direto das agências digitais e dos seus profissionais, assim como das marcas do mercado com uma presença digital relevante, pudessem ajudar a desenvolver um método de ensino único.</p></div>
-                                <div class="col-sm-6"><p class="reveal-blkock">Acreditamos, assim que a sinergia gerada entre as partes, mercado – escola – alunos é a única forma viável de proporcionar uma educação moderna e eficaz face ao mercado digital em constante evolução.</p></div>
+                                <div class="col-sm-6"><p>A EDIT. procurou desde sempre que o envolvimento direto das agências digitais e dos seus profissionais, assim como das marcas do mercado com uma presença digital relevante, pudessem ajudar a desenvolver um método de ensino único.</p></div>
+                                <div class="col-sm-6"><p>Acreditamos, assim que a sinergia gerada entre as partes, mercado – escola – alunos é a única forma viável de proporcionar uma educação moderna e eficaz face ao mercado digital em constante evolução.</p></div>
                             </div>
                             <hr class="light-grey">
                         </div>
@@ -53,7 +53,7 @@ get_header();
             <div class="container">
                 <div class="row is-flex v-center margin90v">
                     <div class="col-xs-12 col-md-6">
-                        <div class="img__wipe__container">
+                        <div class="img__wipe__container active">
                             <div class="img__transition__wipe"></div>
                             <div class="img__transition__inner">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/lisboa@2x.jpg">
@@ -63,9 +63,9 @@ get_header();
                     <div class="col-md-12 col-md-6">
                         <div class="box-center pad100">
                             <div class="box-center-inner">
-                                <h2 class="reveal-block">Lisboa, uma cidade cosmopolita com bons acessos</h2>
-                                <p class="reveal-block">Lisboa é a cidade capital de Portugal, cuja história circula à volta da sua posição estratégica na foz do maior rio da Península Ibérica.</p>
-                                <div class="btn btn-slide reveal-block">
+                                <h2>Lisboa, uma cidade cosmopolita com bons acessos</h2>
+                                <p>Lisboa é a cidade capital de Portugal, cuja história circula à volta da sua posição estratégica na foz do maior rio da Península Ibérica.</p>
+                                <div class="btn btn-slide">
                                     <a href="#" class="btn btn-transparent">Localização</a>
                                 </div>
                             </div>
@@ -77,16 +77,16 @@ get_header();
                     <div class="col-xs-12 col-md-6">
                         <div class="box-center pad100">
                             <div class="box-center-inner">
-                                <h2 class="reveal-block">Lisboa, uma cidade cosmopolita com bons acessos</h2>
-                                <p class="reveal-block">Lisboa é a cidade capital de Portugal, cuja história circula à volta da sua posição estratégica na foz do maior rio da Península Ibérica.</p>
-                                <div class="btn btn-slide reveal-block">
+                                <h2>Lisboa, uma cidade cosmopolita com bons acessos</h2>
+                                <p>Lisboa é a cidade capital de Portugal, cuja história circula à volta da sua posição estratégica na foz do maior rio da Península Ibérica.</p>
+                                <div class="btn btn-slide">
                                     <a href="#" class="btn btn-transparent">Localização</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-12 col-md-6">
-                        <div class="img__wipe__container">
+                        <div class="img__wipe__container active">
                             <div class="img__transition__wipe"></div>
                             <div class="img__transition__inner">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/porto@2x.jpg">
@@ -99,12 +99,12 @@ get_header();
        
         <section class="block-main-content bg-light-grey">
             <div class="container">
-                <div class="row reveal-block">
-                    <div class="col-md-4"><small class="text-muted ">ALUNOS INTERNACIONAIS</small></div>
+                <div class="row">
+                    <div class="col-md-4"><h2 class="text-muted ">ALUNOS INTERNACIONAIS</h2></div>
                 </div>
                 <div class="row">
                         <div class="col-md-4">    
-                            <h2 class="reveal-block section-title">Estadias e processos legais</h2>
+                            <h3 class="section-title">Estadias e processos legais</h3>
                         </div>
                         <div class="col-md-8">
                             <div class="text-block-container">
@@ -125,7 +125,7 @@ get_header();
                             <div class="text-block-container">
                                 <div class="row sp-60">
                                     <div class="col-md-12">
-                                        <h4 class="text-white border border-grey">Alojamento</h4>
+                                        <h3 class="text-white border border-grey">Alojamento</h3>
                                     </div>
                                     <div class="col-sm-6">
                                         <p>No que diz respeito ao alojamento, as Residências Universitárias/Estudantis são uma boa opção, contudo, há também a possibilidade de arrendamento. A propósito, a renda mensal de um quarto, em Portugal, fixa-se numa média de €250.</p>                                
@@ -151,7 +151,7 @@ get_header();
                             <div class="text-block-container">
                                 <div class="row sp-60">
                                     <div class="col-md-12">
-                                        <h4 class="text-white border border-grey">Alunos de paises não pertencentes à União Europeia</h4>
+                                        <h3 class="text-white border border-grey">Alunos de paises não pertencentes à União Europeia</h3>
                                     </div>
                                     <div class="col-sm-12">
                                         <p>Os estudantes oriundos de países que não pertençam à União Europeia (UE), terão de obter o Visto de Residência Temporária para que possam viver, estudar ou trabalhar em Portugal.</p>                                
@@ -171,7 +171,7 @@ get_header();
                             <div class="text-block-container">
                                 <div class="row sp-60">
                                     <div class="col-md-12">
-                                        <h4 class="text-white border border-grey">Alunos Europeus</h4>
+                                        <h3 class="text-white border border-grey">Alunos Europeus</h3>
                                     </div>
                                     <div class="col-sm-6">
                                         <p>Os estudantes provenientes de qualquer Estado-Membro da UE, Suíça, Noruega, Islândia ou Liechtenstein não precisam obter um visto de estudante, basta apenas serem titulares de Bilhete de Identidade válido, do país de origem.</p>                                
