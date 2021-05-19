@@ -18,23 +18,12 @@ get_header();
                 </ul>
                 <div class="row">
                     <div class="col-md-12">    
-                        <h1 class="reveal-block">DEN</h1>
-                        <p class="reveal-block">Um Think Tank, fundado pela EDIT., com o objetivo de inovar nas áreas de educação e recrutamento para a indústria digital.</p>
+                        <h1>DEN</h1>
+                        <h2>Um Think Tank, fundado pela EDIT., com o objetivo de inovar nas áreas de educação e recrutamento para a indústria digital.</h2>
                     </div>
                 </div>
                 <div class="row grid-sp-40 hero-menu">
-                    <div class="col-md-3">
-                        <a href="recrutamento.php">Recrutamento</a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="campus.php">Campus</a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="alunos.php">Alunos</a>
-                    </div>
-                    <div class="col-md-3">
-                        <a href="den.php" class="active">DEN</a>
-                    </div>
+                    <?php get_template_part( 'template-parts/menu', 'escola' ); ?>
                 </div>
             </div>
         <div class="about-image" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/banner-sobre-nos@2x.jpg)"></div>
@@ -44,11 +33,11 @@ get_header();
             <div class="bleeded grey">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4"><small class="text-muted ">O QUE É A DEN?</small></div>
+                        <div class="col-md-4"><h2 class="text-muted ">O QUE É A DEN?</h2></div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">    
-                            <h2 class="reveal-block section-title">Digital Education Network</h2>
+                            <h3 class="section-title">Digital Education Network</h3>
                         </div>
                         <div class="col-md-8">
                             <div class="text-block-container">
@@ -64,7 +53,7 @@ get_header();
                             <div class="text-block-container">
                                 <div class="row sp-60">
                                     <div class="col-md-12">
-                                        <h4 class="text-white border">Educação</h4>
+                                        <h3 class="text-white border">Educação</h3>
                                     </div>
                                     <div class="col-sm-6">
                                         <p class="highlight">A cooperação entre a escola e a DEN – Digital Education Network, permite também a adequação dos conteúdos programáticos da formação oferecida ao mercado e às tendências atuais do digital.</p>
@@ -78,7 +67,7 @@ get_header();
                             <div class="text-block-container">
                                 <div class="row sp-60">
                                     <div class="col-md-12">
-                                        <h4 class="text-white border">Recrutamento</h4>
+                                        <h3 class="text-white border">Recrutamento</h3>
                                     </div>
                                     <div class="col-sm-6">
                                         <p class="highlight">Saber o que procuram as empresas no mercado, e o input de especialistas na área a atuar no mercado nacional e internacional é, para nós, essencial ao desenvolvimento conceptual, criativo, teórico e prático dos alunos da EDIT.</p>
@@ -149,11 +138,11 @@ get_header();
             <div class="grey">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4"><small class="text-muted ">PORQUÊ A DEN?</small></div>
+                        <div class="col-md-4"><h2 class="text-muted ">PORQUÊ A DEN?</h2></div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">    
-                            <h2 class="reveal-block section-title">Estar a par da atualidade e das verdadeiras tendências da indústria digital.</h2>
+                            <h3 class="section-title">Estar a par da atualidade e das verdadeiras tendências da indústria digital.</h3>
                         </div>
                         <div class="col-md-8">
                             
@@ -168,7 +157,7 @@ get_header();
                             <div class="text-block-container">
                                 <div class="row sp-60">
                                     <div class="col-md-12">
-                                        <h4 class="text-white border">Evento anual</h4>
+                                        <h3 class="text-white border">Evento anual</h3>
                                     </div>
                                     <div class="col-sm-12">
                                         <p>Um evento anual organizado pela EDIT., que permite colocar os participantes a a falar da atualidade e das tendências da indústria digital. Aqui, serão abordados sob dois prismas essenciais:</p>
@@ -226,7 +215,7 @@ Foco principal é a aproximação ao mercado e às diferentes áreas de ensino d
                             <div class="col-md-12">
                                 <div class="text-block-container">
                                     <div class="col-md-12">
-                                        <h4 class="text-white border border-grey">Dinâmica interativa</h4>
+                                        <h3 class="text-white border border-grey">Dinâmica interativa</h3>
                                     </div>
                                     <div class="col-sm-12">
                                         <p>Tudo isto faz parte da nossa imagem de marca “disruptive” e que se apresenta com uma dinâmica interativa mas sem perder sua a identidade, responsive em concordância com o meio digital, e que mantém o seu caráter criativo ao longo do tempo, assimilando ainda o valor das sinergias da aprendizagem na nossa evolução, e que é aquilo que nos diferencia no mercado.</p>
