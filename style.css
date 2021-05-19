@@ -1604,6 +1604,7 @@ section.campus-locations{
     line-height: 1;	
     letter-spacing: -2.5px;	
     color: #ffffff;	
+    margin: 0;
 }	
 .location-container .address{	
     font-size: 23px;	
@@ -1613,7 +1614,8 @@ section.campus-locations{
     line-height: 1.52;	
     letter-spacing: -0.72px;	
     color: #d9d9d9;	
-    margin-top: 15px;	
+    margin-top: 15px;
+    margin-bottom: 0;	
 }	
 .location-container .btn{	
     margin-top: 40px;	
@@ -1708,6 +1710,9 @@ ul.breadcrumb li+li:before {
     content: "/\00a0";	
 }
 ul.breadcrumb.class-curso li+li:before{
+    color: #ffdd06;
+}
+ul.breadcrumb a:hover{
     color: #ffdd06;
 }
 ul.breadcrumb.class-remote-learning li+li:before{
