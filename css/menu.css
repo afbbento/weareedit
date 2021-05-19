@@ -600,7 +600,10 @@ svg:not(:root) {
 	font-size: 12px;
 	line-height: 1.33333;
 	text-transform: uppercase;
-	color: #868686
+	color: #868686;
+    margin-top: 20px;
+    font-weight: 500;
+    font-family: SctoGroteskA;
 }
 .primaryNav__list___1wlmQ {
     padding: 0;
@@ -1043,12 +1046,14 @@ a.secondaryNav__link___3CPV0:hover {
 		padding: 120px 60px 60px
 	}
 }
-.content__heading___3h6Kj {
+.content__heading {
 	margin-bottom: 50px;
 	letter-spacing: 1px;
 	font-size: 12px;
 	line-height: 1.33333;
-	text-transform: uppercase
+	text-transform: uppercase;
+    margin-top: 20px;
+    font-weight: 500;
 }
 .secondaryNav__link___3CPV0 {
 	font-size: 24px;

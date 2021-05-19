@@ -16,7 +16,7 @@ get_header();
         <div class="row">
             <div class="col-md-12 col-md-offset-0 col-sm-offset-1 col-xs-offset-0 ">
                 <h1 class=""><?php echo get_field( "titulo_header" );?></h1>
-                <p class=""><?php echo get_field( "texto_header" );?></p>
+                <h2><?php echo get_field( "texto_header" );?></h2>
             </div>
         </div>
     </div>
@@ -27,13 +27,13 @@ get_header();
     <section class="about text-image-block">
         <div class="container">
             <div class="row ">
-                <div class="col-md-4 col-md-offset-0 col-sm-offset-1 col-xs-offset-0"><small
-                        class="text-muted"><?php echo get_field('muted_text_sobre');?></small>
+                <div class="col-md-4 col-md-offset-0 col-sm-offset-1 col-xs-offset-0"><h2
+                        class="text-muted"><?php echo get_field('muted_text_sobre');?></h2>
                 </div>
             </div>
             <div class="row ">
                 <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1 col-xs-offset-0">
-                    <h2 class="section-title"><?php echo get_field('titulo_sobre');?></h2>
+                    <h3 class="section-title"><?php echo get_field('titulo_sobre');?></h3>
                 </div>
                 <div class="col-md-8 col-md-offset-0 col-sm-offset-1 col-xs-offset-0">
                     <div class="row sp-60">
@@ -94,8 +94,8 @@ get_header();
                 <div class="col-md-12 col-xs-offset-0 col-md-6 col-sm-10 col-sm-offset-1 col-md-offset-0 ">
                     <div class="box-center">
                         <div class="box-center-inner">
-                            <small class="text-muted"><?php echo $mute_text;?></small>
-                            <h2><?php echo $titulo;?></h2>
+                            <h2 class="text-muted"><?php echo $mute_text;?></h2>
+                            <h3 class="section-title"><?php echo $titulo;?></h3>
                             <?php echo $texto;?>
                             <div class="btn btn-slide">
                                 <a href="<?php echo $link_url; ?>"
@@ -158,12 +158,12 @@ get_header();
     <section class="alumni">
         <div class="container">
             <div class="row ">
-                <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-0"><small
-                        class="text-muted"><?php echo $muted_text; ?></small></div>
+                <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-0"><h2
+                        class="text-muted"><?php echo $muted_text; ?></h2></div>
             </div>
             <div class="row mb-85 ">
                 <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-0">
-                    <h2 class="section-title"><?php echo $titulo; ?></h2>
+                    <h3 class="section-title"><?php echo $titulo; ?></h3>
                 </div>
                 <div class="col-sm-11 col-md-8 col-sm-offset-1 col-md-offset-0 col-xs-offset-0">
                     <p><?php echo $texto; ?></p>
@@ -184,12 +184,12 @@ get_header();
     <section class="tutores">
         <div class="container">
             <div class="row ">
-                <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-0"><small
-                        class="text-muted"><?php echo $muted_text; ?></small></div>
+                <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-0"><h2
+                        class="text-muted"><?php echo $muted_text; ?></h2></div>
             </div>
             <div class="row  mb-85">
                 <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-0">
-                    <h2 class="section-title"><?php echo $titulo; ?></h2>
+                    <h3 class="section-title"><?php echo $titulo; ?></h3>
                 </div>
                 <div class="col-sm-11 col-md-8 col-sm-offset-1 col-md-offset-0 col-xs-offset-0">
                     <p><?php echo $texto; ?></p>

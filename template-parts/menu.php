@@ -94,7 +94,7 @@
                                 <div class="navigation__scroll___TMg8K">
                                     <div>
                                         <div class="primaryNav___sqMHp">
-                                            <h2 class="primaryNav__heading___2SZOh">SECÇÕES</h2>
+                                            <div class="primaryNav__heading___2SZOh">SECÇÕES</div>
                                             <ul class="primaryNav__list___1wlmQ">
                                                 <li class="primaryNavItem___1k6aC" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
                                                     <a class="primaryNavItem__link___3s0mn" href="/industries">Formação</a>
@@ -151,7 +151,7 @@
                                                 <div class="panel__scroll___Dp-_L" style="height: 535px;">
                                                     <div class="content___2fMF1">
                                                         <div class="content__inner___1liSK">
-                                                            <h2 class="content__heading___3h6Kj">Tipo</h2>
+                                                            <div class="content__heading">Tipo</div>
                                                             <div class="secondaryNav___2AXcM">
                                                                 <ul class="secondaryNav__list___24U7o">
                                                                     <?php
@@ -200,7 +200,7 @@
                                                         <div class="menu__container" style="display:none;">
                                                             <div class="content___2fMF1 featured">
                                                                 <div class="content__inner___1liSK">
-                                                                    <h2 class="content__heading___3h6Kj">ÁREAS</h2>
+                                                                    <div class="content__heading">ÁREAS</div>
                                                                     <div class="secondaryNav___2AXcM small___2fG2M">
                                                                         <ul class="secondaryNav__list___24U7o">
                                                                         <?php
@@ -241,7 +241,7 @@
                                                 <div class="panel__scroll___Dp-_L" style="height: 535px;">
                                                     <div class="content___2fMF1">
                                                         <div class="content__inner___1liSK">
-                                                            <h2 class="content__heading___3h6Kj">Tipo</h2>
+                                                            <div class="content__heading">Tipo</div>
                                                             <div class="secondaryNav___2AXcM">
                                                                 <ul class="secondaryNav__list___24U7o">
                                                                     <li class="secondaryNav__item___2_Jrp">
@@ -296,7 +296,7 @@
                                                         <div class="menu__container" style="display:none;">
                                                             <div class="content___2fMF1 featured">
                                                                 <div class="content__inner___1liSK">
-                                                                    <h2 class="content__heading___3h6Kj">ÁREAS</h2>
+                                                                    <div class="content__heading">ÁREAS</div>
                                                                     <div class="secondaryNav___2AXcM small___2fG2M">
                                                                         <ul class="secondaryNav__list___24U7o">
                                                                             <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/specialties/bankruptcy-restructuring">Design</a></li>
@@ -314,7 +314,7 @@
                                                         <div class="menu__container" style="display:none;">
                                                             <div class="content___2fMF1 featured">
                                                                 <div class="content__inner___1liSK">
-                                                                    <h2 class="content__heading___3h6Kj">ÁREAS</h2>
+                                                                    <div class="content__heading">ÁREAS</div>
                                                                     <div class="secondaryNav___2AXcM small___2fG2M">
                                                                         <ul class="secondaryNav__list___24U7o">
                                                                             <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/specialties/bankruptcy-restructuring">Design 2</a></li>
@@ -332,7 +332,7 @@
                                                         <div class="menu__container" style="display:none;">
                                                             <div class="content___2fMF1 featured">
                                                                 <div class="content__inner___1liSK">
-                                                                    <h2 class="content__heading___3h6Kj">ÁREAS</h2>
+                                                                    <div class="content__heading">ÁREAS</div>
                                                                     <div class="secondaryNav___2AXcM small___2fG2M">
                                                                         <ul class="secondaryNav__list___24U7o">
                                                                             <li class="secondaryNav__item___2_Jrp"><a class="secondaryNav__link___3CPV0" href="/specialties/bankruptcy-restructuring">Design 3</a></li>

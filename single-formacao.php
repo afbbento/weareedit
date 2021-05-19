@@ -41,12 +41,7 @@ $localizacao_formacao = get_field('localizacao');
         <div class="col-md-12 col-sm-10 col-sm-offset-1 col-md-offset-0">
             <ul class="breadcrumb  class-<?php echo $tipo_formacao_class;?>">
                 <li class="logo-formacao"><img src="<?php echo $tipo_formacao_icon_color['url']; ?>"></li>
-                <li><a
-                        href="/tipo-formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>"><?php echo $titulo_tipo_formacao; ?></a>
-                </li>
-                <li><a
-                        href="/formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>&areaId=<?php echo $area_id; ?>"><?php echo $titulo_area; ?></a>
-                </li>
+                <li><h2><a href="/formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>&areaId=<?php echo $area_id; ?>"><?php echo $titulo_tipo_formacao; ?> / <?php echo $titulo_area; ?></a></h2></li>               
             </ul>
             <h1 class=""><?php the_field('titulo'); ?></h1>
         </div>
@@ -195,7 +190,7 @@ $localizacao_formacao = get_field('localizacao');
     <div class="container">
         <div class="row sobre-curso ">
             <div class="col-md-12">
-                <small class="text-muted">SOBRE O CURSO</small>
+                <h2 class="text-muted">SOBRE O CURSO</h2>
                 <h3><?php echo $info_descricao; ?></h3>
             </div>
         </div>
@@ -208,13 +203,13 @@ $localizacao_formacao = get_field('localizacao');
                 }
                 ?>
         <div class="row">
-            <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1"><small
-                    class="text-muted "><?php echo $muted_text_visao_geral; ?></small>
+            <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1"><h2
+                    class="text-muted "><?php echo $muted_text_visao_geral; ?></h2>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4 col-md-offset-0 col-sm-10 col-sm-offset-1">
-                <h2 class="intro "><?php echo $title_visao_geral; ?></h2>
+                <h3 class="intro "><?php echo $title_visao_geral; ?></h3>
             </div>
             <div class="col-md-8 col-md-offset-0 col-sm-10 col-sm-offset-1">
                 <div class="row">
@@ -227,7 +222,7 @@ $localizacao_formacao = get_field('localizacao');
                                             foreach( $blocos_visao_geral as $row ) {
                                         ?>
                                 <div class="grid-item">
-                                    <h4><?php echo $row['titulo']; ?></h4>
+                                    <h3><?php echo $row['titulo']; ?></h3>
                                     <p><?php echo $row['texto']; ?></p>
                                 </div>
                                 <?php }
@@ -249,7 +244,7 @@ $localizacao_formacao = get_field('localizacao');
                 </div>
             </div>
             <div class="col-md-8 col-sm-5 col-sm-offset-0">
-                <h4>Curso certificado pela DGERT</h4>
+                <h3>Curso certificado pela DGERT</h3>
                 <p>A certificação é entregue aos alunos em formato digital. Inclui a carga horária, modular e total, do
                     curso temáticas, notas finais de cada módulo e média final do curso, certificação DGERT, carimbo e
                     assinatura da coordenação pedagógica do programa ou administração da escola.</p>
@@ -263,7 +258,7 @@ $localizacao_formacao = get_field('localizacao');
     <div class="container">
         <div class="row ">
             <div class="col-md-12 col-md-offset-0  col-sm-10 col-sm-offset-1">
-                <h1>Programa</h1>
+                <h2 class="section-title">Programa</h2>
             </div>
         </div>
         <div class="row">
@@ -286,7 +281,7 @@ $localizacao_formacao = get_field('localizacao');
                                     echo '<div class="text-block-container">                            
                                             <div class="row sp-60">
                                                 <div class="col-sm-12">
-                                                    <h4 class="border ">'.$row['titulo'].'</h4>
+                                                    <h3 class="border ">'.$row['titulo'].'</h3>
                                                 </div>
                                             </div>';
                                     
@@ -298,7 +293,7 @@ $localizacao_formacao = get_field('localizacao');
                                     $j++;
                                     
                                     echo '<div class="col-sm-6">
-                                            <p class="list-title">'.$row_item['titulo'].'</p>
+                                            <h4 class="list-title">'.$row_item['titulo'].'</h4>
                                                 '.$row_item['texto'].'                        
                                             </div>';
                                         
@@ -375,7 +370,7 @@ $localizacao_formacao = get_field('localizacao');
             <div class="col-md-12" style="background-image: url(<?php echo $imagem_banner; ?>);">
                 <div class="info-form">
                     <div class="col-md-6">
-                        <small class="text-muted"><?php echo $muted_text_banner; ?></small>
+                        <h2 class="text-muted"><?php echo $muted_text_banner; ?></h2>
                         <h2><?php echo $titulo_banner; ?></h2>
                     </div>
                     <div class="col-md-6 col-center">
@@ -403,10 +398,10 @@ $localizacao_formacao = get_field('localizacao');
         ?>
         <div class="row">
             <div class="col-md-12 col-md-offset-0   col-sm-10 col-sm-offset-1">
-                <small class="text-muted ">PROJETO 360º - <?php echo $titulo_projecto; ?></small>
+                <h2 class="text-muted ">PROJETO 360º - <?php echo $titulo_projecto; ?></h2>
             </div>
             <div class="col-md-4 col-md-offset-0   col-sm-10 col-sm-offset-1">
-                <h2 class="intro "><?php echo $subtitulo_projecto; ?></h2>
+                <h3 class="section-title"><?php echo $subtitulo_projecto; ?></h3>
             </div>
             <div class="col-md-8 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <div class="row sp-60">
@@ -500,12 +495,12 @@ jQuery(document).ready(function() {
 <section class="tutores">
     <div class="container">
         <div class="row ">
-            <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1"><small
-                    class="text-muted"><?php echo $muted_text; ?></small></div>
+            <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1"><h2
+                    class="text-muted"><?php echo $muted_text; ?></h2></div>
         </div>
         <div class="row  mb-85">
             <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1">
-                <h2 class="section-title"><?php echo $titulo; ?></h2>
+                <h3 class="section-title"><?php echo $titulo; ?></h3>
             </div>
             <div class="col-md-8 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <p><?php echo $texto; ?></p>
@@ -527,12 +522,12 @@ jQuery(document).ready(function() {
 <section class="alumni">
     <div class="container">
         <div class="row ">
-            <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1"><small
-                    class="text-muted"><?php echo $muted_text; ?></small></div>
+            <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1"><h2
+                    class="text-muted"><?php echo $muted_text; ?></h2></div>
         </div>
         <div class="row mb-85 ">
             <div class="col-md-4 col-md-offset-0  col-sm-10 col-sm-offset-1">
-                <h2 class="section-title"><?php echo $titulo; ?></h2>
+                <h3 class="section-title"><?php echo $titulo; ?></h3>
             </div>
             <div class="col-md-8 col-md-offset-0  col-sm-10 col-sm-offset-1">
                 <p><?php echo $texto; ?></p>
@@ -546,7 +541,7 @@ jQuery(document).ready(function() {
     <div class="container">
         <div class="row ">
             <div class="col-md-12 col-md-offset-0  col-sm-10 col-sm-offset-1">
-                <h1 class="text-white">Perguntas frequentes</h1>
+                <h2>Perguntas frequentes</h2>
             </div>
         </div>
         <div class="row row-faq ">
@@ -565,7 +560,7 @@ jQuery(document).ready(function() {
                                     }                            
                                     echo '
                                     <div id="accordion" class="accordion-container ">
-                                        <h4 class="accordion-title js-accordion-title '.$open.'">'.$row_even["pergunta"].'</h4>
+                                        <h3 class="accordion-title js-accordion-title '.$open.'">'.$row_even["pergunta"].'</h3>
                                         <div class="accordion-content" '.$display.'>'.$row_even["resposta"].'</div>                            
                                     </div>';
                             

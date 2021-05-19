@@ -36,9 +36,9 @@ if( $seccao_equipa ){
                     <div class="person-card">
                         <div class="person-card-content">
                             <div class="text">
-                                <div class="name"><?php echo $nome." ".$sobrenome; ?></div>
-                                <div class="job"><?php echo $cargo; ?></div>
-                                <div class="company"><?php echo $empresa; ?></div>
+                                <h3 class="name"><?php echo $nome." ".$sobrenome; ?></h3>
+                                <h4 class="job"><?php echo $cargo; ?></h4>
+                                <h4 class="company"><?php echo $empresa; ?></h4>
                             </div>
                         </div>
                         <div class="link">Ver entrevista</div>

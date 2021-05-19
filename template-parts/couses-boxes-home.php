@@ -53,7 +53,7 @@
                                 <div class="course-text">
                                     <div class="course-category"><?php echo $titulo_tipo_formacao; ?>
                                     </div>
-                                    <div class="course-title"><?php echo $titulo_formacao; ?></div>
+                                    <h3 class="course-title"><?php echo $titulo_formacao; ?></h3>
                                 </div>
                                 <div class="course-view">
                                     <span><?php echo $dia_formacao_ini." de ".$mes_formacao.", ".$localizacao_formacao; ?></span>
