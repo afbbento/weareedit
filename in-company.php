@@ -12,11 +12,11 @@ get_header();
 ?>
 <div class="hero">
     <div class="container">
-        <div class="row reveal-block">
+        <div class="row">
             <div class="col-md-12 col-md-offset-0 col-sm-11 col-sm-offset-1">
                 <h1>In-Company</h1>
-                <p>Formação ajustada à realidade das empresas, das suas necessidades e destinada a melhorar a
-                    performance profissional da sua equipa.</p>
+                <h2>Formação ajustada à realidade das empresas, das suas necessidades e destinada a melhorar a
+                    performance profissional da sua equipa.</h2>
                 <a href="#" class="btn btn-yellow ">Perguntas Frequentes</a>
             </div>
         </div>
@@ -28,13 +28,11 @@ get_header();
     <div class="bleeded grey">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-1"><small class="text-muted ">FORMAÇÃO
-                        IN-COMPANY</small></div>
+                <div class="col-md-4 col-md-offset-0 col-sm-4 col-sm-offset-1"><h2 class="text-muted ">FORMAÇÃO IN-COMPANY</h2></div>
             </div>
             <div class="row">
                 <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1">
-                    <h2 class="reveal-block section-title">Formação à medida para empresas nacionais e estrangeiras
-                    </h2>
+                    <h3 class="section-title">Formação à medida para empresas nacionais e estrangeiras</h3>
                 </div>
                 <div class="col-md-8 col-md-offset-0 col-sm-11 col-sm-offset-1">
                     <div class="text-block-container">
@@ -56,7 +54,7 @@ get_header();
                     <div class="text-block-container">
                         <div class="row sp-60">
                             <div class="col-md-12">
-                                <h4 class="text-white border">Sobre a EDIT.</h4>
+                                <h3 class="text-white border">Sobre a EDIT.</h3>
                             </div>
                             <div class="col-sm-6">
                                 <p class="highlight">A EDIT. – Disruptive Digital Education, é uma escola dedicada às
@@ -75,7 +73,7 @@ get_header();
                     <div class="text-block-container">
                         <div class="row sp-60">
                             <div class="col-md-12 ">
-                                <h4 class="text-white border">Sobre a EDIT.</h4>
+                                <h3 class="text-white border">Sobre a EDIT.</h3>
                             </div>
                             <div class="col-sm-6">
                                 <p class="highlight">A EDIT. – Disruptive Digital Education, é uma escola dedicada às
@@ -171,28 +169,25 @@ get_header();
                                 $banner_link_title = $botao_banner['title'];
                             }
                             ?>
-            <div class="row info-banner is-flex v-center reveal-block">
-                <div class="col-md-12 col-md-offset-0 col-sm-11 col-sm-offset-1"
-                    style="background-image: url(<?php echo $imagem_banner; ?>);">
+            <div class="row info-banner is-flex v-center">
+                <div class="col-md-12 col-md-offset-0 col-sm-11 col-sm-offset-1" style="background-image: url(<?php echo $imagem_banner; ?>);">
                     <div class="info-form">
                         <div class="col-md-6 col-sm-12">
-                            <small class="text-muted"><?php echo $muted_text_banner; ?></small>
+                            <h2 class="text-muted"><?php echo $muted_text_banner; ?></h2>
                             <h2 class="text-white"><?php echo $titulo_banner; ?></h2>
                         </div>
                         <div class="col-md-6 col-sm-12 col-center btn-fix">
                             <div class="center-cell">
-                                <a href="<?php echo $banner_link_url; ?>"
-                                    class="btn btn-yellow"><?php echo $banner_link_title; ?></a>
+                                <a href="<?php echo $banner_link_url; ?>" class="btn btn-yellow"><?php echo $banner_link_title; ?></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1"><small
-                        class="text-muted">METODOLOGIA</small></div>
+                <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1"><h2 class="text-muted">METODOLOGIA</h2></div>
             </div>
-            <div class="row reveal-block">
+            <div class="row">
                 <div class="col-md-4 col-md-offset-0 col-sm-11 col-sm-offset-1">
                     <h2 class="section-title">Elaboramos formações à medida para as suas equipas</h2>
                 </div>
@@ -209,19 +204,19 @@ get_header();
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <h4 class="text-white border">Diagnóstico</h4>
+                                <h3 class="text-white border">Diagnóstico</h3>
                                 <p>Numa primeira fase, que corresponde ao Diagnóstico, é efetuada uma consultoria e
                                     levantamento das necessidades de formação junto do cliente, mediante uma reunião com
                                     Key Employees/ Direção da Empresa.</p>
                             </div>
                             <div class="col-md-6 col-sm-6">
-                                <h4 class="text-white border">Preparação</h4>
+                                <h3 class="text-white border">Preparação</h3>
                                 <p>A fase seguinte implica a escolha de uma tutoria especializada e a preparação e
                                     criação do conteúdo programático, com o desenvolvimento de um programa específico
                                     adaptado às necessidades do cliente.</p>
                             </div>
                             <div class="col-md-12 col-sm-12">
-                                <h4 class="text-white border">Material de Apoio</h4>
+                                <h3 class="text-white border">Material de Apoio</h3>
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <p>Após a adjudicação da proposta formativa é facultada uma série de Material de Apoio
@@ -257,12 +252,12 @@ get_header();
                 ?>
 <section class="tutores">
     <div class="container">
-        <div class="row reveal-block">
-            <div class="col-md-4"><small class="text-muted"><?php echo $muted_text; ?></small></div>
+        <div class="row">
+            <div class="col-md-4"><h2 class="text-muted"><?php echo $muted_text; ?></h2></div>
         </div>
-        <div class="row reveal-block mb-85">
+        <div class="row mb-85">
             <div class="col-md-4">
-                <h2 class="section-title"><?php echo $titulo; ?></h2>
+                <h3 class="section-title"><?php echo $titulo; ?></h3>
             </div>
             <div class="col-md-8">
                 <p><?php echo $texto; ?></p>
