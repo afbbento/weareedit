@@ -82,13 +82,13 @@ if ($myposts){
        
     ?>
     <div class="col-sm-6 col-md-6">
-        <a href="<?php echo $link_formacao; ?>" class="course-box reveal-block <?php echo $text_color; ?>" style="background-image:url(<?php echo $tipo_formacao_bg; ?>);">                    
+        <a href="<?php echo $link_formacao; ?>" class="course-box text-black" style="background-image:url(<?php echo $tipo_formacao_bg; ?>);">                    
             <div class="course-icon">
                 <img src="<?php echo $tipo_formacao_icon; ?>">
             </div>
             <div class="course-text">
                 <div class="course-time"><?php echo $titulo_tipo_formacao; ?></div>
-                <div class="course-title"><?php the_field('home_titulo');?></div>
+                <h2 class="course-title"><?php the_field('home_titulo');?></h2>
                 <div class="course-date">10 de Março, Lisboa</div>
             </div>
             <div class="course-view">

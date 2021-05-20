@@ -2470,8 +2470,12 @@ section.relacionados{
     background-size: cover;	
     padding: 40px;	
     margin-bottom: 40px;	
-    background-position: center;	
+    background-position: center;
+    position: relative;	
 }	
+.filter-result .course-box:hover .course-text{
+    transform: translateY(-30px);
+}
 .filter-result .course-box.text-white {	
     color:#FFFFFF;
 }
@@ -2486,9 +2490,13 @@ section.relacionados{
 }
 .filter-result .course-text{	
     position: absolute;	
-    bottom: 40px;	
+    bottom: 25px;	
     -webkit-transition: transform 0.4s;	
     transition: transform 0.4s;	
+}
+.filter-result .course-view{
+    opacity: 0;
+    text-decoration: underline;
 }	
 .course-text .course-time{	
     font-size: 14px;	
@@ -2502,11 +2510,13 @@ section.relacionados{
 }	
 .course-text .course-title{	
     font-size: 30px;	
+    color: #000000;
     font-weight: bold;	
     font-stretch: normal;	
     font-style: normal;	
     line-height: 1.17;	
-    letter-spacing: -0.94px;	
+    letter-spacing: -0.94px;
+    margin-bottom: 5px;	
 }	
 .course-text .course-date{	
     font-size: 20px;	

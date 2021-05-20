@@ -44,7 +44,7 @@ foreach($area as $area_row){
                 <div class="row">   
                     <div class="container">
                         <div class="col-md-12">
-                            <ul class="breadcrumb reveal-block class-<?php echo $tipo_formacao_class;?>">
+                            <ul class="breadcrumb class-<?php echo $tipo_formacao_class;?>">
                                 <li class="logo-formacao"><img src="<?php echo $tipo_formacao_icon_color['url']; ?>"></li>
                                 <li><a href="#"><?php echo $tipo_curso;?></a></li>
                             </ul>    
@@ -52,9 +52,9 @@ foreach($area as $area_row){
                     </div>
                 </div>
                 <div class="row">
-                    <div class="container reveal-block">
+                    <div class="container">
                         <div class="col-md-12">
-                            <div class="filter-select"><span class="select-course-area"><?php echo $area_title; ?>, </span><span class="unselected select-location">Local</span></div>
+                            <h1><div class="filter-select"><span class="select-course-area"><?php echo $area_title; ?>, </span><span class="unselected select-location">Local</span></div></h1>
                         </div>
                     </div>
                 </div>

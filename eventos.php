@@ -16,14 +16,14 @@ get_header();
                 <div class="row">   
                     <div class="container">
                         <div class="col-md-12">
-                            <ul class="breadcrumb reveal-block">
-                                <li><a href="#">Eventos</a></li>
+                            <ul class="breadcrumb">
+                                <li><h2><a href="#">Eventos</a></h2></li>
                             </ul>    
                         </div>      
                     </div>
                 </div>
                 <div class="row">
-                    <div class="container reveal-block">
+                    <div class="container">
                         <div class="col-md-12">
                             <div class="filter-select"><span class="select-course-area">Design, </span><span class="unselected select-location">Local</span></div>
                         </div>
@@ -31,7 +31,7 @@ get_header();
                 </div>
             </div>
             <section class="filter-result result-events">
-                <div class="row grid-sp-40 reveal-block">
+                <div class="row grid-sp-40">
                     <div class="container">
                     <?php
                     $posts = get_posts(array(
@@ -60,7 +60,7 @@ get_header();
                             $mes_texto = getMes($mes_evento);
 
                         if ($i%2==0){
-                            echo '</div></div><div class="row grid-sp-40 reveal-block"><div class="container">';
+                            echo '</div></div><div class="row grid-sp-40"><div class="container">';
                         }
                         ?>
                     
