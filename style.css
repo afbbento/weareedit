@@ -2250,6 +2250,9 @@ section.course-faq .row-faq {
 section.course-faq .row-faq .accordion-content{	
     margin-bottom: 40px;
 }
+section.course-faq .row-faq .accordion-content p{	
+    margin: 0px;
+}
 .row-faq [class^="col-"]:nth-child(odd){	
     padding-right: 60px;	
 }	
