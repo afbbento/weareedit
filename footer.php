@@ -249,10 +249,10 @@
 
     <div class="footer-newsletter">
         <div class="container">
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0 ">
+            <div class="pad0 col-xs-12 col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0 ">
                 <hr class="light-grey">
             </div>
-            <div class="row v-center">
+            <div class="row is-flex v-center">
                 <div class="col-xs-12 col-md-6">
                     <p>Mantém-te a par das novidades</p>
                 </div>

@@ -2889,6 +2889,9 @@ section.relacionados{
     .footer-newsletter .v-center > [class*='col-'] {	
         align-items: center;	
     }	
+    .footer-newsletter .is-flex{
+        display: block;
+    }
     .footer-newsletter [class^="col-"]:first-child{	
         margin-bottom: 30px;	
     }	
