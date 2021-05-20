@@ -2323,13 +2323,13 @@ section.relacionados{
     background-color: rgba(255, 255, 255, 1);	
 }	
 /*FORMACAO TIPO*/	
-.page-template-tipo_formacao{	
+.page-template-tipos-formacao{	
     padding-top: 200px;	
 }	
-.page-template-tipo_formacao .content{	
+.page-template-tipos-formacao .content{	
     margin-bottom: 90px;	
 }	
-.page-template-tipo_formacao .head h2{	
+.page-template-tipos-formacao .head h2{	
     font-family: SctoGroteskA;	
     font-size: 36px;	
     font-weight: bold;	
@@ -2340,22 +2340,22 @@ section.relacionados{
     color: #ffffff;	
     margin-bottom: 60px;	
 }	
-.page-template-tipo_formacao .content-box{	
+.page-template-tipos-formacao .content-box{	
     padding-right: 55px;	
     margin-bottom: 90px;	
 }	
-.page-template-tipo_formacao .content-box:hover .tipo-title{	
+.page-template-tipos-formacao .content-box:hover .tipo-title{	
     color: #ffdd06;	
 }	
-.page-template-tipo_formacao .content-box:hover h3:after{	
+.page-template-tipos-formacao .content-box:hover h3:after{	
     width: 100%;	
     border-color: #ffdd06;	
 }	
-.page-template-tipo_formacao .content-box h3{	
+.page-template-tipos-formacao .content-box h3{	
     min-height: 90px;	
     position: relative;	
 }	
-.page-template-tipo_formacao .content-box h3:after{	
+.page-template-tipos-formacao .content-box h3:after{	
     content: " ";	
     left: 0;	
     position: absolute;	
@@ -2387,7 +2387,7 @@ section.relacionados{
     -o-transition: color 0.2s ease-in-out;	
     transition: color 0.2s ease-in-out;	
 }
-.page-template-tipo_formacao .container.tipos-formacao h3{
+.page-template-tipos-formacao .container.tipos-formacao h3{
     font-size: 18px;
     font-weight: normal;
     font-stretch: normal;
@@ -2851,7 +2851,7 @@ section.relacionados{
     section h2{	
         font-size: 36px;	
     }	
-    .page-template-tipo_formacao .content-box p {	
+    .page-template-tipos-formacao .content-box p {	
         min-height: 122px;	
     }	
     .filter-result .course-box{	
