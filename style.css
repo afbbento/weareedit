@@ -2246,7 +2246,10 @@ section.relacionados h3{
 				
 section.course-faq .row-faq {	
     margin: 50px 0;	
-}	
+}
+section.course-faq .row-faq .accordion-content{	
+    margin-bottom: 40px;
+}
 .row-faq [class^="col-"]:nth-child(odd){	
     padding-right: 60px;	
 }	
