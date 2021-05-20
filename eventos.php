@@ -25,7 +25,7 @@ get_header();
                 <div class="row">
                     <div class="container">
                         <div class="col-md-12">
-                            <div class="filter-select"><span class="select-course-area">Design, </span><span class="unselected select-location">Local</span></div>
+                            <h1 class="filter-select"><span class="select-course-area">Design, </span><span class="unselected select-location">Local</span></h1>
                         </div>
                     </div>
                 </div>
@@ -67,8 +67,8 @@ get_header();
                             <div class="col-sm-6 col-md-6">
                                 <a href="<?php echo $link_evento; ?>" class="course-box" style="background-image:url(<?php echo $imagem['url']; ?>"></a>    
                                 <div class="course-text">
-                                    <div class="course-time">Evento</div>
-                                    <div class="course-title"><a href="<?php echo $link_evento; ?>"><?php echo $titulo_evento; ?></a></div>
+                                    <h3 class="course-time">Evento</h3>
+                                    <h2 class="course-title"><a href="<?php echo $link_evento; ?>"><?php echo $titulo_evento; ?></a></h2>
                                     <div class="course-date"><?php echo $dia_evento; ?> de <?php echo $mes_texto; ?>, <?php echo $localizacao;?></div>
                                 </div>
                             </div>                                        

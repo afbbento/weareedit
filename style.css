@@ -1309,6 +1309,9 @@ a.headerDesktop__inCompany:hover{
 .filter-result.result-events .course-title{
     color:#FFFFFF;
 }
+.filter-result.result-events .course-title:hover{
+    color:#FFFFFF;
+}
 /*SINGLE EVENTO*/
 .single-eventos .info_bar_container .vagas span{
     color: #a6a6a6;
