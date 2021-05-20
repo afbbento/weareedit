@@ -46,7 +46,7 @@ $localizacao_formacao = get_field('localizacao');
             <h1 class=""><?php the_field('titulo'); ?></h1>
         </div>
 
-        <div class="col-md-12 col-sm-10 col-sm-offset-1">
+        <div class="col-md-12 col-sm-10 col-sm-offset-1 col-md-offset-0">
             <div class="formacao-info ">
                 <div class="row ">
                     <?php 

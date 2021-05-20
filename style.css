@@ -1121,6 +1121,9 @@ section.faq{
 }	
 #info_bar.sticky_info .formacao-info-bar{	
     height: 60px !important;	
+}
+.info_bar_container:not(.sticky_info){
+    padding: 0 15px;
 }	
 .formacao-info-bar{	
     display: -webkit-box;	
