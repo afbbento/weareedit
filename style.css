@@ -2323,13 +2323,13 @@ section.relacionados{
     background-color: rgba(255, 255, 255, 1);	
 }	
 /*FORMACAO TIPO*/	
-.formacao-tipo-template{	
+.page-template-tipo_formacao{	
     padding-top: 200px;	
 }	
-.formacao-tipo-template .content{	
+.page-template-tipo_formacao .content{	
     margin-bottom: 90px;	
 }	
-.formacao-tipo-template .head h2{	
+.page-template-tipo_formacao .head h2{	
     font-family: SctoGroteskA;	
     font-size: 36px;	
     font-weight: bold;	
@@ -2340,22 +2340,22 @@ section.relacionados{
     color: #ffffff;	
     margin-bottom: 60px;	
 }	
-.formacao-tipo-template .content-box{	
+.page-template-tipo_formacao .content-box{	
     padding-right: 55px;	
     margin-bottom: 90px;	
 }	
-.formacao-tipo-template .content-box:hover .tipo-title{	
+.page-template-tipo_formacao .content-box:hover .tipo-title{	
     color: #ffdd06;	
 }	
-.formacao-tipo-template .content-box:hover p:after{	
+.page-template-tipo_formacao .content-box:hover h3:after{	
     width: 100%;	
     border-color: #ffdd06;	
 }	
-.formacao-tipo-template .content-box p{	
+.page-template-tipo_formacao .content-box h3{	
     min-height: 90px;	
     position: relative;	
 }	
-.formacao-tipo-template .content-box p:after{	
+.page-template-tipo_formacao .content-box h3:after{	
     content: " ";	
     left: 0;	
     position: absolute;	
@@ -2381,10 +2381,21 @@ section.relacionados{
     display: block;	
     color: #ffffff;	
     margin-bottom: 20px;	
+    margin-top: 0;
     -webkit-transition: color 0.2s ease-in-out;	
     -moz-transition: color 0.2s ease-in-out;	
     -o-transition: color 0.2s ease-in-out;	
     transition: color 0.2s ease-in-out;	
+}
+.page-template-tipo_formacao .container.tipos-formacao h3{
+    font-size: 18px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: -0.56px;
+    color: #8f8f8f;
+    margin: 0;
 }	
 /*EVENTOS SINGLE*/
 .event-time-block h4{
@@ -2840,7 +2851,7 @@ section.relacionados{
     section h2{	
         font-size: 36px;	
     }	
-    .formacao-tipo-template .content-box p {	
+    .page-template-tipo_formacao .content-box p {	
         min-height: 122px;	
     }	
     .filter-result .course-box{	
