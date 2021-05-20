@@ -366,17 +366,19 @@ $localizacao_formacao = get_field('localizacao');
                     $banner_link_title = $botao_banner['title'];
                 }
                 ?>
-        <div class="row info-banner is-flex v-center ">
+        <div class="row info-banner is-flex v-center">
             <div class="col-md-12" style="background-image: url(<?php echo $imagem_banner; ?>);">
-                <div class="info-form">
+                <div class="row info-form is-flex v-center">
                     <div class="col-md-6">
                         <h2 class="text-muted"><?php echo $muted_text_banner; ?></h2>
                         <h2><?php echo $titulo_banner; ?></h2>
                     </div>
                     <div class="col-md-6 col-center">
-                        <div class="center-cell">
+                        <div>
+                            <div class="center-container">
                             <a href="<?php echo $banner_link_url; ?>"
                                 class="btn btn-<?php echo $tipo_formacao_class;?>"><?php echo $banner_link_title; ?></a>
+                            </div>
                         </div>
                     </div>
                 </div>
