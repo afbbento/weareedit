@@ -21,17 +21,15 @@ get_header();
         ?>
 
         <div class="col-md-12 col-sm-10 col-sm-offset-1">
-            <ul class="breadcrumb reveal-block text-yellow">
-                <li class="logo-formacao"><img src="<?php echo get_template_directory_uri(); ?>/img/formacao.svg"></li>
-                <li><a href="/eventos/">Eventos</a></li>
-                <li><a href="#"><?php echo $titulo_area; ?></a></li>
+            <ul class="breadcrumb text-yellow">
+                <li><h2><a href="/eventos/">Eventos / <?php echo $titulo_area; ?></a><h2></li>
             </ul>
-            <h1 class="reveal-block"><?php the_field('titulo'); ?></h1>
+            <h1><?php the_field('titulo'); ?></h1>
         </div>
 
         <div class="col-md-12 col-sm-10 col-sm-offset-1">
             <div class="formacao-info ">
-                <div class="row reveal-block">
+                <div class="row">
                     <?php 
                 $duracao = get_field('duracao');
                 $preco = get_field('preco');
@@ -71,7 +69,7 @@ get_header();
 
     <!--INFO BAR-->
     <div id="info_bar" class="info_bar_container">
-        <div class="formacao-info-bar reveal-block">
+        <div class="formacao-info-bar">
             <div class="cols vagas">
                 <?php
                     $vagas_totais = get_field('vagas_totais');
@@ -139,11 +137,11 @@ get_header();
             <div class="bleeded grey">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4"><small class="text-muted ">SOBRE O EVENTO</small></div>
+                        <div class="col-md-4"><h2 class="text-muted ">SOBRE O EVENTO</h2></div>
                     </div>
-                    <div class="row reveal-block">
+                    <div class="row">
                         <div class="col-md-4">    
-                            <h2 class="section-title">Como uma estratégia criativa pode impulsionar a tua marca</h2>
+                            <h3 class="section-title">Como uma estratégia criativa pode impulsionar a tua marca</h3>
                         </div>
                         <div class="col-md-8">
                             <div class="row sp-60">
@@ -180,13 +178,13 @@ get_header();
         ?>
     <section class="tutores">
         <div class="container">
-            <div class="row reveal-block">
-                <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-1"><small
-                        class="text-muted"><?php echo $muted_text; ?></small></div>
+            <div class="row">
+                <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-1"><h2
+                        class="text-muted"><?php echo $muted_text; ?></h2></div>
             </div>
-            <div class="row reveal-block mb-85">
+            <div class="row mb-85">
                 <div class="col-md-4 col-sm-offset-1 col-md-offset-0 col-xs-offset-1">
-                    <h2 class="section-title"><?php echo $titulo; ?></h2>
+                    <h3 class="section-title"><?php echo $titulo; ?></h3>
                 </div>
                 <div class="col-sm-11 col-md-8 col-sm-offset-1 col-md-offset-0 col-xs-offset-1">
                     <p><?php echo $texto; ?></p>
@@ -200,9 +198,9 @@ get_header();
 <!--PROGRAMA-->
 <section class="programa bg-black">
     <div class="container">
-        <div class="row reveal-block">
+        <div class="row">
             <div class="col-md-12 col-sm-11 col-sm-offset-1">
-                <h1>Programa</h1>
+                <h2 class="section-title">Programa</h2>
             </div>
         </div>
         <div class="row">
@@ -210,7 +208,7 @@ get_header();
                 <?php 
                     $texto_programa_evento = get_field('texto_programa_evento');            
                 ?>
-                <p class="reveal-block"><?php echo $texto_programa_evento; ?></p>
+                <p><?php echo $texto_programa_evento; ?></p>
             </div>
             <div class="col-md-8 col-sm-11 col-sm-offset-1">
                 <?php
@@ -218,10 +216,10 @@ get_header();
                 if( $bloco_horario ){
                     foreach( $bloco_horario as $row_bloco_horario ) {
                         
-                    echo '<div class="text-block-container reveal-block event-time-block">
+                    echo '<div class="text-block-container event-time-block">
                             <div class="row sp-60">
                                 <div class="col-sm-12">
-                                    <h4 class="border"><span class="event-time">'.$row_bloco_horario["hora"].'</span>'.$row_bloco_horario["titulo"].'</h4>';
+                                    <h3 class="border"><span class="event-time">'.$row_bloco_horario["hora"].'</span>'.$row_bloco_horario["titulo"].'</h3>';
 
                                     $bloco_programa_detalhe = $row_bloco_horario['bloco_programa_detalhe'];
                                     foreach( $bloco_programa_detalhe as $row_horario_detalhe ) {

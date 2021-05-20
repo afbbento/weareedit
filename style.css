@@ -2435,11 +2435,13 @@ section.relacionados{
     background-color:#000000;	
     padding-bottom: 300px;	
 }	
-.page-template-page-formacao ul.breadcrumb{	
+.page-template-page-formacao ul.breadcrumb, 
+.page-template-page-eventos ul.breadcrumb{	
     background-image: none;	
     padding: 5px 0px;	
 }	
-.page-template-page-formacao .filter-select{	
+.page-template-page-formacao .filter-select,
+.page-template-eventos .filter-select{	
     font-size: 90px;	
     font-weight: bold;	
     font-stretch: normal;	
@@ -2457,7 +2459,7 @@ section.relacionados{
     border-bottom: 5px solid #242424;	
     cursor: pointer;	
 }	
-.page-template-page-formacao .filter-select .select-location.unselected{	
+.filter-select .select-location.unselected{	
     color: #242424;	
 }	
 .filter-result{	
