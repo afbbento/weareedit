@@ -1676,14 +1676,9 @@ section.campus-locations{
 /*FORMACAO SINGLE*/	
 ul.breadcrumb {	
     list-style: none;	
-    padding: 5px 40px;	
+    padding: 5px 0px;
     background-color: transparent;	
     margin-bottom: 40px;
-}	
-ul.breadcrumb{	
-    background-image: url(img/arrow-left.svg);	
-    background-position: left center;	
-    background-repeat: no-repeat;	
 }	
 ul.breadcrumb li {	
     font-size: 30px;	
@@ -1703,21 +1698,20 @@ ul.breadcrumb li {
 }	
 .breadcrumb.class-bootcamp a{	
     color: #f92869;	
-}	
-		
+}			
+.breadcrumb > li + li:before{
+    content: none;
+}
 ul.breadcrumb li.logo-formacao img {	
     transform: translateY(-2px);	
 }	
 ul.breadcrumb li.logo-formacao {	
     margin-right: 16px;	
+    margin-left: 25px;
 }	
 ul.breadcrumb li:nth-child(1)+li:before{	
     content: none; 	
 }	
-ul.breadcrumb li+li:before {	
-    padding: 0px 0 0 5px;	
-    content: "/\00a0";	
-}
 ul.breadcrumb.class-curso li+li:before{
     color: #ffdd06;
 }

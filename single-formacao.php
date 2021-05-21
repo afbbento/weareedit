@@ -40,6 +40,7 @@ $localizacao_formacao = get_field('localizacao');
     <div class="container">
         <div class="col-md-12 col-sm-10 col-sm-offset-1 col-md-offset-0">
             <ul class="breadcrumb class-<?php echo $tipo_formacao_class;?>">
+                <li class="arrow"><a href="/formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>&areaId=<?php echo $area_id; ?>"><img src="http://localhost:8888/weareedit.io/wp-content/themes/weareedit/img/arrow-left.svg"></a></li>
                 <li class="logo-formacao"><a href="/formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>&areaId=<?php echo $area_id; ?>"><img src="<?php echo $tipo_formacao_icon_color['url']; ?>"></a></li>
                 <li><h2><a href="/formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>&areaId=<?php echo $area_id; ?>"><?php echo $titulo_tipo_formacao; ?> / <?php echo $titulo_area; ?></a></h2></li>               
             </ul>
