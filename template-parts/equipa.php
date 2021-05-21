@@ -22,9 +22,11 @@ if( $seccao_equipa ){
             $foto = get_field('foto', $elemento->ID);
 
            
-
+ if (($i==6) && $num_elementos==6){
+           echo '<div class="col-md-3 col-sm-5"></div>';
+        }
 ?>
-
+    
     <div class="col-md-3 col-sm-6 col-sm-offset-0 col-xs-12 col-xs-offset-0 <?php echo $margin;?>">
         <a href=" <?php echo $link_elemento; ?>">
             <div class="adaptImage ">
@@ -48,6 +50,7 @@ if( $seccao_equipa ){
         </a>
     </div>
     <?php
+
             if (($i==5 || $i==7 ) && $num_elementos<5){
                 echo '<div class="col-md-3 col-sm-5"></div>';
             }
