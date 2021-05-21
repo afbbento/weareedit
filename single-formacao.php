@@ -39,8 +39,8 @@ $localizacao_formacao = get_field('localizacao');
 <div class="head">
     <div class="container">
         <div class="col-md-12 col-sm-10 col-sm-offset-1 col-md-offset-0">
-            <ul class="breadcrumb  class-<?php echo $tipo_formacao_class;?>">
-                <li class="logo-formacao"><img src="<?php echo $tipo_formacao_icon_color['url']; ?>"></li>
+            <ul class="breadcrumb class-<?php echo $tipo_formacao_class;?>">
+                <li class="logo-formacao"><a href="/formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>&areaId=<?php echo $area_id; ?>"><img src="<?php echo $tipo_formacao_icon_color['url']; ?>"></a></li>
                 <li><h2><a href="/formacao/?tipoId=<?php echo $tipo_formacao_ID; ?>&areaId=<?php echo $area_id; ?>"><?php echo $titulo_tipo_formacao; ?> / <?php echo $titulo_area; ?></a></h2></li>               
             </ul>
             <h1 class=""><?php the_field('titulo'); ?></h1>
@@ -353,7 +353,19 @@ $localizacao_formacao = get_field('localizacao');
             }
         ?>
         <hr class="light-grey">
+    </div>
+    <!--end container programa-->
+</section>
+<!--end section programa-->
+<?php
+$projecto_360 = get_field('projecto_360');
 
+if (!$projecto_360){
+    $split = 'split-bg split-black-grey';
+}
+?>
+<section class="banner bg-black <?php echo $split;?>">
+    <div class="container">
         <?php
                 $banner = get_field('banner');
                 if( $banner ) {
@@ -384,20 +396,22 @@ $localizacao_formacao = get_field('localizacao');
                 </div>
             </div>
         </div>
-
-        <?php
-        $projecto_360 = get_field('projecto_360');
-        if( $projecto_360 ){
+    </div>
+</section>
+<?php
+$projecto_360 = get_field('projecto_360');
+    if( $projecto_360 ){        
+        foreach($projecto_360 as $elemento_360){
+            $titulo_projecto = get_field('titulo', $elemento_360->ID);
+            $subtitulo_projecto = get_field('subtitulo', $elemento_360->ID);
+            $texto_projecto = get_field('texto', $elemento_360->ID);
+            $video_projecto = get_field('video', $elemento_360->ID);
+            $clientes_projecto_360 = get_field('cliente', $elemento_360->ID);
+        }                    
+?>
+<section class="bg-black section-projecto360">
+    <div class="container">
         
-            foreach($projecto_360 as $elemento_360){
-                $titulo_projecto = get_field('titulo', $elemento_360->ID);
-                $subtitulo_projecto = get_field('subtitulo', $elemento_360->ID);
-                $texto_projecto = get_field('texto', $elemento_360->ID);
-                $video_projecto = get_field('video', $elemento_360->ID);
-                $clientes_projecto_360 = get_field('cliente', $elemento_360->ID);
-            }        
-            
-        ?>
         <div class="row">
             <div class="col-md-12 col-md-offset-0   col-sm-10 col-sm-offset-1">
                 <h2 class="text-muted ">PROJETO 360º - <?php echo $titulo_projecto; ?></h2>
@@ -439,16 +453,20 @@ $localizacao_formacao = get_field('localizacao');
                         }
                         ?>
         </div>
-        <div class="video-vimeo">
-            <iframe src="<?php echo $video_projecto;?>" width="100%" height="640" frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="split-bg split-black-grey">
+        <div class="container">
+            <div class="video-vimeo">
+                <iframe src="<?php echo $video_projecto;?>" width="100%" height="640" frameborder="0"
+                        allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
-        <?php 
-        //end projecto 360
-        }
-        ?>
     </div>
 </section>
+<?php 
+//end projecto 360
+}
+?>
 <script>
 jQuery(document).ready(function() {
     jQuery('.grid').masonry({
@@ -487,13 +505,13 @@ jQuery(document).ready(function() {
 
 <!--tutores-->
 <?php
-            $seccao_equipa = get_field('seccao_equipa');
-            if( $seccao_equipa ){
-                $muted_text = $seccao_equipa['muted_text'];
-                $titulo = $seccao_equipa['titulo'];
-                $texto = $seccao_equipa['texto'];                
-            }
-        ?>
+$seccao_equipa = get_field('seccao_equipa');
+if( $seccao_equipa ){
+    $muted_text = $seccao_equipa['muted_text'];
+    $titulo = $seccao_equipa['titulo'];
+    $texto = $seccao_equipa['texto'];                
+}
+?>
 <section class="tutores">
     <div class="container">
         <div class="row ">
@@ -514,13 +532,13 @@ jQuery(document).ready(function() {
 
 <!--alumni-->
 <?php
-            $seccao_alumni = get_field('seccao_alumni');
-            if( $seccao_alumni ){
-                $muted_text = $seccao_alumni['muted_text'];
-                $titulo = $seccao_alumni['titulo'];
-                $texto = $seccao_alumni['texto'];                
-            }
-        ?>
+$seccao_alumni = get_field('seccao_alumni');
+    if( $seccao_alumni ){
+        $muted_text = $seccao_alumni['muted_text'];
+        $titulo = $seccao_alumni['titulo'];
+        $texto = $seccao_alumni['texto'];                
+    }
+?>
 <section class="alumni">
     <div class="container">
         <div class="row ">

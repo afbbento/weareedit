@@ -1285,6 +1285,9 @@ a.headerDesktop__inCompany:hover{
 .single-formacao #page.bootcamp section.programa h3.border{
     border-left: 3px solid #f92869;
 }
+.single-formacao section.tutores{
+    margin-top: 90px;
+}
 .formacao-info-bar .cols.drop.open:after{	
     width:100%;	
 }	
@@ -1862,9 +1865,6 @@ section.visao-geral [class^="col-"] h4:not(:first-child) {
 .visao-geral .certificacao img{	
     width: 100%;	
 }	
-section.programa{	
-    margin-bottom: 400px;	
-}	
 section.programa h2.section-title{	
     margin-top: 90px;	
     margin-bottom: 75px;
@@ -1954,14 +1954,16 @@ section.programa .block-formacao hr {
     text-transform: uppercase;	
     color: #525252;	
     transition: color 0.1s ease;	
+}
+.single-formacao section.banner.split-bg{
+    margin-bottom: -95px;
 }	
-section.programa .video-vimeo{	
-    margin-bottom: -320px;
+.single-formacao .video-vimeo{	
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     height: 0;	
 }	
-section.programa .video-vimeo iframe {
+.single-formacao .video-vimeo iframe {
     position: absolute;
     top: 0;
     left: 0;
