@@ -9,6 +9,9 @@
 
 get_header();
 
+if(isset($_REQUEST['catId'])) {
+    $catId = $_REQUEST['catId'];
+}
 ?>
 
 <div class="content formacao-area-template">

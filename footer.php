@@ -62,8 +62,21 @@
                     <div class="hide-tablet">
                         <h3>Eventos</h3>
                         <ul class="footer-menu">
-                            <li><a href="https://dev.edit.work/about/">Industry Sessions</a></li>
-                            <li><a href="https://dev.edit.work/about/">Data Driven Summit</a></li>
+                        <?php
+                        $args = array(                                    
+                            'post_type' => 'eventos',
+                            'orderby' => 'name',
+                            'order'   => 'ASC'
+                        );
+
+                        $cats = get_categories($args);
+
+                        foreach($cats as $cat) {
+                        ?>
+                            <li><a href="eventos?catID=<?php echo $cat->term_id; ?>"><?php echo $cat->name; ?></a></li>                            
+                        <?php
+                        }
+                        ?>                           
                         </ul>
                     </div>
                 </div>
@@ -171,8 +184,9 @@
                     </ul>
                     <h3>Eventos</h3>
                     <ul class="footer-menu">
-                        <li><a href="https://dev.edit.work/about/">Industry Sessions</a></li>
-                        <li><a href="https://dev.edit.work/about/">Data Driven Summit</a></li>
+                       
+                        <li><a href="?areaID=">Design</a></li>
+                        <li><a href="https://dev.edit.work/about/">Programação</a></li>
                     </ul>
                     <h3>Outros</h3>
                     <ul class="footer-menu">
