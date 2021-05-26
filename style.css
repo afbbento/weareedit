@@ -217,7 +217,14 @@ p{
 .text-block-container .highlight{	
     font-weight: bold;	
     color: #ffffff;	
-}	
+}
+.blocos-destaque > .row:not(:first-child) {
+    margin-top:40px;
+}
+section.bg-dark-grey .text-block-container .highlight p{	
+    font-weight: 500;	
+    color: #ffffff;	
+}		
 .block-main-content.bg-light-grey .text-block-container .highlight{	
     color: #000000;	
 }	

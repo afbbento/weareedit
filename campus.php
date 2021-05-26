@@ -13,12 +13,12 @@ get_header();
 <div class="hero">   
             <div class="container">
                 <ul class="breadcrumb">
-                    <li><h2><a href="#">Sobre nós</a></h2></li>
+                    <li><h2><a href="/escola">Sobre nós</a></h2></li>
                 </ul>
                 <div class="row">
                     <div class="col-md-12">    
-                        <h1>Campus</h1>
-                        <h2>A EDIT. tem como constante preocupação a empregabilidade dos seus alunos. </h2>
+                        <h1><?php echo get_field( "titulo_header" );?></h1>
+                        <h2><?php echo get_field( "texto_header" );?></h2>
                     </div>
                 </div>
                 <div class="row grid-sp-40 hero-menu">
@@ -26,82 +26,71 @@ get_header();
                 </div>
             </div>
         </div>
-        <section class="split-bg split-black-grey campus-locations">
+        <?php
+            $posts = get_posts(array(
+                'posts_per_page'	=> -1,
+                'post_type'			=> 'localizacoes',
+                'orderby'           => 'title',
+                'order'             => 'ASC',
+            ));
+            $i = 0;
+            if( $posts ){
+                foreach( $posts as $post ){ 
+                    setup_postdata( $post );
+            $i++;
+            if ($i==1){
+                $first = 'split-bg split-black-grey';
+            }else{
+                $first ='';
+            }                                                        
+        ?>
+        <section class="<?php echo $first;?> campus-locations">
             <div class="container">
                 <div class="location-container">
-                    <h1 class="title">Lisboa</h1>
+                    <h1 class="title"><?php echo get_the_title();?></h1>
                     <h2 class="address">
-                        Alameda D. Afonso Henriques, 7A<br>
-                        1900-178, Lisboa <br>
-                        +351 210 182 455<br>
-                        geral@edit.com
+                        <?php echo get_field('morada_rua');?><br>
+                        <?php echo get_field('morada');?> <br>
+                        <?php echo get_field('telefone');?><br>
+                        <?php echo get_field('email');?>
                     </h2>
                     <a href="#" class="btn btn-yellow">Google Maps</a>
                 </div>
             </div>
         </section>
-
-        <section class="campus-locations">
-            <div class="container">
-                <div class="location-container">
-                    <h1 class="title">Porto</h1>
-                    <h2 class="address">
-                        Rua Alferes Malheiro, 226<br>
-                        4000-057, Porto <br>
-                        +351 224 960 345 <br>
-                        geral@edit.com
-                    </h2>
-                    <a href="#" class="btn btn-yellow">Google Maps</a>
-                </div>
-            </div>
-        </section>
+        <?php 
+            }//end foreach
+        }//end if
+        ?>
         
+        <?php
+        $bloco_logos = get_field('bloco_logos');
+        if( $bloco_logos ){
+            $titulo = $bloco_logos['titulo'];
+            $logos = $bloco_logos['logos'];
+        }
+        ?>
         <section class="parceiros">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12"><h3>Parceiros e clientes</h3></div>
+                    <div class="col-md-12"><h3><?php echo $titulo;?></h3></div>
                 </div>
                 <div class="row grid-sp-40 logos-grid">
-                    <div class="col-xs-6  col-md-3 col-sm-6">
-                        <div class="grid-box">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
+                    <?php
+                        if( $logos ) {
+                            foreach( $logos as $row ) {                    
+                        ?>
+                        <div class="col-xs-6 col-md-3 col-sm-6">
+                            <div class="grid-box">
+                                <a href="<?php echo $row['link'];?>" target="_blank">
+                                    <img src="<?php echo $row['imagem'];?>">
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3 col-sm-6">
-                        <div class="grid-box">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
-                        </div>
-                    </div>
-                   <div class="col-xs-6 col-md-3 col-sm-6">
-                        <div class="grid-box">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3 col-sm-6">
-                        <div class="grid-box">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3 col-sm-6">
-                        <div class="grid-box">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3 col-sm-6">
-                        <div class="grid-box">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3 col-sm-6">
-                        <div class="grid-box">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-md-3 col-sm-6">
-                        <div class="grid-box">
-                            <img src="<?php echo get_template_directory_uri(); ?>/img/burocratik-transp.png">
-                        </div>
-                    </div>
+                        <?php
+                            }//end foreach
+                        }//end if
+                    ?>                   
                 </div>
                 
             </div>
