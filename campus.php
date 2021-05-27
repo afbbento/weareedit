@@ -61,10 +61,13 @@ get_header();
         <?php 
             }//end foreach
         }//end if
+        wp_reset_postdata();
         ?>
         
         <?php
+       
         $bloco_logos = get_field('bloco_logos');
+        
         if( $bloco_logos ){
             $titulo = $bloco_logos['titulo'];
             $logos = $bloco_logos['logos'];
